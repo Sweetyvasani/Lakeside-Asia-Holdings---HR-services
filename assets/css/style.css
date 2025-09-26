@@ -456,26 +456,6 @@ footer {
   color: #333;
 }
 
-.why-us-highlight h2 {
-  font-size: 3.2rem;
-  font-weight: 800;
-  color: #14b8a6;
-  margin: 0 0 0.5rem;
-  text-shadow: 0 0 8px rgba(20,184,166,0.25);
-}
-
-
-.why-us-highlight h3 {
-  font-size: 1.2rem;
-  color: #0a2540;
-  margin-bottom: 0.75rem;
-}
-
-.why-us-highlight p {
-  font-size: 0.95rem;
-  color: #333;
-}
-
 @keyframes fadeInOut {
   0% { opacity: 0; transform: translateY(10px); }
   10% { opacity: 1; transform: translateY(0); }
