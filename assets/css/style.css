@@ -29,7 +29,7 @@ header .brand {
 }
 
 header img {
-  height: 65px; /* ✅ bigger logo for clarity */
+  height: 75px; /* ✅ bigger logo for clarity */
   width: auto;
 }
 
