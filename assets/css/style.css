@@ -329,6 +329,20 @@ footer {
   text-align: center;
 }
 
+/* Founders section headings */
+.founders h2 {
+  color: #0a2540;
+  margin-bottom: 0.25rem;
+}
+
+.founders h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #14b8a6;  /* teal subheading for role */
+  margin-bottom: 0.75rem;
+}
+
+
 /* ✅ Standardize founder images */
 .founder-img {
   width: 200px;       /* same width for both */
