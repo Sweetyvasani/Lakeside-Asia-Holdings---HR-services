@@ -162,61 +162,71 @@
 <footer>
   <p>© 2025 Lakeside HR Services | Blending People + Technology for Scalable HR</p>
 </footer>
+
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     const proofs = [
-      {
-        stat: "40%",
-        title: "Reduction in Time-to-Hire",
-        desc: "Our tech-enabled approach saves you critical time and resources in finding top talent."
-      },
-      {
-        stat: "2x",
-        title: "Faster HR Digitization",
-        desc: "Our streamlined frameworks cut implementation time in half."
-      },
-      {
-        stat: "25%",
-        title: "Lower Compliance Risk",
-        desc: "Proactive audits and governance structures reduce regulatory exposure."
-      },
-      {
-        stat: "3x",
-        title: "Increase in HR Efficiency",
-        desc: "Automation + best practices free HR to focus on strategy, not admin."
-      },
-      {
-        stat: "60%",
-        title: "Higher Employee Engagement",
-        desc: "Data-driven practices boost retention and satisfaction scores."
-      },
-      {
-        stat: "50%",
-        title: "Cost Savings in HR Tech",
-        desc: "Curated tech stacks eliminate waste from unused licenses."
-      },
-      {
-        stat: "90 Days",
-        title: "Transformation Roadmap",
-        desc: "From diagnosis to execution, we deliver results in 3 months."
-      }
+      { stat: "40", suffix: "%", title: "Reduction in Time-to-Hire", desc: "Our tech-enabled approach saves you critical time and resources in finding top talent." },
+      { stat: "2", suffix: "x", title: "Faster HR Digitization", desc: "Our streamlined frameworks cut implementation time in half." },
+      { stat: "25", suffix: "%", title: "Lower Compliance Risk", desc: "Proactive audits and governance structures reduce regulatory exposure." },
+      { stat: "3", suffix: "x", title: "Increase in HR Efficiency", desc: "Automation + best practices free HR to focus on strategy, not admin." },
+      { stat: "60", suffix: "%", title: "Higher Employee Engagement", desc: "Data-driven practices boost retention and satisfaction scores." },
+      { stat: "50", suffix: "%", title: "Cost Savings in HR Tech", desc: "Curated tech stacks eliminate waste from unused licenses." },
+      { stat: "90", suffix: " Days", title: "Transformation Roadmap", desc: "From diagnosis to execution, we deliver results in 3 months." }
     ];
 
     let index = 0;
     const rotator = document.getElementById("proof-rotator");
 
-    setInterval(() => {
-      index = (index + 1) % proofs.length;
+    // Count-up animation
+    function animateCountUp(element, target, suffix) {
+      let current = 0;
+      const duration = 1000; // 1 second
+      const steps = 30;
+      const increment = target / steps;
+      let step = 0;
+
+      const timer = setInterval(() => {
+        step++;
+        current += increment;
+        if (step >= steps) {
+          clearInterval(timer);
+          current = target;
+        }
+        element.textContent = Math.floor(current) + suffix;
+      }, duration / steps);
+    }
+
+    function showProof() {
+      const proof = proofs[index];
+
+      // fade animation reset
+      rotator.classList.remove("fade");
+      void rotator.offsetWidth; 
+      rotator.classList.add("fade");
+
+      // build content
       rotator.innerHTML = `
-        <h2>${proofs[index].stat}</h2>
-        <h3>${proofs[index].title}</h3>
-        <p>${proofs[index].desc}</p>
+        <h2 id="stat"></h2>
+        <h3>${proof.title}</h3>
+        <p>${proof.desc}</p>
       `;
-    }, 5000); // rotates every 5 seconds
+
+      // animate stat
+      const statEl = document.getElementById("stat");
+      animateCountUp(statEl, parseInt(proof.stat), proof.suffix);
+
+      index = (index + 1) % proofs.length;
+    }
+
+    showProof(); // show first proof
+    setInterval(showProof, 5000); // rotate every 5 seconds
   });
 </script>
+
 </body>
 </html>
+
 
 
 
