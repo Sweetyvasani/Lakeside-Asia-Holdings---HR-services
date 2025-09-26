@@ -14,9 +14,9 @@ header {
   width: 100%;
   display: flex;
   align-items: center;   /* keeps logo + text aligned vertically */
-  justify-content: flex-start;   /* ✅ keep items aligned left */
+  justify-content: space-between;   /* ✅ logo left, nav right */
   background: #fff;        /* White background */
-  padding: 10px 30px;
+  padding: 10px 40px;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
 }
@@ -26,7 +26,6 @@ header .brand {
   display: flex;
   align-items: center;   /* ✅ keeps text vertically centered with logo */
   text-decoration: none;
-  margin-right: 50px;       /* ✅ space between brand and menu */
 }
 
 header img {
@@ -44,12 +43,10 @@ header .brand-name {
 /* navigation menu */
 
 header nav {
-  flex: 1;                  /* ✅ nav uses remaining space */
+  flex-shrink: 0;   /* ✅ prevent nav from being squished */
 }
 header nav ul {
   display: flex;
-  justify-content: flex-start;  /* ✅ don’t push to edge */
-  flex-wrap: wrap;        /* ✅ prevents overflow (Contact will wrap if needed) */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -57,10 +54,6 @@ header nav ul {
 
 header nav ul li {
   margin-left: 25px;
-}
-
-header nav ul li:first-child {
-  margin-left: 0; /* no gap before Home */
 }
 
 header nav ul li a {
