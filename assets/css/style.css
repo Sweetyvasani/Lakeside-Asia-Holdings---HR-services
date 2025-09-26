@@ -69,20 +69,18 @@ nav ul li a.cta {
 /* ================== HERO ================== */
 .hero {
   text-align: center;
-  padding: 3rem 1.5rem; /* reduced top/bottom padding */
-  background-image: url("../images/banner8.jpg");
+  padding: 3rem 1.5rem;
+  background-image: url("../images/banner4.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  min-height: 340px; /* smaller height */
+  min-height: 340px;
 }
 
+/* remove the light overlay completely */
 .hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255, 255, 255, 0.55); /* light overlay */
+  content: none;
 }
 
 .hero-content {
@@ -97,6 +95,7 @@ nav ul li a.cta {
   margin-bottom: 0.75rem;
   font-weight: 700;
   color: #0a2540; /* Navy Blue */
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.8); /* subtle light shadow */
 }
 
 .hero p {
@@ -104,6 +103,7 @@ nav ul li a.cta {
   margin-bottom: 1.5rem;
   line-height: 1.5;
   color: #000; /* Black */
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.7); /* light shadow for clarity */
 }
 
 /* CTA buttons – both teal filled, white text */
