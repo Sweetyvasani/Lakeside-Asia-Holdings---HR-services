@@ -70,16 +70,17 @@ nav ul li a.cta {
 .hero {
   text-align: center;
   padding: 6rem 2rem;
-  background: url("assets/images/banner1.png") center/cover no-repeat; /* set one banner */
-  color: #fff; /* white text for contrast */
+  background: url("assets/images/banner1.png") center/cover no-repeat !important;
+  color: #fff;
   position: relative;
+  min-height: 500px;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(10, 37, 64, 0.55); /* navy overlay for readability */
+  background: rgba(10, 37, 64, 0.35); /* lighter overlay so image is visible */
 }
 
 .hero-content {
