@@ -408,18 +408,39 @@ footer {
 /* Right Column */
 .why-us-highlight {
   flex: 1 1 30%;
-  background: #e9f7f6;
-  border: 1px solid #14b8a6;
-  padding: 2rem;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #ffffff, #e9f7f6); /* gradient */
+  border: 2px solid #14b8a6;
+  padding: 2.5rem;
+  border-radius: 16px;
   text-align: center;
+  box-shadow: 0 8px 20px rgba(20,184,166,0.15); /* teal glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-us-highlight:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(20,184,166,0.25);
+}
+
+/* accent bar on top */
+.why-us-highlight::before {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 60px;
+  background: #14b8a6;
+  margin: 0 auto 1rem;
+  border-radius: 3px;
 }
 
 .why-us-highlight h2 {
-  font-size: 2.5rem;
+  font-size: 3.2rem;
+  font-weight: 800;
   color: #14b8a6;
   margin: 0 0 0.5rem;
+  text-shadow: 0 0 8px rgba(20,184,166,0.25);
 }
+
 
 .why-us-highlight h3 {
   font-size: 1.2rem;
@@ -445,11 +466,12 @@ footer {
 /* Progress bar inside proof box */
 .progress-bar {
   height: 4px;
-  background: #14b8a6;   /* teal */
+  background: linear-gradient(90deg, #14b8a6, #0fa192); /* gradient bar */
   width: 0%;
   border-radius: 2px;
   margin-top: 1.5rem;
   animation: progressAnim 5s linear infinite;
+  box-shadow: 0 0 6px rgba(20,184,166,0.5); /* glowing effect */
 }
 
 @keyframes progressAnim {
