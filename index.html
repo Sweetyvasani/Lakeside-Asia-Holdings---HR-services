@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lakeside HR Services | People + Technology</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Smooth Scroll -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
  <!-- Header -->
@@ -17,61 +24,103 @@
   </a>
   <nav>
     <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#services">Services</a></li>
-      <li><a href="index.html#model">Our Model</a></li>
-      <li><a href="index.html#resources">Resources</a></li>
-      <li><a href="index.html#contact" class="cta">Contact</a></li>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#model">Our Model</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#contact" class="cta">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <!-- Hero -->
-<section class="hero">
+<section id="home" class="hero">
   <div class="hero-content">
     <h1>Is Your HR Ready for the Next Phase of Growth?</h1>
     <p>Stop firefighting and start building a strategic workforce. 
        We integrate expert HR consulting with smart technology 
        to turn your people operations into a competitive advantage.</p>
-    <a href="contact.html" class="btn-primary">Book a Consultation</a>
-    <a href="resources.html" class="btn-secondary">Take the HR Health Check</a>
+    <a href="#contact" class="btn-primary">Book a Consultation</a>
+    <a href="#resources" class="btn-secondary">Take the HR Health Check</a>
   </div>
 </section>
 
-  <!-- Difference -->
-  <section class="difference">
-    <h2>What Makes Us Different</h2>
-    <p>We blend deep HR know-how with scalable technology. Unlike traditional consultants, we deliver HR as a true growth engine.</p>
-  </section>
+<!-- Difference -->
+<section class="difference">
+  <h2>What Makes Us Different</h2>
+  <p>We blend deep HR know-how with scalable technology. Unlike traditional consultants, we deliver HR as a true growth engine.</p>
+</section>
 
-  <!-- Services Overview -->
-  <section class="services">
-    <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card">HR Strategy & Transformation</div>
-      <div class="service-card">People Practices</div>
-      <div class="service-card">HR Technology & Analytics</div>
-      <div class="service-card">Compliance & Governance</div>
-      <div class="service-card">Employee Experience</div>
-    </div>
-  </section>
+<!-- About Section -->
+<section id="about" class="page-header">
+  <h1>About Us</h1>
+  <p>We combine 20+ years of HR leadership and 20+ years of technology expertise to deliver scalable, people-first HR solutions.</p>
+</section>
 
-  <!-- CTA -->
-  <section class="cta-banner">
-    <h2>Ready to transform your HR?</h2>
-    <a href="contact.html" class="btn-primary">Book Consultation</a>
-  </section>
+<section class="founders">
+  <div class="founder">
+    <img src="assets/images/Rohit.png" alt="Rohit Nalwade" class="founder-img" />
+    <h2>Rohit Nalwade</h2>
+    <p>20+ years leading technology projects with Reliance & Mahindra. Expert in scalable HR systems, automation, and analytics. Rohit brings systems thinking and tech innovation to HR, enabling organizations to scale with confidence.</p>
+  </div>
+  <div class="founder">
+    <img src="assets/images/Sweety.png" alt="Sweety Vasani" class="founder-img" />
+    <h2>Sweety Vasani</h2>
+    <p>20+ years in HR leadership across India & GCC. Specialist in talent management, compliance, and building people-first cultures. Sweety ensures HR strategies are practical, compliant, and rooted in employee experience.</p>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Lakeside HR Services | Blending People + Technology for Scalable HR</p>
-  </footer>
+<!-- Services Overview -->
+<section id="services" class="services">
+  <h2>Our Services</h2>
+  <div class="service-grid">
+    <div class="service-card">HR Strategy & Transformation</div>
+    <div class="service-card">People Practices</div>
+    <div class="service-card">HR Technology & Analytics</div>
+    <div class="service-card">Compliance & Governance</div>
+    <div class="service-card">Employee Experience</div>
+  </div>
+</section>
+
+<!-- Model Section -->
+<section id="model" class="model">
+  <h2>Our Model</h2>
+  <ul class="model-steps">
+    <li>Attract</li>
+    <li>Engage</li>
+    <li>Develop</li>
+    <li>Grow</li>
+    <li>Assess</li>
+  </ul>
+</section>
+
+<!-- Resources Section -->
+<section id="resources" class="resources">
+  <h2>Resources</h2>
+  <p>Check out our latest insights, frameworks, and HR toolkits designed for CHROs and business leaders.</p>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner">
+  <h2>Ready to transform your HR?</h2>
+  <a href="#contact" class="btn-primary">Book Consultation</a>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-form">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn-primary">Send Message</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Lakeside HR Services | Blending People + Technology for Scalable HR</p>
+</footer>
 </body>
 </html>
-
-
-
-
-
-
