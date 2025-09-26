@@ -345,11 +345,11 @@ footer {
 
 /* ✅ Standardize founder images */
 .founder-img {
-  width: 200px;       /* same width for both */
-  height: 200px;      /* fixed height */
-  object-fit: cover;  /* crop to fit neatly */
-  object-position: center; /* ✅ centers face inside circle */
-  border-radius: 50%; /* keep circular shape */
+  width: 220px;       /* standard width */
+  height: 220px;      /* standard height */
+  border-radius: 50%;    /* circle */
+  object-fit: cover;  /* crop to fill circle */
+  object-position: top center; /* adjust focus (top-center works well for portraits) */
   margin-bottom: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
