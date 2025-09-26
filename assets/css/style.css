@@ -1,4 +1,4 @@
-/* assets/css/style.css */
+/* ================== GLOBAL ================== */
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -6,15 +6,43 @@ body {
   line-height: 1.6;
 }
 
+/* ================== HEADER ================== */
 header {
-  background: #0a2540; /* Navy */
-  color: #fff;
+  background: #f4f4f4;   /* Light grey */
+  color: #0a2540;        /* Navy */
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Brand + Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-img {
+  height: 55px;   /* Smaller logo */
+  width: auto;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+}
+
+.brand-bold {
+  font-weight: 700;
+  color: #0a2540; /* Navy */
+}
+
+.brand-light {
+  font-weight: 400;
+  color: #0a2540; /* Navy, not bold */
+}
+
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
@@ -25,17 +53,20 @@ nav ul {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #0a2540;        /* Navy */
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;      /* Regular, not bold */
 }
 
 nav ul li a.cta {
-  background: #14b8a6; /* Teal */
+  background: #14b8a6;   /* Teal */
+  color: #fff !important;
   padding: 0.5rem 1rem;
   border-radius: 5px;
+  font-weight: 600;      /* CTA button bold */
 }
 
+/* ================== HERO ================== */
 .hero {
   text-align: center;
   padding: 4rem 2rem;
@@ -62,6 +93,7 @@ nav ul li a.cta {
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
+  font-weight: 600;
 }
 
 .btn-secondary {
@@ -72,8 +104,10 @@ nav ul li a.cta {
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
+  font-weight: 600;
 }
 
+/* ================== SERVICES ================== */
 .services {
   padding: 3rem 2rem;
   text-align: center;
@@ -96,6 +130,7 @@ nav ul li a.cta {
   box-shadow: 0 2px 6px rgba(10,37,64,0.03);
 }
 
+/* ================== CTA ================== */
 .cta-banner {
   background: #0a2540;
   color: #fff;
@@ -103,12 +138,18 @@ nav ul li a.cta {
   padding: 2rem;
 }
 
+/* ================== PAGE HEADERS ================== */
 .page-header {
   padding: 2.5rem 2rem;
   text-align: center;
   background: #fff;
 }
 
+.page-header h1 {
+  color: #0a2540;
+}
+
+/* ================== FOUNDERS ================== */
 .founders {
   display: flex;
   gap: 2rem;
@@ -121,8 +162,23 @@ nav ul li a.cta {
   max-width: 420px;
   border-radius: 8px;
   padding: 1.25rem;
+  text-align: center;
 }
 
+.founder-img {
+  width: 180px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.founder h2 {
+  color: #0a2540;
+  margin-bottom: 0.5rem;
+}
+
+/* ================== MODEL ================== */
 .model {
   padding: 2rem;
   text-align: center;
@@ -145,6 +201,7 @@ nav ul li a.cta {
   font-weight: 700;
 }
 
+/* ================== RESOURCES & CONTACT ================== */
 .resources, .contact-form {
   padding: 2rem;
 }
@@ -163,17 +220,10 @@ nav ul li a.cta {
   font-size: 1rem;
 }
 
+/* ================== FOOTER ================== */
 footer {
   background: #0a2540;
   color: #fff;
   text-align: center;
   padding: 1rem;
-}
-/* Founder photos */
-.founder-img {
-  width: 180px;
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
