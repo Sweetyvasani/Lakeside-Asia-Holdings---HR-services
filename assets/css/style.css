@@ -8,39 +8,57 @@ body {
 
 /* ================== HEADER ================== */
 header {
-  background: #0a2540;   /* Navy background */
-  color: #fff;           /* White text */
-  padding: 1rem 2rem;
+  position: fixed;          
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  background: #fff;        /* White background */
+  padding: 10px 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
 }
 
-.brand-name,
-nav ul li a {
-  color: #fff !important;  /* Force white for logo text + nav links */
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+header img {
+  height: 45px; /* smaller logo */
+  width: auto;
 }
 
-nav ul li a:hover {
-  color: #14b8a6 !important;     /* Teal on hover */
-  border-bottom: 2px solid #14b8a6; /* Teal underline effect */
-  padding-bottom: 2px;           /* space for underline */
+header .brand-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #001F54;   /* Navy text */
+  margin-left: 10px;
 }
 
-nav ul li a.cta {
-  background: #14b8a6;  /* Teal */
-  color: #0a2540 !important; /* Navy text inside CTA */
-  font-weight: 700;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  transition: background 0.3s ease, transform 0.2s ease;
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li a.cta:hover {
-  background: #0fa192;  /* Darker teal */
-  color: #fff !important; /* White text on hover */
-  transform: translateY(-2px);
+header nav ul li {
+  margin-left: 25px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #001F54;   /* Navy text */
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #FFD700; /* golden hover effect */
+}
+
+/* Push page content down so it doesn’t hide under sticky nav */
+body {
+  padding-top: 70px; /* adjust depending on navbar height */
 }
 
 /* ================== HERO ================== */
@@ -267,62 +285,3 @@ footer {
   text-align: center;
   padding: 1rem;
 }
-
-/* Navbar styles */
-.navbar {
-  position: fixed;          
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: white;        /* White background */
-  padding: 10px 40px;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow for separation */
-}
-
-/* Logo */
-.navbar img {
-  height: 45px; /* smaller logo */
-  width: auto;
-}
-
-/* Company name */
-.navbar .company-name {
-  font-size: 22px;
-  font-weight: 600;
-  color: #001F54;   /* Navy text */
-  margin-left: 10px;
-}
-
-/* Navigation menu */
-.navbar ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar ul li {
-  margin-left: 25px;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  color: #001F54;   /* Navy text */
-  transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-  color: #FFD700; /* golden hover effect */
-}
-
-/* Push page content down so it doesn’t hide under sticky nav */
-body {
-  padding-top: 70px; /* adjust depending on navbar height */
-}
-
