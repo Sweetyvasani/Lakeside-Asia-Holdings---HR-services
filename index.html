@@ -198,27 +198,27 @@
     }
 
     function showProof() {
-      const proof = proofs[index];
+  const proof = proofs[index];
 
-      // fade animation reset
-      rotator.classList.remove("fade");
-      void rotator.offsetWidth; 
-      rotator.classList.add("fade");
+  // fade animation reset
+  rotator.classList.remove("fade");
+  void rotator.offsetWidth;
+  rotator.classList.add("fade");
 
-      // build content
-      rotator.innerHTML = `
-        <h2 id="stat"></h2>
-        <h3>${proof.title}</h3>
-        <p>${proof.desc}</p>
-      `;
+  // build content (✅ now includes progress bar)
+  rotator.innerHTML = `
+    <h2 id="stat"></h2>
+    <h3>${proof.title}</h3>
+    <p>${proof.desc}</p>
+    <div class="progress-bar"></div>
+  `;
 
-      // animate stat
-      const statEl = document.getElementById("stat");
-      animateCountUp(statEl, parseInt(proof.stat), proof.suffix);
+  // animate stat
+  const statEl = document.getElementById("stat");
+  animateCountUp(statEl, parseInt(proof.stat), proof.suffix);
 
-      index = (index + 1) % proofs.length;
-    }
-
+  index = (index + 1) % proofs.length;
+}
     showProof(); // show first proof
     setInterval(showProof, 5000); // rotate every 5 seconds
   });
@@ -226,6 +226,7 @@
 
 </body>
 </html>
+
 
 
 
