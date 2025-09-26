@@ -162,8 +162,62 @@
 <footer>
   <p>© 2025 Lakeside HR Services | Blending People + Technology for Scalable HR</p>
 </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const proofs = [
+      {
+        stat: "40%",
+        title: "Reduction in Time-to-Hire",
+        desc: "Our tech-enabled approach saves you critical time and resources in finding top talent."
+      },
+      {
+        stat: "2x",
+        title: "Faster HR Digitization",
+        desc: "Our streamlined frameworks cut implementation time in half."
+      },
+      {
+        stat: "25%",
+        title: "Lower Compliance Risk",
+        desc: "Proactive audits and governance structures reduce regulatory exposure."
+      },
+      {
+        stat: "3x",
+        title: "Increase in HR Efficiency",
+        desc: "Automation + best practices free HR to focus on strategy, not admin."
+      },
+      {
+        stat: "60%",
+        title: "Higher Employee Engagement",
+        desc: "Data-driven practices boost retention and satisfaction scores."
+      },
+      {
+        stat: "50%",
+        title: "Cost Savings in HR Tech",
+        desc: "Curated tech stacks eliminate waste from unused licenses."
+      },
+      {
+        stat: "90 Days",
+        title: "Transformation Roadmap",
+        desc: "From diagnosis to execution, we deliver results in 3 months."
+      }
+    ];
+
+    let index = 0;
+    const rotator = document.getElementById("proof-rotator");
+
+    setInterval(() => {
+      index = (index + 1) % proofs.length;
+      rotator.innerHTML = `
+        <h2>${proofs[index].stat}</h2>
+        <h3>${proofs[index].title}</h3>
+        <p>${proofs[index].desc}</p>
+      `;
+    }, 5000); // rotates every 5 seconds
+  });
+</script>
 </body>
 </html>
+
 
 
 
