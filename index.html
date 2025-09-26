@@ -163,7 +163,7 @@
   <p>© 2025 Lakeside HR Services | Blending People + Technology for Scalable HR</p>
 </footer>
 
-  <script>
+<script>
   document.addEventListener("DOMContentLoaded", function() {
     const proofs = [
       { stat: "40", suffix: "%", title: "Reduction in Time-to-Hire", desc: "Our tech-enabled approach saves you critical time and resources in finding top talent." },
@@ -178,10 +178,9 @@
     let index = 0;
     const rotator = document.getElementById("proof-rotator");
 
-    // Count-up animation
     function animateCountUp(element, target, suffix) {
       let current = 0;
-      const duration = 1000; // 1 second
+      const duration = 1000;
       const steps = 30;
       const increment = target / steps;
       let step = 0;
@@ -198,34 +197,35 @@
     }
 
     function showProof() {
-  const proof = proofs[index];
+      const proof = proofs[index];
 
-  // fade animation reset
-  rotator.classList.remove("fade");
-  void rotator.offsetWidth;
-  rotator.classList.add("fade");
+      // fade reset
+      rotator.classList.remove("fade");
+      void rotator.offsetWidth;
+      rotator.classList.add("fade");
 
-  // build content (✅ now includes progress bar)
-  rotator.innerHTML = `
-    <h2 id="stat"></h2>
-    <h3>${proof.title}</h3>
-    <p>${proof.desc}</p>
-    <div class="progress-bar"></div>
-  `;
+      // build content + ✅ progress bar
+      rotator.innerHTML = `
+        <h2 id="stat"></h2>
+        <h3>${proof.title}</h3>
+        <p>${proof.desc}</p>
+        <div class="progress-bar"></div>
+      `;
 
-  // animate stat
-  const statEl = document.getElementById("stat");
-  animateCountUp(statEl, parseInt(proof.stat), proof.suffix);
+      const statEl = document.getElementById("stat");
+      animateCountUp(statEl, parseInt(proof.stat), proof.suffix);
 
-  index = (index + 1) % proofs.length;
-}
-    showProof(); // show first proof
-    setInterval(showProof, 5000); // rotate every 5 seconds
+      index = (index + 1) % proofs.length;
+    }
+
+    showProof(); 
+    setInterval(showProof, 5000);
   });
 </script>
 
 </body>
 </html>
+
 
 
 
