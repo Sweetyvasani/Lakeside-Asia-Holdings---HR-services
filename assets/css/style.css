@@ -13,7 +13,7 @@ header {
   left: 0;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: center;   /* keeps logo + text aligned vertically */
   justify-content: space-between;
   background: #fff;        /* White background */
   padding: 10px 40px;
@@ -22,17 +22,20 @@ header {
 }
 
 header img {
-  height: 45px; /* smaller logo */
+  height: 65px; /* ✅ bigger logo for clarity */
   width: auto;
 }
 
 header .brand-name {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
   color: #001F54;   /* Navy text */
-  margin-left: 10px;
+  margin-left: 12px;
+  display: flex;
+  align-items: center; /* ✅ vertically center with logo */
 }
 
+/* nav menu */
 header nav ul {
   display: flex;
   list-style: none;
@@ -49,11 +52,13 @@ header nav ul li a {
   font-size: 16px;
   font-weight: 500;
   color: #001F54;   /* Navy text */
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 header nav ul li a:hover {
-  color: #FFD700; /* golden hover effect */
+  color: #14b8a6; /* ✅ Teal hover */
+  border-bottom: 2px solid #14b8a6; /* ✅ Teal underline */
+  padding-bottom: 2px;
 }
 
 /* Push page content down so it doesn’t hide under sticky nav */
@@ -102,6 +107,7 @@ body {
   white-space: normal; /* ✅ allow wrapping */
   text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
   animation: fadeInUp 1.2s ease-in-out;
+  line-height: 1.05; /* ✅ tighten spacing between lines */
 }
 
 /* Subtext */
