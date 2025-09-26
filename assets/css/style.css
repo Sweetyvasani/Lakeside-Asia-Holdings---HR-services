@@ -348,6 +348,7 @@ footer {
   width: 200px;       /* same width for both */
   height: 200px;      /* fixed height */
   object-fit: cover;  /* crop to fit neatly */
+  object-position: center; /* ✅ centers face inside circle */
   border-radius: 50%; /* keep circular shape */
   margin-bottom: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
