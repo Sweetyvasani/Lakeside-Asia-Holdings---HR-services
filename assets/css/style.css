@@ -21,6 +21,13 @@ header {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
 }
 
+/* Brand block (logo + text) */
+header .brand {
+  display: flex;
+  align-items: center;   /* ✅ keeps text vertically centered with logo */
+  text-decoration: none;
+}
+
 header img {
   height: 65px; /* ✅ bigger logo for clarity */
   width: auto;
@@ -31,13 +38,13 @@ header .brand-name {
   font-weight: 600;
   color: #001F54;   /* Navy text */
   margin-left: 12px;
-  display: flex;
-  align-items: center; /* ✅ vertically center with logo */
 }
 
-/* nav menu */
+/* navigation menu */
+
 header nav ul {
   display: flex;
+  flex-wrap: wrap;        /* ✅ prevents overflow (Contact will wrap if needed) */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -119,6 +126,9 @@ body {
   white-space: normal; /* ✅ allow wrapping */
   text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
   animation: fadeInUp 1.5s ease-in-out;
+  max-width: 700px;      /* ✅ limit width for readability */
+  margin-left: auto;     /* ✅ center the paragraph */
+  margin-right: auto;
 }
 
 /* CTA buttons */
