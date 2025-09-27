@@ -492,28 +492,65 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-/* ================== MODEL ================== */
-.model {
-  padding: 2rem;
+/* Full-Width Flow */
+.our-model-flow {
+  background: #f8f9fa;
+  padding: 80px 0;
   text-align: center;
 }
 
-.model-steps {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
+.our-model-flow h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: 10px;
 }
 
-.model-steps li {
-  background: #e9f7f6;
-  color: #0a2540;
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
-  font-weight: 700;
+.our-model-flow .subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 50px;
 }
+
+.flow-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+.flow-step {
+  flex: 1;
+  padding: 15px;
+}
+
+.flow-step .icon {
+  font-size: 2rem;
+  color: #009688;
+  margin-bottom: 10px;
+}
+
+.flow-step h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  margin-bottom: 8px;
+}
+
+.flow-step p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.connector {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fbc02d;
+  align-self: center;
+}
+
 
 /* ================== RESOURCES & CONTACT ================== */
 .resources, .contact-form {
