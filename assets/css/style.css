@@ -354,6 +354,66 @@ footer {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Trust / Expertise Section (inside Why Us) */
+.trust {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #f9f9f9;   /* ✅ subtle light gray background */
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.trust h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a2540;
+  margin-bottom: 1rem;
+}
+
+.trust p {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.trust .trust-subtitle {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #555;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.trust-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.trust-logos .logo-box {
+  background: #e5e5e5;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.trust-logos .logo-box:hover {
+  background: #14b8a6;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+
 /* Why Us Section */
 .why-us {
   padding: 3rem 2rem;
