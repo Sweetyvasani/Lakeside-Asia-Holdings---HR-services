@@ -193,57 +193,123 @@ body {
 
 
 /* ================== SERVICES ================== */
-.services {
-  padding: 3rem 2rem;
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
   text-align: center;
-  background: #fff;
 }
 
-.services h2 {
-  font-size: 2rem;
+/* Headings */
+h2 {
+  font-size: 2.2rem;
   font-weight: 700;
-  color: #0a2540;
+  color: #0d1b2a; /* Navy */
+  margin-bottom: 10px;
 }
 
-.service-grid {
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Lifecycle Placeholder */
+.lifecycle {
+  margin: 40px auto;
+  padding: 40px;
+  border: 4px solid #009688; /* Teal */
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #009688;
+}
+
+/* Services Section */
+.services {
+  background: #f8f9fa;
+  padding: 80px 0;
+}
+
+.services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 30px;
 }
 
 .service-card {
   background: #fff;
-  border: 1px solid #e5e5e5;
-  padding: 2rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .service-card .icon {
-  margin-bottom: 1rem;
-}
-
-.service-card .icon svg {
-  width: 48px;
-  height: 48px;
-  stroke: #14b8a6; /* teal line icon */
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #009688;
 }
 
 .service-card h3 {
-  font-size: 1.25rem;
-  color: #0a2540;
-  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  margin-bottom: 15px;
 }
 
-.service-card p {
+.service-card ul {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  list-style: disc inside;
+}
+
+/* Our Model */
+.our-model {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.model-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.step {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.step-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #009688;
+  margin-bottom: 10px;
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+
+.step p {
   font-size: 0.95rem;
   color: #555;
   line-height: 1.5;
