@@ -315,27 +315,54 @@ h2 {
   line-height: 1.5;
 }
 
+/* Timeline Base */
 .lifecycle-timeline {
   background: #fff;
   padding: 60px 0;
   text-align: center;
 }
+
+.lifecycle-timeline h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+
+.lifecycle-timeline .subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Timeline Layout */
 .timeline {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
-  margin-top: 30px;
 }
+
 .stage {
   background: #009688;
   color: #fff;
-  padding: 12px 20px;
+  padding: 12px 22px;
   border-radius: 30px;
   font-weight: 600;
   font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
+
+.stage:hover {
+  background: #fbc02d;      /* Golden highlight */
+  color: #0d1b2a;           /* Navy text on hover */
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
 .arrow {
   color: #fbc02d;
   font-size: 1.2rem;
