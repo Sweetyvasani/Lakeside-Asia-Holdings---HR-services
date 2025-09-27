@@ -494,9 +494,9 @@ footer {
 .why-us-highlight h2 {
   font-size: 3.2rem;
   font-weight: 800;
-  color: #FFD700; /* gold */
+  color: #14b8a6; /* ✅ teal */
   margin: 0 0 0.5rem;
-  text-shadow: 0 0 8px rgba(255,215,0,0.4); /* glowing gold */
+  text-shadow: 0 0 8px rgba(20,184,166,0.25); /* glowing teal */
 }
 
 /* stat title */
