@@ -374,6 +374,10 @@ footer {
   color: #444;
   font-size: 1rem;
   margin-bottom: 1.5rem;
+  max-width: 700px;   /* ✅ restrict width */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
 .trust .trust-subtitle {
@@ -381,7 +385,7 @@ footer {
   text-transform: uppercase;
   color: #555;
   font-weight: 600;
-  margin-top: 1rem;
+  margin-top: 2.5rem;  /* ✅ add extra space above */
   margin-bottom: 1rem;
   letter-spacing: 0.5px;
 }
@@ -390,26 +394,19 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 2rem;  /* ✅ more breathing space */
+  margin-top: 1.5rem;
 }
 
-.trust-logos .logo-box {
-  background: #e5e5e5;
-  color: #333;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  min-width: 100px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: background 0.3s ease, transform 0.3s ease;
+.trust-logos .logo-img {
+  height: 50px;        /* ✅ consistent logo height */
+  width: auto;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.trust-logos .logo-box:hover {
-  background: #14b8a6;
-  color: #fff;
+.trust-logos .logo-img:hover {
+  opacity: 1;
   transform: translateY(-3px);
 }
 
