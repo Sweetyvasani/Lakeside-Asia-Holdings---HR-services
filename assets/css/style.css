@@ -476,28 +476,28 @@ body {
   margin-bottom: 40px;
 }
 
-/* layout: steps in a row with connectors */
+/* ---- 4-Step Path Styling ---- */
 .premium-lineflow {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* exactly 4 steps in one row */
+  align-items: start;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .premium-step {
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  flex: 1 1 220px;
-  padding: 24px 18px;
+  padding: 28px 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 280px;
 }
 
 .premium-step:hover {
@@ -505,36 +505,30 @@ body {
   box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
-/* badge */
+/* badge with icon */
 .step-badge {
   background: #14b8a6;
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.1rem;
-  width: 42px;
-  height: 42px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 14px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.step-badge img {
+  width: 28px;
+  height: 28px;
 }
 
-/* step title */
+/* title + desc */
 .premium-step h3 {
-  font-size: 1.15rem; /* slightly larger */
+  font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 10px;
   color: #0d1b2a;
-  transition: color 0.3s ease;
 }
-
-.premium-step:hover h3 {
-  color: #14b8a6;
-}
-
-/* description */
 .premium-step p {
   font-size: 0.9rem;
   color: #555;
@@ -542,26 +536,26 @@ body {
   margin: 0;
 }
 
-/* connector */
+/* fancy curved connectors */
 .premium-connector {
-  width: 50px;
-  height: 4px;
-  background: #14b8a6;
-  align-self: center;
-  margin: 0 10px;
-  border-radius: 2px;
+  position: absolute;
+  top: 60px;
+  height: 40px;
+  width: calc(100% - 60px);
+  left: 80px;
+  right: 80px;
+  border-top: 3px dashed #14b8a6;   /* dashed teal line */
+  z-index: -1;
 }
 
-/* responsive: stack */
-@media (max-width: 768px) {
+/* responsive fallback: stack */
+@media (max-width: 992px) {
   .premium-lineflow {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 24px;
   }
   .premium-connector {
-    width: 4px;
-    height: 30px;
-    margin: 10px auto;
+    display: none; /* hide connectors on mobile */
   }
 }
 
