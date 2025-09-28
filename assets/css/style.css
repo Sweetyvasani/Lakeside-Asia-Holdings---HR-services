@@ -190,60 +190,53 @@ body {
 
 /* ================== SERVICES ================== */
 /* ================== END-TO-END HR GROWTH ENGINE ================== */
-.hr-engine {
-  background: #f8f9fa;
-  padding: 80px 20px;
+/* ===== SERVICES: center + 4-up grid (replace existing .service-grid/.service-card/.sub-services) ===== */
+
+.services, .hr-engine {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.services h2, .hr-engine h2 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.services p, .hr-engine p.subtitle {
+  max-width: 780px;
+  margin: 0 auto 28px;
   text-align: center;
 }
 
-/* Force heading + subtitle to center regardless of any inner container defaults */
-.hr-engine h2,
-.hr-engine .subtitle {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-/* Use a fixed max-width for the grid so 4 cards can align evenly on large screens */
-.engine-grid {
+/* 4-up grid on desktop, responsive below */
+.service-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* exactly 4 columns on large screens */
+  grid-template-columns: repeat(4, 1fr);   /* exactly 4 columns on wide screens */
   gap: 28px;
-  align-items: start;         /* keep cards top-aligned */
-  max-width: 1200px;          /* increase if you want wider cards */
-  margin: 0 auto;             /* center the grid on the page */
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 20px;
+  align-items: start;
   box-sizing: border-box;
 }
 
-/* Card sizing: fill the column, don't allow extra max-width to force wrap */
-.engine-card,
-.service-card {
-  width: 100%;
-  max-width: none;            /* remove restrictive max-width that caused wrapping */
-  box-sizing: border-box;
-}
-
-/* Keep the card visual style and hover lift */
-.engine-card,
+/* each service must be one grid child (.service-card) */
 .service-card {
   background: #fff;
-  padding: 28px 22px;
+  padding: 26px 20px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-align: left;
   transition: transform .28s ease, box-shadow .28s ease;
+  width: 100%;
+  max-width: none; /* important for grid sizing */
 }
 
-/* Hover */
-.engine-card:hover,
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* Ensure icons and text wrap nicely inside the card */
-.engine-card img,
 .service-card img {
   width: 46px;
   height: auto;
@@ -251,21 +244,31 @@ body {
   margin-bottom: 12px;
 }
 
-/* ===== Responsive: change to 2-up and 1-up at breakpoints ===== */
-@media (max-width: 1100px) {
-  .engine-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 820px;
-  }
+/* sub-service pills */
+.sub-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  justify-content: flex-start;
+}
+.sub-services span {
+  background: #e6f6f6;
+  color: #007777;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 13px;
 }
 
-@media (max-width: 620px) {
-  .engine-grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    gap: 18px;
-  }
+/* breakpoints */
+@media (max-width: 1100px) {
+  .service-grid { grid-template-columns: repeat(2, 1fr); max-width: 860px; }
 }
+@media (max-width: 620px) {
+  .service-grid { grid-template-columns: 1fr; max-width: 420px; gap:18px; padding:0 12px; }
+}
+
 
 
 /* ================== CIRCULAR HR LIFECYCLE WHEEL ================== */
@@ -832,5 +835,6 @@ footer {
   width: 46px;
   margin-bottom: 12px;
 }
+
 
 
