@@ -208,33 +208,29 @@ body {
   text-align: center;
 }
 
-/* ===== Services: left-start 4-up grid but center card content ===== */
+/* ----- Services: centered content + tighter grid so 4 cards fit ----- */
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 equal columns */
-  gap: 18px;                /* slightly smaller gap so 4th fits */
-  max-width: 1200px;        /* container width */
-  width: 100%;
-  margin: 0 auto;           /* center container on page */
-  padding: 0 16px;
-  box-sizing: border-box;
-  justify-content: start;   /* align grid start from the left inside the container */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;               /* smaller gap to help fit 4th card */
+  max-width: 1360px;       /* widen container so grid has space */
+  margin: 0 auto;
+  padding: 0 14px;
   align-items: start;
+  box-sizing: border-box;
+  justify-content: start;  /* start from left inside the container */
 }
 
-/* card: center all internal content */
+/* center content inside each card */
 .service-card {
-  background: #fff;
-  padding: 20px;            /* reduce padding slightly to save horizontal space */
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  text-align: center;       /* CENTER headings, icons, text & pills inside card */
-  transition: transform .28s ease, box-shadow .28s ease;
-  width: 100%;
-  max-width: none;          /* allow grid column to control width */
   display: flex;
   flex-direction: column;
-  align-items: center;      /* explicitly center children vertically */
+  align-items: center;     /* centers icon, heading, pills */
+  text-align: center;
+  padding: 16px;           /* smaller padding to save width */
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 
 .service-card:hover {
@@ -242,21 +238,18 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* icon centered */
+/* icon size - reduce to help fit */
 .service-card img {
-  width: 56px;              /* slightly larger icon size; adjust if needed */
+  width: 40px;
   height: auto;
+  margin-bottom: 10px;
   display: block;
-  margin: 0 auto 12px;      /* center the icon inside card */
 }
 
-/* heading centered (inherited from .service-card but keep explicit) */
+/* heading centered (explicit) */
 .service-card h3 {
-  margin: 6px 0 10px;
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #0d1b2a;
-  text-align: center;
+  margin: 6px 0 8px;
+  font-size: 1.05rem;
 }
 
 /* description text — centered */
@@ -267,40 +260,31 @@ body {
   max-width: 100%;
 }
 
-/* sub-service pills: center inside card */
+/* sub-service pills centered */
 .sub-services {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;  /* CENTER the pills */
-  margin-top: 10px;
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:10px;
 }
 .sub-services span {
-  background: #e6f6f6;
-  color: #007777;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 13px;
+  padding:6px 10px;
+  border-radius:18px;
+  background:#e6f6f6;
+  color:#007777;
+  font-weight:600;
+  font-size:13px;
 }
 
-/* ===== responsive behavior ===== */
+/* responsive */
 @media (max-width: 1100px) {
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 860px;
-    gap: 18px;
-  }
+  .service-grid { grid-template-columns: repeat(2, 1fr); max-width: 920px; }
 }
-
 @media (max-width: 620px) {
-  .service-grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    gap: 14px;
-    padding: 0 12px;
-  }
-
+  .service-grid { grid-template-columns: 1fr; gap:14px; padding:0 12px; }
+  .service-card img { width:48px; }
+}
   .service-card img { width: 48px; }
   .service-card { padding: 18px; }
 }
