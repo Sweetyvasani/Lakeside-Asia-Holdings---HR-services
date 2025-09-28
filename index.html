@@ -358,8 +358,49 @@
   });
 </script>
 
+    <script>
+document.addEventListener('DOMContentLoaded', function(){
+  const mapping = {
+    "Talent Acquisition": ["Workforce Planning","Recruitment Process","Employer Branding"],
+    "Automated Compliance": ["Payroll & Compliance","HR Policies & SOPs","Onboarding & Documentation"],
+    "Employee Engagement": ["Employee Experience","Learning & Development","Rewards & Recognition"],
+    "Performance & Growth": ["Performance Management","Career Development","Succession Planning"]
+  };
+
+  Object.keys(mapping).forEach(title => {
+    // find heading exactly matching the title
+    const heading = Array.from(document.querySelectorAll('h1,h2,h3,h4')).find(el => el.textContent.trim() === title);
+    if (!heading) return;
+
+    // find the description paragraph after the heading (skip images)
+    let sibling = heading.nextElementSibling;
+    while (sibling && ['IMG','FIGURE','BR'].includes(sibling.tagName)) sibling = sibling.nextElementSibling;
+
+    // if a .sub-services already exists, skip
+    if (sibling && sibling.nextElementSibling && sibling.nextElementSibling.classList && sibling.nextElementSibling.classList.contains('sub-services')) return;
+
+    // create container
+    const container = document.createElement('div');
+    container.className = 'sub-services';
+    mapping[title].forEach(item => {
+      const sp = document.createElement('span');
+      sp.textContent = item;
+      container.appendChild(sp);
+    });
+
+    if (sibling && sibling.parentNode) {
+      sibling.parentNode.insertBefore(container, sibling.nextSibling);
+    } else {
+      heading.parentNode.insertBefore(container, heading.nextSibling);
+    }
+  });
+});
+</script>
+
+
   </body>
 </html>
+
 
 
 
