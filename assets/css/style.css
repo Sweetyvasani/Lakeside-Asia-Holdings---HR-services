@@ -493,103 +493,243 @@ h2 {
 }
 
 /* ================== MODEL ================== */
-.our-model-flow {
-  background: #fff;
+Option 1 (Step Cards with Gradient Numbers)
+
+.our-model-cards {
+  background: #f8f9fa;
   padding: 80px 0;
   text-align: center;
 }
 
-.our-model-flow h2 {
+.our-model-cards h2 {
   font-size: 2rem;
   font-weight: 700;
   color: #0d1b2a;
   margin-bottom: 10px;
 }
 
-.our-model-flow .subtitle {
+.our-model-cards .subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.model-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.model-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.model-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.step-num {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background: linear-gradient(135deg, #009688, #00bfa5);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.card-content i {
+  width: 28px;
+  height: 28px;
+  color: #009688;
+  margin-bottom: 10px;
+}
+
+.card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* ================== MODEL ================== */
+Option 2: Zig-Zag Flow (Vertical Journey Roadmap)
+
+.our-model-zigzag {
+  background: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.our-model-zigzag h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+
+.our-model-zigzag .subtitle {
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 60px;
 }
 
-.flow-steps {
-  display: flex;
-  justify-content: space-between;
+.zigzag-steps {
   position: relative;
-  margin-bottom: 50px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.flow-step {
-  flex: 1;
+.zigzag-steps::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: linear-gradient(#009688, #fbc02d);
+}
+
+.zigzag-step {
+  display: flex;
+  justify-content: flex-start;
+  margin: 40px 0;
+  width: 100%;
+}
+
+.zigzag-step.right {
+  justify-content: flex-end;
+}
+
+.zigzag-content {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  width: 40%;
   text-align: center;
-  padding: 0 20px;
-  z-index: 1;
-}
-
-.step-badge {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 20px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #009688, #00bfa5);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
-  position: relative;
 }
 
-.step-badge i {
-  width: 26px;
-  height: 26px;
-  margin-top: 6px;
-  color: #fff;
+.zigzag-content:hover {
+  transform: translateY(-5px);
+  background: #fffbea;
 }
 
-.step-number {
+.step-num {
   font-size: 1rem;
   font-weight: 700;
+  color: #009688;
+  margin-bottom: 8px;
 }
 
-.flow-step h3 {
+.zigzag-content i {
+  width: 26px;
+  height: 26px;
+  margin-bottom: 8px;
+  color: #009688;
+}
+
+.zigzag-content h3 {
   font-size: 1.1rem;
   font-weight: 600;
   color: #0d1b2a;
   margin-bottom: 8px;
 }
 
-.flow-step p {
+.zigzag-content p {
   font-size: 0.95rem;
   color: #555;
   line-height: 1.5;
 }
 
-/* Hover effect */
-.flow-step:hover .step-badge {
-  background: linear-gradient(135deg, #fbc02d, #ffeb3b);
+/* ================== MODEL ================== */
+Option 3: Gradient Panels (Bold Horizontal Strips)
+
+.our-model-panels {
+  background: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.our-model-panels h2 {
+  font-size: 2rem;
+  font-weight: 700;
   color: #0d1b2a;
-  box-shadow: 0 6px 20px rgba(251,192,45,0.4);
-  transform: scale(1.05);
+  margin-bottom: 10px;
 }
 
-/* Progress Line */
-.progress-line {
-  position: absolute;
-  top: 115px; /* aligns through badges */
-  left: 12%;
-  right: 12%;
-  height: 4px;
-  background: linear-gradient(90deg, #009688, #fbc02d);
-  z-index: 0;
-  border-radius: 2px;
+.our-model-panels .subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 50px;
 }
 
+.panel-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 30px;
+}
 
+.panel-step {
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.panel-step.teal {
+  background: linear-gradient(135deg, #009688, #00bfa5);
+}
+
+.panel-step.navy {
+  background: linear-gradient(135deg, #0d1b2a, #1c3d5a);
+}
+
+.panel-step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.step-num {
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.panel-step i {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 10px;
+}
+
+.panel-step h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.panel-step p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
 
 
 /* ================== RESOURCES & CONTACT ================== */
