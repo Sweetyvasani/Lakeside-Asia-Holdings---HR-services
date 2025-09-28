@@ -494,150 +494,108 @@ h2 {
 
 /* ================== MODEL Option 1: Horizontal Line Flow (Process Roadmap) ================== */
 /* =======================================================
-   1. General Section and Header Styling
+   1. General Section (Adding Depth)
    ======================================================= */
 .our-model-premium {
-    padding: 80px 0;
-    text-align: center; /* Center main heading and subtitle */
-    background-color: #ffffff; /* Ensure a clean background */
-}
-
-.our-model-premium h2 {
-    /* Styles for "Your End-to-End HR Growth Engine" */
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #204060; /* Deep Corporate Blue */
-}
-
-.our-model-premium .subtitle {
-    /* Styles for "From discovery to optimization, a seamless journey." */
-    font-size: 1.15rem;
-    color: #6c757d;
-    margin-bottom: 50px;
+    padding: 100px 0; /* More vertical space */
+    position: relative;
+    /* Adding subtle background texture (adjust or remove if needed) */
+    background-color: #f7f7f7; /* Very light grey */
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23e0e0e0" opacity="0.5" /></svg>');
+    background-size: 20px 20px;
 }
 
 /* =======================================================
-   2. Horizontal Flow Container (Desktop)
+   2. Horizontal Flow Container
    ======================================================= */
 .premium-lineflow {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Aligns content to the top */
-    margin: 0 auto;
-    padding: 20px 0;
-    max-width: 1100px; /* Constrain width for better layout control */
+    /* Keep existing Flexbox properties */
+    align-items: center; /* Center items vertically along the line */
 }
 
 /* =======================================================
-   3. Individual Step Styling
+   3. Individual Step Styling (Focus on Hover/Contrast)
    ======================================================= */
 .premium-step {
-    flex: 1; /* Ensures steps take up equal horizontal space */
-    padding: 0 15px;
-    position: relative;
-    text-align: center;
+    transition: all 0.3s ease; /* Enable smooth transitions */
+    padding: 20px 15px;
+    border-radius: 8px;
+    cursor: default; /* Indicate it's an interactive area */
 }
 
-/* Styling for the Number Badge (The Circle) */
+/* Hover effect on the entire step block */
+.premium-step:hover {
+    background-color: #eaf8f6; /* Very light teal highlight */
+    transform: translateY(-5px); /* Lift the step slightly */
+    box-shadow: 0 10px 30px rgba(32, 64, 96, 0.1);
+}
+
+/* Styling for the Number Badge (Deep Blue & Shadow) */
 .step-badge {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    border-radius: 50%;
-    background-color: #204060; /* Dark Corporate Blue */
-    color: #FFFFFF;
-    font-size: 26px;
-    font-weight: 700;
-    margin: 0 auto 20px;
-    box-shadow: 0 4px 10px rgba(32, 64, 96, 0.2);
-    z-index: 10; /* Ensure the badge sits on top of the line */
-    position: relative;
+    /* Existing sizes remain */
+    background-color: #204060; /* Deep Blue */
+    box-shadow: 0 4px 10px rgba(32, 64, 96, 0.3);
+    transition: all 0.3s ease;
+    /* Adding a ring effect for visual flair */
+    border: 4px solid transparent;
 }
 
-/* Styling for the Lucide Icons */
+/* Badge hover: The ring lights up */
+.premium-step:hover .step-badge {
+    background-color: #204060;
+    border-color: #20C997; /* Teal Ring */
+}
+
+
+/* Styling for the Lucide Icons (Large & Positioned) */
 .premium-step i[data-lucide] {
-    display: block; /* Ensures icon is on its own line */
-    color: #20C997; /* Teal/Aqua Accent Color */
-    font-size: 36px;
-    margin-bottom: 10px;
+    display: block;
+    color: #495057; /* Subdued grey/blue color when static */
+    font-size: 50px; /* Much larger icon */
+    margin: 0 auto 10px;
+    transition: color 0.3s ease;
+    height: 50px; /* Ensure consistent spacing */
 }
 
-/* Step Title Styling */
+/* Icon hover: Change color to bright teal */
+.premium-step:hover i[data-lucide] {
+    color: #20C997;
+}
+
+/* Step Title Styling (Contrast) */
 .premium-step h3 {
-    font-weight: 600;
-    color: #343a40;
-    font-size: 1.4rem;
-    margin-bottom: 10px;
+    color: #204060; /* Deep blue title when static */
+    font-weight: 700; /* Extra bold */
+    transition: color 0.3s ease;
 }
 
-/* Step Description Styling */
-.premium-step p {
-    color: #495057;
-    font-size: 1rem;
+/* Title hover: Change color to bright teal */
+.premium-step:hover h3 {
+    color: #20C997;
 }
 
 /* =======================================================
-   4. Connector Line Styling
+   4. Connector Line (Solid & Teal)
    ======================================================= */
 .premium-connector {
-    /* Position the line between the steps */
-    flex-shrink: 0;
-    width: 60px; /* Adjust this to control spacing between steps */
-    height: 2px;
-    background: transparent;
-    border-bottom: 2px dashed #cccccc; /* Dashed Grey Line */
-    margin-top: 35px; /* Aligns line horizontally with the center of the badge */
+    height: 4px; /* Make the line thicker */
+    width: 60px;
+    background: #20C997; /* Solid Teal Color */
+    border-bottom: none;
+    margin-top: 50px; /* Adjust margin to align with the center of the badge */
 }
-
-/* Hide the last connector, as there's no step after it */
-.premium-lineflow .premium-step:last-child + .premium-connector {
-    display: none;
-}
-
 
 /* =======================================================
-   5. Mobile Responsiveness (Vertical Flow)
+   5. Mobile Responsiveness (Ensure contrast/readability)
    ======================================================= */
+/* Keep existing mobile media queries but adjust margins if needed */
 @media (max-width: 992px) {
-    .premium-lineflow {
-        flex-direction: column; /* Stacks steps vertically */
-        align-items: stretch; /* Stretches items to full width */
-    }
-
-    .premium-step {
-        display: flex;
-        text-align: left;
-        align-items: flex-start;
-        padding: 15px 0;
-    }
-
-    .step-badge {
-        margin: 0 20px 0 0;
-        flex-shrink: 0; /* Prevents badge from shrinking */
-    }
-    
-    .premium-step i[data-lucide] {
-        display: none; /* Hide icons on mobile for cleaner look */
-    }
-
-    /* Vertical Connector Line (using border on the step container) */
-    .premium-connector {
-        display: none; /* Hide horizontal connector */
-    }
-
-    .premium-step:not(:last-child) {
-        border-left: 2px dashed #cccccc; /* Use border for vertical line */
-        padding-bottom: 40px; /* Add space between stacked steps */
-        margin-left: 35px; /* Aligns line with the center of the badge */
-        padding-left: 40px; /* Pushes content away from the vertical line */
-    }
-    
-    /* Reposition badge to cover the start of the vertical line */
-    .premium-step:not(:last-child) .step-badge {
-        position: absolute;
-        left: 0;
-        top: 15px;
+    /* Remove hover effects on mobile for performance/simplicity */
+    .premium-step:hover {
+        background-color: transparent;
+        transform: none;
+        box-shadow: none;
     }
 }
 
