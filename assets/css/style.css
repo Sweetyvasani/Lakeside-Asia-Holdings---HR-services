@@ -208,26 +208,27 @@ body {
   text-align: center;
 }
 
-/* ----- Services: centered content + tighter grid so 4 cards fit ----- */
+/* ----- Fix: center pills + ensure 4 cards on one line ----- */
+
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;               /* smaller gap to help fit 4th card */
-  max-width: 1360px;       /* widen container so grid has space */
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 equal columns */
+  gap: 10px;                  /* smaller gap to help fit 4th card */
+  max-width: 1360px;          /* widen container so grid has space */
   margin: 0 auto;
-  padding: 0 14px;
+  padding: 0 12px;
   align-items: start;
   box-sizing: border-box;
-  justify-content: start;  /* start from left inside the container */
+  justify-content: start;     /* grid columns start at left inside container */
 }
 
-/* center content inside each card */
+/* center the card contents and reduce horizontal padding (to save width) */
 .service-card {
   display: flex;
   flex-direction: column;
-  align-items: center;     /* centers icon, heading, pills */
+  align-items: center;        /* centers icon, heading & pills */
   text-align: center;
-  padding: 16px;           /* smaller padding to save width */
+  padding: 14px;              /* smaller padding so 4 cards more likely to fit */
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
@@ -238,15 +239,15 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* icon size - reduce to help fit */
+/* icon: slightly smaller to save width */
 .service-card img {
   width: 40px;
   height: auto;
-  margin-bottom: 10px;
   display: block;
+  margin-bottom: 10px;
 }
 
-/* heading centered (explicit) */
+/* heading */
 .service-card h3 {
   margin: 6px 0 8px;
   font-size: 1.05rem;
@@ -260,33 +261,34 @@ body {
   max-width: 100%;
 }
 
-/* sub-service pills centered */
+/* sub-service pills: CENTER them */
 .sub-services {
-  display:flex;
-  justify-content:center;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-top:10px;
-}
-.sub-services span {
-  padding:6px 10px;
-  border-radius:18px;
-  background:#e6f6f6;
-  color:#007777;
-  font-weight:600;
-  font-size:13px;
+  display: flex;
+  justify-content: center;    /* <--- centers the pills horizontally */
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
-/* responsive */
+/* pill appearance */
+.sub-services span {
+  padding: 6px 10px;
+  border-radius: 18px;
+  background: #e6f6f6;
+  color: #007777;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-block;
+}
+
+/* responsive fallbacks */
 @media (max-width: 1100px) {
-  .service-grid { grid-template-columns: repeat(2, 1fr); max-width: 920px; }
+  .service-grid { grid-template-columns: repeat(2, 1fr); max-width: 920px; gap: 12px; }
 }
 @media (max-width: 620px) {
-  .service-grid { grid-template-columns: 1fr; gap:14px; padding:0 12px; }
-  .service-card img { width:48px; }
-}
-  .service-card img { width: 48px; }
-  .service-card { padding: 18px; }
+  .service-grid { grid-template-columns: 1fr; gap: 12px; padding: 0 12px; }
+  .service-card img { width: 48px; } /* slightly larger on small screens */
 }
 
 
