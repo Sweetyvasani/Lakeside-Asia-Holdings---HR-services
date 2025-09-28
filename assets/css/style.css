@@ -84,25 +84,38 @@ body {
   padding-top: 70px; /* adjust depending on navbar height */
 }
 
-/* ================== HERO  Option 1 ================== */
-/* Color Palette: Navy Blue (#204060) and Teal Accent (#20C997) */
-.hero-tech-look {
-    background-color: #204060; 
-    color: #ffffff;
+/* ================== HERO  Option 2 ================== */
+.hero-people-focus {
+    /* Use a high-quality stock image related to collaboration/meetings */
+    background-image: url('path/to/collaboration-image.jpg'); 
+    background-size: cover;
+    background-position: center;
     padding: 120px 0;
     position: relative;
-    overflow: hidden; /* Contains the subtle background patterns */
-    
-    /* Adding Subtle Background Texture (Tech Lines/Dots) */
-    background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
-    background-size: 20px 20px;
 }
 
-.hero-tech-look .headline {
-    font-size: 3.5rem;
-    font-weight: 800;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Text shadow to make it pop */
-    margin-bottom: 20px;
+/* Dark Overlay to Ensure Text Readability */
+.hero-people-focus::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(32, 64, 96, 0.85); /* 85% opacity Navy Blue */
+    z-index: 1;
+}
+
+/* Push Content to the front of the overlay */
+.hero-people-focus .container {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.hero-people-focus .headline {
+    /* Same font styles as Option 1 */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Stronger shadow for image background */
 }
 
 /* Dual CTA Button Styling */
@@ -139,6 +152,7 @@ body {
 .cta-btn.btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.1); 
 }
+
 
 
 /* ================== SERVICES ================== */
