@@ -493,102 +493,108 @@ h2 {
 }
 
 /* ================== MODEL Option 1: Horizontal Line Flow (Process Roadmap) ================== */
-.our-model-lineflow {
-  background: #fff;
+.our-model-premium {
+  background: #f9fafc;
   padding: 80px 0;
   text-align: center;
 }
 
-.our-model-lineflow h2 {
+.our-model-premium h2 {
   font-size: 2rem;
   font-weight: 700;
   color: #0d1b2a;
   margin-bottom: 10px;
 }
 
-.our-model-lineflow .subtitle {
+.our-model-premium .subtitle {
   font-size: 1.1rem;
   color: #555;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
-.lineflow {
+.premium-lineflow {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 25px;
-  margin-top: 40px;
+  gap: 20px;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
-.line-step {
-  text-align: center;
+.premium-step {
   flex: 1;
-  max-width: 240px;
-  transition: transform 0.3s ease, color 0.3s ease;
+  max-width: 220px;
+  background: linear-gradient(180deg, #ffffff, #f1fdfb);
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.line-step i {
-  width: 34px; height: 34px;
-  color: #009688;
-  margin-bottom: 8px;
-  transition: color 0.3s ease;
+.premium-step:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(180deg, #fffde7, #fff9c4);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-.line-step .num {
-  display: block;
+.step-badge {
+  background: linear-gradient(135deg, #009688, #00bfa5);
+  color: #fff;
   font-weight: 700;
   font-size: 1rem;
-  margin: 6px 0;
-  color: #fbc02d;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 12px;
 }
 
-.line-step h3 {
+.premium-step i {
+  width: 28px; height: 28px;
+  color: #009688;
+  margin-bottom: 10px;
+}
+
+.premium-step h3 {
   font-size: 1.1rem;
   font-weight: 600;
   color: #0d1b2a;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
-.line-step p {
+.premium-step p {
   font-size: 0.9rem;
   color: #555;
   line-height: 1.5;
 }
 
-.line-step:hover {
-  transform: translateY(-6px);
-}
-.line-step:hover i { color: #fbc02d; }
-
-.connector {
-  width: 50px;
-  height: 2px;
-  background: linear-gradient(90deg, #009688, #fbc02d);
+/* Connectors */
+.premium-connector {
+  flex: 0 0 50px;
+  height: 3px;
   align-self: center;
+  background: linear-gradient(90deg, #009688, #fbc02d);
+  border-radius: 2px;
+  animation: drawLine 1s forwards;
+}
+
+@keyframes drawLine {
+  from { width: 0; }
+  to { width: 50px; }
 }
 
 @media (max-width: 768px) {
-  .lineflow { flex-direction: column; align-items: center; }
-  .connector {
-    width: 2px;
-    height: 40px;
+  .premium-lineflow {
+    flex-direction: column;
+    align-items: center;
+  }
+  .premium-connector {
+    width: 3px; height: 40px;
     background: linear-gradient(180deg, #009688, #fbc02d);
   }
 }
 
-/* Initial state (hidden) */
-.animate-step {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-/* Visible state (on scroll) */
-.animate-step.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* ================== RESOURCES & CONTACT ================== */
 .resources, .contact-form {
