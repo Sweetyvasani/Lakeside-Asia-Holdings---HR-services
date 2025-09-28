@@ -456,115 +456,115 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* ================== MODEL Option 1: Horizontal Line Flow (Process Roadmap) ================== */
-/* =======================================================
-   1. General Section (Adding Depth)
-   ======================================================= */
+/* ================== 4-STEP PATH TO HR EXCELLENCE ================== */
 .our-model-premium {
-    padding: 100px 0; /* More vertical space */
-    position: relative;
-    /* Adding subtle background texture (adjust or remove if needed) */
-    background-color: #f7f7f7; /* Very light grey */
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
-                      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23e0e0e0" opacity="0.5" /></svg>');
-    background-size: 20px 20px;
+  text-align: center;
+  padding: 80px 20px;
+  background: #f8f9fa;
 }
 
-/* =======================================================
-   2. Horizontal Flow Container
-   ======================================================= */
+.our-model-premium h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0a2540;
+}
+
+.our-model-premium p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* layout: steps in a row with connectors */
 .premium-lineflow {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 18px;
+  align-items: stretch;
   flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* =======================================================
-   3. Individual Step Styling (Focus on Hover/Contrast)
-   ======================================================= */
 .premium-step {
-    transition: all 0.3s ease; /* Enable smooth transitions */
-    padding: 20px 15px;
-    border-radius: 8px;
-    cursor: default; /* Indicate it's an interactive area */
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  flex: 1 1 220px;
+  padding: 24px 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Hover effect on the entire step block */
 .premium-step:hover {
-    background-color: #eaf8f6; /* Very light teal highlight */
-    transform: translateY(-5px); /* Lift the step slightly */
-    box-shadow: 0 10px 30px rgba(32, 64, 96, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
-/* Styling for the Number Badge (Deep Blue & Shadow) */
+/* badge */
 .step-badge {
-    /* Existing sizes remain */
-    background-color: #204060; /* Deep Blue */
-    box-shadow: 0 4px 10px rgba(32, 64, 96, 0.3);
-    transition: all 0.3s ease;
-    /* Adding a ring effect for visual flair */
-    border: 4px solid transparent;
+  background: #14b8a6;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Badge hover: The ring lights up */
-.premium-step:hover .step-badge {
-    background-color: #204060;
-    border-color: #20C997; /* Teal Ring */
-}
-
-
-/* Styling for the Lucide Icons (Large & Positioned) */
-.premium-step i[data-lucide] {
-    display: block;
-    color: #495057; /* Subdued grey/blue color when static */
-    font-size: 50px; /* Much larger icon */
-    margin: 0 auto 10px;
-    transition: color 0.3s ease;
-    height: 50px; /* Ensure consistent spacing */
-}
-
-/* Icon hover: Change color to bright teal */
-.premium-step:hover i[data-lucide] {
-    color: #20C997;
-}
-
-/* Step Title Styling (Contrast) */
+/* step title */
 .premium-step h3 {
-    color: #204060; /* Deep blue title when static */
-    font-weight: 700; /* Extra bold */
-    transition: color 0.3s ease;
+  font-size: 1.15rem; /* slightly larger */
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0d1b2a;
+  transition: color 0.3s ease;
 }
 
-/* Title hover: Change color to bright teal */
 .premium-step:hover h3 {
-    color: #20C997;
+  color: #14b8a6;
 }
 
-/* =======================================================
-   4. Connector Line (Solid & Teal)
-   ======================================================= */
+/* description */
+.premium-step p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* connector */
 .premium-connector {
-    height: 4px; /* Make the line thicker */
-    width: 60px;
-    background: #20C997; /* Solid Teal Color */
-    border-bottom: none;
-    margin-top: 50px; /* Adjust margin to align with the center of the badge */
+  width: 50px;
+  height: 4px;
+  background: #14b8a6;
+  align-self: center;
+  margin: 0 10px;
+  border-radius: 2px;
 }
 
-/* =======================================================
-   5. Mobile Responsiveness (Ensure contrast/readability)
-   ======================================================= */
-/* Keep existing mobile media queries but adjust margins if needed */
-@media (max-width: 992px) {
-    /* Remove hover effects on mobile for performance/simplicity */
-    .premium-step:hover {
-        background-color: transparent;
-        transform: none;
-        box-shadow: none;
-    }
+/* responsive: stack */
+@media (max-width: 768px) {
+  .premium-lineflow {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .premium-connector {
+    width: 4px;
+    height: 30px;
+    margin: 10px auto;
+  }
 }
+
 
 /* ================== RESOURCES & CONTACT ================== */
 .resources, .contact-form {
