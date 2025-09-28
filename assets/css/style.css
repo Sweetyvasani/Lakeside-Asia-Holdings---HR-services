@@ -222,16 +222,17 @@ body {
   justify-content: start;     /* grid columns start at left inside container */
 }
 
-/* center the card contents and reduce horizontal padding (to save width) */
+/* ---- Service Card Consistency & Typography ---- */
 .service-card {
   display: flex;
   flex-direction: column;
-  align-items: center;        /* centers icon, heading & pills */
+  align-items: center;      /* center everything inside */
   text-align: center;
-  padding: 14px;              /* smaller padding so 4 cards more likely to fit */
-  border-radius: 12px;
+  padding: 20px;
+  border-radius: 14px;
   background: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  min-height: 320px;        /* ensures all cards same height */
 }
 
 .service-card:hover {
@@ -239,47 +240,48 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* icon: slightly smaller to save width */
+/* icons: slightly larger */
 .service-card img {
-  width: 40px;
+  width: 54px;              /* increased from 40–46px */
   height: auto;
+  margin-bottom: 12px;
   display: block;
-  margin-bottom: 10px;
 }
 
-/* heading */
+/* headings: +2px */
 .service-card h3 {
-  margin: 6px 0 8px;
-  font-size: 1.05rem;
-}
-
-/* description text — centered */
-.service-card p {
-  margin: 0 0 12px;
-  color: #555;
+  font-size: 1.25rem;       /* was ~1.05rem → +2 points */
+  font-weight: 600;
+  margin: 8px 0 12px;
+  color: #0d1b2a;
   text-align: center;
-  max-width: 100%;
 }
 
-/* sub-service pills: CENTER them */
+/* description: -1 point */
+.service-card p {
+  font-size: 0.9rem;        /* reduced from 1rem to 0.9rem */
+  color: #555;
+  line-height: 1.5;
+  margin: 0 0 12px;
+  text-align: center;
+  max-width: 95%;
+}
+
+/* pills: keep centered & consistent */
 .sub-services {
   display: flex;
-  justify-content: center;    /* <--- centers the pills horizontally */
-  align-items: center;
-  gap: 8px;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 10px;
+  gap: 8px;
+  margin-top: auto;         /* pushes pills to bottom for alignment */
 }
-
-/* pill appearance */
 .sub-services span {
-  padding: 6px 10px;
-  border-radius: 18px;
   background: #e6f6f6;
   color: #007777;
+  padding: 6px 12px;
+  border-radius: 20px;
   font-weight: 600;
   font-size: 13px;
-  display: inline-block;
 }
 
 /* responsive fallbacks */
