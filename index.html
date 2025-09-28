@@ -371,8 +371,30 @@
   });
 </script>
 
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const steps = document.querySelectorAll(".animate-step");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add("visible");
+            }, index * 200); // stagger by 200ms per step
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    steps.forEach(step => observer.observe(step));
+  });
+</script>
+
   </body>
 </html>
+
 
 
 
