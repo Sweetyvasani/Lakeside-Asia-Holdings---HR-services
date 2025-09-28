@@ -577,6 +577,18 @@ h2 {
   }
 }
 
+/* Initial state (hidden) */
+.animate-step {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Visible state (on scroll) */
+.animate-step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ================== RESOURCES & CONTACT ================== */
 .resources, .contact-form {
