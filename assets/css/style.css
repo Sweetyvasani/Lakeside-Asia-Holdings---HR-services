@@ -757,28 +757,43 @@ footer {
   to { width: 100%; }
 }
 
-/* ================== SUB-SERVICES PILL STYLE ================== */
+/* SUB-SERVICES PILL STYLE (add to your main CSS) */
+.sub-services { margin-top: 12px; }
+
+/* high-specificity selector so it overrides other rules on the page */
+.container .sub-services,
+.services .sub-services,
 .sub-services {
   margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
 }
 
 .sub-services span {
   display: inline-block;
-  background: #e6f6f6;   /* light teal background */
-  color: #007777;        /* teal text */
+  background: #e6f6f6;       /* light teal background */
+  color: #007777;            /* teal text */
   font-size: 13px;
   font-weight: 600;
   padding: 6px 12px;
-  margin: 5px 5px 0 0;
-  border-radius: 20px;   /* rounded pill */
-  transition: all 0.3s ease;
+  border-radius: 20px;
+  transition: transform .18s ease, background .18s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
+/* small hover lift */
 .sub-services span:hover {
-  background: #d0f2f2;   /* slightly darker teal on hover */
+  background: #d0f2f2;
   transform: translateY(-2px);
 }
 
+/* optional: constrain card widths so pills wrap nicely */
+.service-card, .engine-card, .card, .card * {
+  box-sizing: border-box;
+}
+.service-card, .engine-card { max-width: 320px; }
 
 
 
