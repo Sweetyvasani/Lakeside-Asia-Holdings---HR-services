@@ -134,47 +134,57 @@
   <h2>Your End-to-End HR Growth Engine</h2>
   <p>We provide modular services that scale with you. Whether you need to fix a specific problem or build an entire HR framework from the ground up, we have you covered.</p>
   
-  <div class="service-grid">
-   <!-- Talent Acquisition -->
-<img src="images/talent.svg" alt="Talent Acquisition">
-<h3>Talent Acquisition</h3>
-<p>Go from manual hiring to a data-driven talent pipeline with AI-powered sourcing and analytics.</p>
-<div class="sub-services">
-  <span>Workforce Planning</span>
-  <span>Recruitment Process</span>
-  <span>Employer Branding</span>
-</div>
+ <div class="service-grid">
 
-<!-- Automated Compliance -->
-<img src="images/compliance.svg" alt="Automated Compliance">
-<h3>Automated Compliance</h3>
-<p>Eliminate errors and overhead with streamlined payroll, onboarding, and policies for India &amp; GCC.</p>
-<div class="sub-services">
-  <span>Payroll &amp; Compliance</span>
-  <span>HR Policies &amp; SOPs</span>
-  <span>Onboarding &amp; Documentation</span>
-</div>
+  <!-- Talent Acquisition -->
+  <div class="service-card">
+    <img src="assets/images/talent.svg" alt="Talent Acquisition">
+    <h3>Talent Acquisition</h3>
+    <p>Go from manual hiring to a data-driven talent pipeline with AI-powered sourcing and analytics.</p>
+    <div class="sub-services">
+      <span>Workforce Planning</span>
+      <span>Recruitment Process</span>
+      <span>Employer Branding</span>
+    </div>
+  </div>
 
-<!-- Employee Engagement -->
-<img src="images/engagement.svg" alt="Employee Engagement">
-<h3>Employee Engagement</h3>
-<p>Measure engagement and analyze feedback to create a culture that reduces attrition and boosts productivity.</p>
-<div class="sub-services">
-  <span>Employee Experience</span>
-  <span>Learning &amp; Development</span>
-  <span>Rewards &amp; Recognition</span>
-</div>
+  <!-- Automated Compliance -->
+  <div class="service-card">
+    <img src="assets/images/compliance.svg" alt="Automated Compliance">
+    <h3>Automated Compliance</h3>
+    <p>Eliminate errors and overhead with streamlined payroll, onboarding, and policies for India &amp; GCC.</p>
+    <div class="sub-services">
+      <span>Payroll &amp; Compliance</span>
+      <span>HR Policies &amp; SOPs</span>
+      <span>Onboarding &amp; Documentation</span>
+    </div>
+  </div>
 
-<!-- Performance & Growth -->
-<img src="images/performance.svg" alt="Performance & Growth">
-<h3>Performance & Growth</h3>
-<p>Link employee performance directly to business outcomes with transparent, data-driven systems.</p>
-<div class="sub-services">
-  <span>Performance Management</span>
-  <span>Career Development</span>
-  <span>Succession Planning</span>
-</div>
+  <!-- Employee Engagement -->
+  <div class="service-card">
+    <img src="assets/images/engagement.svg" alt="Employee Engagement">
+    <h3>Employee Engagement</h3>
+    <p>Measure engagement and analyze feedback to create a culture that reduces attrition and boosts productivity.</p>
+    <div class="sub-services">
+      <span>Employee Experience</span>
+      <span>Learning &amp; Development</span>
+      <span>Rewards &amp; Recognition</span>
+    </div>
+  </div>
 
+  <!-- Performance & Growth -->
+  <div class="service-card">
+    <img src="assets/images/performance.svg" alt="Performance & Growth">
+    <h3>Performance & Growth</h3>
+    <p>Link employee performance directly to business outcomes with transparent, data-driven systems.</p>
+    <div class="sub-services">
+      <span>Performance Management</span>
+      <span>Career Development</span>
+      <span>Succession Planning</span>
+    </div>
+  </div>
+
+</div>
 
 
 <!-- ================= OUR MODEL SECTION - Option 1: Horizontal Line Flow (Process Roadmap) ================= -->
@@ -358,48 +368,10 @@
   });
 </script>
 
-    <script>
-document.addEventListener('DOMContentLoaded', function(){
-  const mapping = {
-    "Talent Acquisition": ["Workforce Planning","Recruitment Process","Employer Branding"],
-    "Automated Compliance": ["Payroll & Compliance","HR Policies & SOPs","Onboarding & Documentation"],
-    "Employee Engagement": ["Employee Experience","Learning & Development","Rewards & Recognition"],
-    "Performance & Growth": ["Performance Management","Career Development","Succession Planning"]
-  };
-
-  Object.keys(mapping).forEach(title => {
-    // find heading exactly matching the title
-    const heading = Array.from(document.querySelectorAll('h1,h2,h3,h4')).find(el => el.textContent.trim() === title);
-    if (!heading) return;
-
-    // find the description paragraph after the heading (skip images)
-    let sibling = heading.nextElementSibling;
-    while (sibling && ['IMG','FIGURE','BR'].includes(sibling.tagName)) sibling = sibling.nextElementSibling;
-
-    // if a .sub-services already exists, skip
-    if (sibling && sibling.nextElementSibling && sibling.nextElementSibling.classList && sibling.nextElementSibling.classList.contains('sub-services')) return;
-
-    // create container
-    const container = document.createElement('div');
-    container.className = 'sub-services';
-    mapping[title].forEach(item => {
-      const sp = document.createElement('span');
-      sp.textContent = item;
-      container.appendChild(sp);
-    });
-
-    if (sibling && sibling.parentNode) {
-      sibling.parentNode.insertBefore(container, sibling.nextSibling);
-    } else {
-      heading.parentNode.insertBefore(container, heading.nextSibling);
-    }
-  });
-});
-</script>
-
-
+   
   </body>
 </html>
+
 
 
 
