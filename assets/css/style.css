@@ -493,108 +493,153 @@ h2 {
 }
 
 /* ================== MODEL Option 1: Horizontal Line Flow (Process Roadmap) ================== */
+/* =======================================================
+   1. General Section and Header Styling
+   ======================================================= */
 .our-model-premium {
-  background: #f9fafc;
-  padding: 80px 0;
-  text-align: center;
+    padding: 80px 0;
+    text-align: center; /* Center main heading and subtitle */
+    background-color: #ffffff; /* Ensure a clean background */
 }
 
 .our-model-premium h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0d1b2a;
-  margin-bottom: 10px;
+    /* Styles for "Your End-to-End HR Growth Engine" */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #204060; /* Deep Corporate Blue */
 }
 
 .our-model-premium .subtitle {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 60px;
+    /* Styles for "From discovery to optimization, a seamless journey." */
+    font-size: 1.15rem;
+    color: #6c757d;
+    margin-bottom: 50px;
 }
 
+/* =======================================================
+   2. Horizontal Flow Container (Desktop)
+   ======================================================= */
 .premium-lineflow {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns content to the top */
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 1100px; /* Constrain width for better layout control */
 }
 
+/* =======================================================
+   3. Individual Step Styling
+   ======================================================= */
 .premium-step {
-  flex: 1;
-  max-width: 220px;
-  background: linear-gradient(180deg, #ffffff, #f1fdfb);
-  border-radius: 14px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: all 0.3s ease;
-  position: relative;
+    flex: 1; /* Ensures steps take up equal horizontal space */
+    padding: 0 15px;
+    position: relative;
+    text-align: center;
 }
 
-.premium-step:hover {
-  transform: translateY(-6px);
-  background: linear-gradient(180deg, #fffde7, #fff9c4);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
-
+/* Styling for the Number Badge (The Circle) */
 .step-badge {
-  background: linear-gradient(135deg, #009688, #00bfa5);
-  color: #fff;
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 8px 14px;
-  border-radius: 8px;
-  display: inline-block;
-  margin-bottom: 12px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: #204060; /* Dark Corporate Blue */
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 10px rgba(32, 64, 96, 0.2);
+    z-index: 10; /* Ensure the badge sits on top of the line */
+    position: relative;
 }
 
-.premium-step i {
-  width: 28px; height: 28px;
-  color: #009688;
-  margin-bottom: 10px;
+/* Styling for the Lucide Icons */
+.premium-step i[data-lucide] {
+    display: block; /* Ensures icon is on its own line */
+    color: #20C997; /* Teal/Aqua Accent Color */
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
+/* Step Title Styling */
 .premium-step h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #0d1b2a;
-  margin-bottom: 8px;
+    font-weight: 600;
+    color: #343a40;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
 }
 
+/* Step Description Styling */
 .premium-step p {
-  font-size: 0.9rem;
-  color: #555;
-  line-height: 1.5;
+    color: #495057;
+    font-size: 1rem;
 }
 
-/* Connectors */
+/* =======================================================
+   4. Connector Line Styling
+   ======================================================= */
 .premium-connector {
-  flex: 0 0 50px;
-  height: 3px;
-  align-self: center;
-  background: linear-gradient(90deg, #009688, #fbc02d);
-  border-radius: 2px;
-  animation: drawLine 1s forwards;
+    /* Position the line between the steps */
+    flex-shrink: 0;
+    width: 60px; /* Adjust this to control spacing between steps */
+    height: 2px;
+    background: transparent;
+    border-bottom: 2px dashed #cccccc; /* Dashed Grey Line */
+    margin-top: 35px; /* Aligns line horizontally with the center of the badge */
 }
 
-@keyframes drawLine {
-  from { width: 0; }
-  to { width: 50px; }
+/* Hide the last connector, as there's no step after it */
+.premium-lineflow .premium-step:last-child + .premium-connector {
+    display: none;
 }
 
-@media (max-width: 768px) {
-  .premium-lineflow {
-    flex-direction: column;
-    align-items: center;
-  }
-  .premium-connector {
-    width: 3px; height: 40px;
-    background: linear-gradient(180deg, #009688, #fbc02d);
-  }
-}
 
+/* =======================================================
+   5. Mobile Responsiveness (Vertical Flow)
+   ======================================================= */
+@media (max-width: 992px) {
+    .premium-lineflow {
+        flex-direction: column; /* Stacks steps vertically */
+        align-items: stretch; /* Stretches items to full width */
+    }
+
+    .premium-step {
+        display: flex;
+        text-align: left;
+        align-items: flex-start;
+        padding: 15px 0;
+    }
+
+    .step-badge {
+        margin: 0 20px 0 0;
+        flex-shrink: 0; /* Prevents badge from shrinking */
+    }
+    
+    .premium-step i[data-lucide] {
+        display: none; /* Hide icons on mobile for cleaner look */
+    }
+
+    /* Vertical Connector Line (using border on the step container) */
+    .premium-connector {
+        display: none; /* Hide horizontal connector */
+    }
+
+    .premium-step:not(:last-child) {
+        border-left: 2px dashed #cccccc; /* Use border for vertical line */
+        padding-bottom: 40px; /* Add space between stacked steps */
+        margin-left: 35px; /* Aligns line with the center of the badge */
+        padding-left: 40px; /* Pushes content away from the vertical line */
+    }
+    
+    /* Reposition badge to cover the start of the vertical line */
+    .premium-step:not(:last-child) .step-badge {
+        position: absolute;
+        left: 0;
+        top: 15px;
+    }
+}
 
 /* ================== RESOURCES & CONTACT ================== */
 .resources, .contact-form {
