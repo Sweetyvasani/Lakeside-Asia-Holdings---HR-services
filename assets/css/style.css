@@ -242,7 +242,7 @@ body {
 
 /* icons: slightly larger */
 .service-card img {
-  width: 54px;              /* increased from 40–46px */
+  width: 56px;              /* increased from 40–46px */
   height: auto;
   margin-bottom: 12px;
   display: block;
