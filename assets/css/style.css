@@ -235,9 +235,41 @@ body {
   min-height: 320px;        /* ensures all cards same height */
 }
 
+/* ---- Service Card Hover Effects ---- */
+
+/* card hover: lift & stronger shadow */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* icon hover: color tint (teal filter) */
+.service-card img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.service-card:hover img {
+  transform: scale(1.1);            /* slightly enlarge */
+  filter: drop-shadow(0 0 6px rgba(20, 184, 166, 0.4)); /* glowing teal shadow */
+}
+
+/* heading hover: change color */
+.service-card h3 {
+  transition: color 0.3s ease;
+}
+.service-card:hover h3 {
+  color: #14b8a6; /* teal */
+}
+
+/* pill hover: subtle lift */
+.sub-services span {
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.sub-services span:hover {
+  background: #d0f2f2;
+  transform: translateY(-2px);
 }
 
 /* icons: slightly larger */
