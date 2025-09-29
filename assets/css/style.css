@@ -428,7 +428,8 @@ body {
   transform: rotate(var(--rotation)) translateY(-200px) scale(1.15) !important;
   z-index: 10;
   filter: brightness(1.2);
-  box-shadow: 0 8px 25px rgba(10, 25, 47, 0.3);
+  box-shadow: 0 8px 25px rgba(20, 184, 166, 0.5); /* teal glow */
+    0 0 15px rgba(255, 215, 0, 0.25);    /* faint golden glow */  
 }
 
 /* Set rotation variables for each petal */
