@@ -356,6 +356,101 @@ body {
   display: block;
 }
 
+/* ================== HR LIFECYCLE - Option 3 - Circular Lifecycle Wheel  ================== */
+/* --- Wheel Layout --- */
+.wheel-container {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  margin: 40px auto;
+}
+
+.center-circle {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #14b8a6;
+  color: #fff;
+  font-weight: 700;
+  padding: 40px 20px;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.outer-circle {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%;
+}
+
+.wheel-step {
+  position: absolute;
+  background: #fff;
+  border: 2px solid #14b8a6;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* Position steps around the circle (7 items) */
+.outer-circle .wheel-step:nth-child(1) { top: 0%; left: 50%; }
+.outer-circle .wheel-step:nth-child(2) { top: 18%; left: 85%; }
+.outer-circle .wheel-step:nth-child(3) { top: 50%; left: 100%; }
+.outer-circle .wheel-step:nth-child(4) { top: 82%; left: 85%; }
+.outer-circle .wheel-step:nth-child(5) { top: 100%; left: 50%; }
+.outer-circle .wheel-step:nth-child(6) { top: 82%; left: 15%; }
+.outer-circle .wheel-step:nth-child(7) { top: 50%; left: 0%; }
+
+
+/* ================== HR LIFECYCLE - Option 4 - Curved / Wavy Journey Path  ================== */
+/* --- Wavy Journey Layout --- */
+.wave-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 60px auto;
+  position: relative;
+}
+
+/* Add SVG wave as background line */
+.wave-container::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 50 Q125 0 250 50 T500 50" fill="transparent" stroke="%2314b8a6" stroke-width="3"/></svg>') no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Step nodes */
+.wave-step {
+  background: #fff;
+  border: 2px solid #14b8a6;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  margin: 40px 10px;
+}
+
+
 /* ================== HR LIFECYCLE ROADMAP ================== */
 .hr-lifecycle {
   text-align: center;
