@@ -505,22 +505,23 @@ body {
   box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
-/* badge with icon */
+/* remove teal background, just keep icon centered */
 .step-badge {
-  background: #14b8a6;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  background: transparent;     /* no background */
+  width: auto;                 /* let image size control */
+  height: auto;
+  border-radius: 0;            /* no circle */
+  box-shadow: none;            /* remove shadow */
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 .step-badge img {
-  width: 28px;
-  height: 28px;
+  width: 48px;   /* make icons a little bigger */
+  height: auto;
 }
+
 
 /* title + desc */
 .premium-step h3 {
