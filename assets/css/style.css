@@ -502,6 +502,8 @@ body {
   line-height: 1.3;
   z-index: 20;
   overflow: visible;
+  box-shadow: 0 0 15px rgba(20,184,166,0.4);
+
 }
 
 /* Pulsing Animation for Center - KEEP ORIGINAL */
