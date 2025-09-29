@@ -593,15 +593,6 @@ body {
   }
 }
 
-/* Add this to your CSS for the active state */
-.wheel-segment.active {
-    transform: scale(1.1) !important;
-    z-index: 100;
-    filter: brightness(1.3);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    border: 2px solid white;
-}
-
 /* ================== HR LIFECYCLE - Option 4 - Curved / Wavy Journey Path  ================== */
 /* --- Wavy Journey Layout --- */
 .wave-container {
