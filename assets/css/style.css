@@ -357,6 +357,90 @@ body {
   display: block;
 }
 
+/* ================== HR LIFECYCLE ROADMAP ================== */
+.hr-lifecycle {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.hr-lifecycle h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0a2540;
+}
+
+.hr-lifecycle p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* main roadmap layout */
+.lifecycle-roadmap {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* exactly 7 steps in one row */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* step node */
+.lifecycle-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative; /* required for tooltips */
+}
+
+.step-icon {
+  background: #fff;
+  border: 2px solid #14b8a6; /* teal outline */
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+.step-icon img {
+  width: 32px;
+  height: auto;
+}
+
+.lifecycle-step span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0d1b2a;
+}
+
+/* connector line across all steps */
+.lifecycle-roadmap::before {
+  content: "";
+  position: absolute;
+  top: 32px; /* aligns with step icons */
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, #14b8a6, #0a2540);
+  z-index: -1;
+}
+
+/* responsive: stack vertically */
+@media (max-width: 992px) {
+  .lifecycle-roadmap {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .lifecycle-roadmap::before {
+    display: none;
+  }
+}
 
 /* ================== CTA ================== */
 .cta-banner {
