@@ -329,30 +329,30 @@
 
    <!-- ================= Option C: Circular Lifecycle Wheel ================= -->
 
-  <div class="wheel-container">
-  <div class="wheel-segment">
-    <div class="segment-content">Recruitment</div>
+<div class="lotus-container">
+  <div class="lotus-petal">
+    <div class="petal-content">Recruitment</div>
   </div>
-  <div class="wheel-segment">
-    <div class="segment-content">Onboarding</div>
+  <div class="lotus-petal">
+    <div class="petal-content">Onboarding</div>
   </div>
-  <div class="wheel-segment">
-    <div class="segment-content">Development</div>
+  <div class="lotus-petal">
+    <div class="petal-content">Development</div>
   </div>
-  <div class="wheel-segment">
-    <div class="segment-content">Performance</div>
+  <div class="lotus-petal">
+    <div class="petal-content">Performance</div>
   </div>
-  <div class="wheel-segment">
-    <div class="segment-content">Retention</div>
+  <div class="lotus-petal">
+    <div class="petal-content">Retention</div>
   </div>
-  <div class="wheel-segment">
-    <div class="segment-content">Transition</div>
+  <div class="lotus-petal">
+    <div class="petal-content">Transition</div>
   </div>
-  <div class="wheel-segment">
-    <div class="segment-content">Separation</div>
+  <div class="lotus-petal">
+    <div class="petal-content">Separation</div>
   </div>
   
-  <div class="center-circle">
+  <div class="lotus-center">
     Hire to Retire
   </div>
 </div>
@@ -491,27 +491,35 @@
   });
 </script>
 
-   // Add click handlers for each segment
-document.querySelectorAll('.wheel-segment').forEach(segment => {
-  segment.addEventListener('click', function() {
-    const segmentName = this.querySelector('.segment-content').textContent;
+// Add this before closing </body> tag
+document.addEventListener('DOMContentLoaded', function() {
+    const petals = document.querySelectorAll('.lotus-petal');
     
-    // Remove active class from all segments
-    document.querySelectorAll('.wheel-segment').forEach(seg => {
-      seg.classList.remove('active');
+    petals.forEach(petal => {
+        petal.addEventListener('click', function() {
+            const petalName = this.querySelector('.petal-content').textContent.trim();
+            
+            // Remove active class from all petals
+            petals.forEach(p => p.classList.remove('active'));
+            
+            // Add active class to clicked petal
+            this.classList.add('active');
+            
+            // Optional: Show more details or navigate
+            console.log(`Selected: ${petalName}`);
+            // Add your custom functionality here
+        });
+        
+        // Prevent flickering by ensuring stable hover
+        petal.addEventListener('mouseenter', function() {
+            this.style.transform = getComputedStyle(this).transform;
+        });
     });
-    
-    // Add active class to clicked segment
-    this.classList.add('active');
-    
-    // You can add functionality to show more details about the segment
-    console.log(`Clicked on: ${segmentName}`);
-    // Add your custom functionality here
-  });
 });
    
   </body>
 </html>
+
 
 
 
