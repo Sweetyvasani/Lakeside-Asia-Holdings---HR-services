@@ -329,23 +329,33 @@
 
    <!-- ================= Option C: Circular Lifecycle Wheel ================= -->
 
-   <section class="hr-lifecycle wheel-version">
-  <h2>End-to-End HR Services</h2>
-  <p>Employee lifecycle from hire to retire represented as a continuous cycle.</p>
-
   <div class="wheel-container">
-    <div class="center-circle">Hire to Retire</div>
-    <div class="outer-circle">
-      <div class="wheel-step">Attract</div>
-      <div class="wheel-step">Hire</div>
-      <div class="wheel-step">Onboard</div>
-      <div class="wheel-step">Engage</div>
-      <div class="wheel-step">Manage</div>
-      <div class="wheel-step">Grow</div>
-      <div class="wheel-step">Exit & Beyond</div>
-    </div>
+  <div class="wheel-segment">
+    <div class="segment-content">Recruitment</div>
   </div>
-</section>
+  <div class="wheel-segment">
+    <div class="segment-content">Onboarding</div>
+  </div>
+  <div class="wheel-segment">
+    <div class="segment-content">Development</div>
+  </div>
+  <div class="wheel-segment">
+    <div class="segment-content">Performance</div>
+  </div>
+  <div class="wheel-segment">
+    <div class="segment-content">Retention</div>
+  </div>
+  <div class="wheel-segment">
+    <div class="segment-content">Transition</div>
+  </div>
+  <div class="wheel-segment">
+    <div class="segment-content">Separation</div>
+  </div>
+  
+  <div class="center-circle">
+    Hire to Retire
+  </div>
+</div>
 
       <!-- ================= Option E: Curved / Wavy Journey Path ================= -->
 <section class="hr-lifecycle wave-version">
@@ -481,9 +491,28 @@
   });
 </script>
 
+   // Add click handlers for each segment
+document.querySelectorAll('.wheel-segment').forEach(segment => {
+  segment.addEventListener('click', function() {
+    const segmentName = this.querySelector('.segment-content').textContent;
+    
+    // Remove active class from all segments
+    document.querySelectorAll('.wheel-segment').forEach(seg => {
+      seg.classList.remove('active');
+    });
+    
+    // Add active class to clicked segment
+    this.classList.add('active');
+    
+    // You can add functionality to show more details about the segment
+    console.log(`Clicked on: ${segmentName}`);
+    // Add your custom functionality here
+  });
+});
    
   </body>
 </html>
+
 
 
 
