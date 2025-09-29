@@ -398,7 +398,7 @@ body {
 
 .step-icon {
   background: #fff;
-  border: 2px solid #14b8a6; /* teal outline */
+  border: 2px solid #14b8a6;
   border-radius: 50%;
   width: 64px;
   height: 64px;
@@ -409,8 +409,8 @@ body {
   box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
 .step-icon img {
-  width: 32px;
-  height: auto;
+  max-width: 32px;   /* keeps icon inside circle */
+  max-height: 32px;
 }
 
 .lifecycle-step span {
@@ -423,7 +423,8 @@ body {
 .lifecycle-roadmap::before {
   content: "";
   position: absolute;
-  top: 32px; /* aligns with step icons */
+  top: 50%;   /* middle of the row */
+  transform: translateY(-50%);
   left: 0;
   right: 0;
   height: 3px;
