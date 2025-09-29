@@ -327,7 +327,8 @@ body {
 
 
 /* ================== HR LIFECYCLE - Option 1 - Always Visible Details  ================== */
-.lifecycle-step .step-details {
+.option-a .step-details {
+  display: block; /* force visible */
   font-size: 0.8rem;
   color: #555;
   margin-top: 6px;
@@ -337,7 +338,7 @@ body {
 
 /* ================== HR LIFECYCLE - Option 2 - Hover Tooltips  ================== */
 /* tooltip hidden by default */
-.step-tooltip {
+.option-b .step-tooltip {
   display: none;
   position: absolute;
   top: 80px;
@@ -351,9 +352,7 @@ body {
   white-space: nowrap;
   z-index: 10;
 }
-
-/* show tooltip on hover */
-.lifecycle-step:hover .step-tooltip {
+.option-b .lifecycle-step:hover .step-tooltip {
   display: block;
 }
 
