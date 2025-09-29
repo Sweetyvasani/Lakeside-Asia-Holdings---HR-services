@@ -377,7 +377,7 @@ body {
   height: 120px;
   background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 100%);
   border-radius: 50% 50% 50% 0;
-  transform-origin: center bottom;
+  transform-origin: 50% 50%;  /* pivot around container center */
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(10, 25, 47, 0.2);
@@ -389,37 +389,37 @@ body {
 
 /* Individual Petal Positioning with Lotus Arrangement */
 .lotus-petal:nth-child(1) { /* Recruitment */
-  transform: rotate(0deg) translateY(-120px);
+  transform: rotate(0deg) translateY(-180px);
   background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 100%);
 }
 
 .lotus-petal:nth-child(2) { /* Onboarding */
-  transform: rotate(51.43deg) translateY(-120px);
+  transform: rotate(51.43deg) translateY(-180px);
   background: linear-gradient(135deg, #1e3a5f 0%, #2d5a7c 100%);
 }
 
 .lotus-petal:nth-child(3) { /* Development */
-  transform: rotate(102.86deg) translateY(-120px);
+  transform: rotate(102.86deg) translateY(-180px);
   background: linear-gradient(135deg, #2d5a7c 0%, #3b7a9e 100%);
 }
 
 .lotus-petal:nth-child(4) { /* Performance */
-  transform: rotate(154.29deg) translateY(-120px);
+  transform: rotate(154.29deg) translateY(-180px);
   background: linear-gradient(135deg, #3b7a9e 0%, #14b8a6 100%);
 }
 
 .lotus-petal:nth-child(5) { /* Retention */
-  transform: rotate(205.72deg) translateY(-120px);
+  transform: rotate(205.72deg) translateY(-180px);
   background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
 }
 
 .lotus-petal:nth-child(6) { /* Transition */
-  transform: rotate(257.15deg) translateY(-120px);
+  transform: rotate(257.15deg) translateY(-180px);
   background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
 }
 
 .lotus-petal:nth-child(7) { /* Separation */
-  transform: rotate(308.58deg) translateY(-120px);
+  transform: rotate(308.58deg) translateY(-180px);
   background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
 }
 
