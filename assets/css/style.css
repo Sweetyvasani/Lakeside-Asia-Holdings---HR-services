@@ -362,9 +362,8 @@ body {
 /* Lotus Wheel Container */
 .lotus-container {
   position: relative;
-  width: 90vw;         /* scales with viewport width */
-  max-width: 450px;    /* but doesn’t grow beyond 450px */
-  aspect-ratio: 1/1;   /* always square */
+  width: 450px;
+  height: 450px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -374,8 +373,8 @@ body {
 /* Lotus Petal Base Styles */
 .lotus-petal {
   position: absolute;
-  width: 40%;               /* scales with container size */
-  height: 28%;              /* scales with container size */
+  width: 180px;              
+  height: 120px;           
   background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 100%);
   border-radius: 50% 50% 50% 0;
   transform-origin: center center;   /* ✅ pivot from lotus center */
@@ -390,43 +389,43 @@ body {
 
 /* Individual Petal Positioning with Lotus Arrangement */
 .lotus-petal:nth-child(1) { /* Recruitment */
-  --rotation: 0deg; transform: rotate(0deg) translateY(-40%);
+  --rotation: 0deg; transform: rotate(0deg) translateY(-180px);
   background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 100%);
 }
 
 .lotus-petal:nth-child(2) { /* Onboarding */
- --rotation: 51.43deg; transform: rotate(51.43deg) translateY(-40%);
+ --rotation: 51.43deg; transform: rotate(51.43deg) translateY(-180px);
   background: linear-gradient(135deg, #1e3a5f 0%, #2d5a7c 100%);
 }
 
 .lotus-petal:nth-child(3) { /* Development */
-  --rotation: 102.86deg; transform: rotate(102.86deg) translateY(-40%);
+  --rotation: 102.86deg; transform: rotate(102.86deg) translateY(-180px);
   background: linear-gradient(135deg, #2d5a7c 0%, #3b7a9e 100%);
 }
 
 .lotus-petal:nth-child(4) { /* Performance */
-  --rotation: 154.29deg; transform: rotate(154.29deg) translateY(-40%);
+  --rotation: 154.29deg; transform: rotate(154.29deg) translateY(-180px);
   background: linear-gradient(135deg, #3b7a9e 0%, #14b8a6 100%);
 }
 
 .lotus-petal:nth-child(5) { /* Retention */
-  --rotation: 205.72deg; transform: rotate(205.72deg) translateY(-40%);
+  --rotation: 205.72deg; transform: rotate(205.72deg) translateY(-180px);
   background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
 }
 
 .lotus-petal:nth-child(6) { /* Transition */
- --rotation: 257.15deg; transform: rotate(257.15deg) translateY(-40%);
+ --rotation: 257.15deg; transform: rotate(257.15deg) translateY(-180px);
   background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
 }
 
 .lotus-petal:nth-child(7) { /* Separation */
- --rotation: 308.58deg; transform: rotate(308.58deg) translateY(-40%);
+ --rotation: 308.58deg; transform: rotate(308.58deg) translateY(-180px);
   background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
 }
 
 /* Hover Effects - Stable and Smooth */
 .lotus-petal:hover {
-  transform: rotate(var(--rotation)) translateY(-45%) scale(1.15) !important;
+  transform: rotate(var(--rotation)) translateY(-200px) scale(1.15) !important;
   z-index: 10;
   filter: brightness(1.2);
   box-shadow: 0 8px 25px rgba(10, 25, 47, 0.3);
