@@ -485,7 +485,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* THIS FIXES THE CENTERING */
+  transform: translate(-50%, -50%);
   width: 120px;
   height: 120px;
   background: linear-gradient(135deg, #0a192f 0%, #14b8a6 100%);
@@ -501,12 +501,14 @@ body {
   line-height: 1.3;
   z-index: 20;
   overflow: visible;
-  box-shadow: 0 0 15px rgba(20,184,166,0.4);
 
+  /* ✅ constant subtle glow */
+  box-shadow: 
+    0 0 15px rgba(20, 184, 166, 0.6),
+    0 0 10px rgba(255, 215, 0, 0.25); /* faint golden glow */
 }
 
-/* Pulsing Animation for Center - KEEP ORIGINAL */
-/* Outer Pulse Ring */
+/* Outer glow pulse */
 .lotus-center::after {
   content: '';
   position: absolute;
@@ -516,21 +518,23 @@ body {
   height: 140px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
- box-shadow: 0 0 25px rgba(20, 184, 166, 0.5);
   animation: pulseGlow 2.5s infinite ease-in-out;
-  z-index: -1; /* ✅ sits behind the circle */
+  z-index: -1;
 }
 
-
-/* Animations */
+/* Glow animation with dual teal + gold */
 @keyframes pulseGlow {
   0%, 100% {
     transform: translate(-50%, -50%) scale(1);
-    box-shadow: 0 0 25px rgba(20, 184, 166, 0.5);
+    box-shadow: 
+      0 0 25px rgba(20, 184, 166, 0.5),   /* teal */
+      0 0 15px rgba(255, 215, 0, 0.2);    /* faint gold */
   }
   50% {
     transform: translate(-50%, -50%) scale(1.2);
-    box-shadow: 0 0 45px rgba(10, 31, 84, 0.8);
+    box-shadow: 
+      0 0 45px rgba(10, 31, 84, 0.8),     /* navy pulse */
+      0 0 25px rgba(255, 215, 0, 0.35);   /* stronger golden pulse */
   }
 }
 
