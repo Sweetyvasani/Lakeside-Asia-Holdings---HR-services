@@ -508,8 +508,8 @@ body {
 .lotus-center::after {
   content: '';
   position: absolute;
-  top: 50%
-  left: 50%
+  top: 50%;
+  left: 50%;
   width: 130px;
   height: 130px;
   border: 2px solid rgba(20, 184, 166, 0.4);
@@ -540,17 +540,14 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   transform: translate(-50%, -50%); /* keep inner ring centered */
-  animation: rotate 10s infinite linear;
+  animation: spin 10s infinite linear;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg);}
+  to {transform: translate(-50%, -50%) rotate(360deg);}
 }
+
 
 /* Active State for Clicked Petals */
 .lotus-petal.active {
