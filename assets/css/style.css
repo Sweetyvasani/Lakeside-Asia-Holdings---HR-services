@@ -362,8 +362,9 @@ body {
 /* Lotus Wheel Container */
 .lotus-container {
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 90vw;         /* scales with viewport width */
+  max-width: 450px;    /* but doesn’t grow beyond 450px */
+  aspect-ratio: 1/1;   /* always square */
   margin: 0 auto;
   display: flex;
   align-items: center;
