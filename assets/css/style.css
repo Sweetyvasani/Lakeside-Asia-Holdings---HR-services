@@ -443,6 +443,36 @@ body {
   }
 }
 
+/* --- HR Lifecycle - Option A: details always visible --- */
+.option-a .step-details {
+  display: block; /* force visible */
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.3;
+  max-width: 140px;
+}
+
+/* --- HR Lifecycle - Option B: tooltip on hover only --- */
+.option-b .step-tooltip {
+  display: none;
+  position: absolute;
+  top: 80px;
+  background: #fff;
+  border: 1px solid #14b8a6;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #0d1b2a;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  white-space: nowrap;
+  z-index: 10;
+}
+.option-b .lifecycle-step:hover .step-tooltip {
+  display: block;
+}
+
+
 /* ================== CTA ================== */
 .cta-banner {
   background: #0a2540;
