@@ -212,7 +212,7 @@ body {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 equal columns */
+  grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 equal columns */
   gap: 10px;                  /* smaller gap to help fit 4th card */
   max-width: 1360px;          /* widen container so grid has space */
   margin: 0 auto;
