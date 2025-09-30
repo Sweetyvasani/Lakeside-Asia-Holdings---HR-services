@@ -1,1 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Automated Compliance | Lakeside HR Services</title>
 
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/Lakeside-Asia-Holdings---HR-services/assets/css/style.css">
+</head>
+  
+<body>
+
+   <!-- Header -->
+<header>
+  <a href="../index.html" class="brand">
+    <img src="/Lakeside-Asia-Holdings---HR-services/assets/images/logo.png" alt="Lakeside HR Services Logo" class="logo-img" />
+    <span class="brand-name">
+      <strong class="brand-bold">LAKESIDE HR</strong> <span class="brand-light">Services</span>
+    </span>
+  </a>
+  <nav>
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">Founders</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#model">Our Model</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#contact" class="cta">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  
+  <!-- Automated Compliance Detailed Section -->
+  <section class="service-detail py-16 bg-white">
+    <div class="container mx-auto px-6 lg:px-20">
+      
+<!-- Hero Section -->
+<div class="text-center mb-16">
+  <img src="/Lakeside-Asia-Holdings---HR-services/assets/images/ta-hero.png" 
+       alt="Automated Compliance Graphic" 
+       class="mx-auto w-[220px] md:w-[260px] mb-6 rounded-xl">
+  <h1 class="text-4xl font-bold mb-4 text-blue-900">Automated Compliance</h1>
+  <p class="text-lg text-gray-600">
+   Eliminate errors and overhead with streamlined payroll, policies, and statutory compliance for India & GCC.
+  </p>
+</div>
+
+
+<!-- Why Automated Compliance Matters -->
+<section class="py-16 bg-gradient-to-r from-teal-100 to-blue-100 rounded-2xl mb-20">
+  <div class="container mx-auto px-6 lg:px-20 text-center max-w-6xl">
+    
+    <!-- Heading -->
+    <h2 class="text-4xl font-bold mb-6 text-gray-800">Why Automated Compliance Matters</h2>
+    
+    <!-- Storytelling paragraph (smaller font, wider layout) -->
+    <p class="text-base text-gray-700 leading-relaxed mb-12 max-w-5xl mx-auto text-center">
+    Compliance failures are one of the biggest risks organizations face. From penalties and lawsuits to reputational damage, even small errors in payroll or statutory filings can cost companies heavily. Manual processes create unnecessary overhead, delays, and risk exposure — especially across multiple regions like India & GCC. A proactive, automated approach ensures compliance is always accurate, transparent, and audit-ready.
+    </p>
+
+    <!-- Four highlight cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+      <div class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-teal-700 mb-2">⚖️ Risk Mitigation</h3>
+        <p class="text-gray-600">Reduce exposure to penalties and lawsuits</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-teal-700 mb-2">⏱️ Efficiency</h3>
+        <p class="text-gray-600">Eliminate manual overhead and delays</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-teal-700 mb-2">🌍 Regional Compliance</h3>
+        <p class="text-gray-600">Stay aligned with <strong>India & GCC <strong> statutory requirements</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-teal-700 mb-2">📑 Audit Readiness</h3>
+        <p class="text-gray-600">Maintain transparent records for inspections anytime</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- A Smarter Approach to Human Resources -->
+<section class="pt-10 pb-12 bg-white mb-12">
+  <div class="container mx-auto px-6 lg:px-20 text-center max-w-6xl">
+    
+    <!-- Heading -->
+    <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-gray-800">A Smarter Approach to Human Resources</h2>
+    
+    <!-- Paragraphs (same as finalized version) -->
+    <div class=max-w-5xl mx-auto">
+    <p class="text-base text-gray-700 mb-4 leading-relaxed">
+      You don’t need an enterprise-sized budget to have world-class HR. 
+      We founded Lakeside HR Services on a simple belief: the right blend of human expertise and intelligent technology can solve hiring challenges, 
+      making strategic HR accessible and affordable for SMEs.
+    </p>
+    <p class="text-base text-gray-700 mb-6 leading-relaxed max-w-5xl mx-auto">
+      Instead of hiring a permanent CHRO or senior HR leader, organizations engage us as consultants to design scalable frameworks, 
+      align Talent Acquisition with business goals, and leave behind repeatable, efficient processes. 
+      This gives you the clarity of a seasoned CHRO and the efficiency of modern technology — without the overhead of a permanent role.
+    </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Services We Offer -->
+<section class="pt-4 pb-12 bg-white">
+  <div class="container mx-auto px-6 lg:px-20 text-center">
+    
+    <!-- Green line as heading -->
+    <h2 class="text-3xl lg:text-4xl font-bold mb-8 text-teal-700">
+      Here’s how we help organizations achieve stress-free compliance:
+    </h2>
+      </div>
+</section>
+
+      
+<!-- Feature Block 1 Enhanced -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+  <div class="p-6 bg-gray-50 rounded-xl shadow-sm">
+    <h2 class="text-2xl font-semibold mb-2">Payroll Compliance</h2>
+    <p class="text-sm text-teal-600 mb-6">Ensure accurate payroll deductions and filings every cycle.</p> <!-- changed mb-4 to mb-6 -->
+
+    <!-- Centered bullets -->
+    <ul class="text-gray-700 leading-relaxed space-y-3">
+      <li>
+        <span class="text-teal-600 mr-2">✔</span>
+        <span><span class="bg-teal-100 text-teal-800 px-1 rounded">PF & ESIC</span> handled without manual errors</span>
+      </li>
+      <li>
+        <span class="text-teal-600 mr-2">✔</span>
+        <span><span class="bg-teal-100 text-teal-800 px-1 rounded">TDS & tax deductions</span> automated every payroll run</span>
+      </li>
+      <li>
+        <span class="text-teal-600 mr-2">✔</span>
+        <span><span class="bg-teal-100 text-teal-800 px-1 rounded">Gratuity compliance</span> tracked seamlessly</span>
+      </li>
+    </ul>
+    </div>
+    <!-- Image (always centered) -->
+  <div class="flex justify-center">
+    <img src="/Lakeside-Asia-Holdings---HR-services/assets/images/workforce-planning.png" 
+         alt="Workforce Planning" 
+         class="w-[220px] h-[220px]">
+  </div>
+</div>
+
+
+
+      <!-- Feature Block 2 -->
+     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+          <!-- Image (always centered) -->
+  <div class="flex justify-center">
+    <img src="/Lakeside-Asia-Holdings---HR-services/assets/images/ai-sourcing.png" alt="AI Talent Sourcing" class="w-[220px] h-[220px]">
+  </div>
+  <div class="order-1 lg:order-2 p-6 bg-gray-50 rounded-xl shadow-sm">
+    <h2 class="text-2xl font-semibold mb-2">Statutory Filings & Returns</h2>
+    <p class="text-sm text-teal-600 mb-6">Automate government filings to stay 100% compliant.</p>
+    <ul class="text-gray-700 leading-relaxed space-y-3 text-left">
+      <li><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Labour law returns</span> filed accurately</span></li>
+      <li><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Shops & Establishments</span> filings automated</span></li>
+      <li><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Regional compliance</span> tailored for India & GCC</span></li>
+    </ul>
+  </div>
+</div>
+
+
+      <!-- Feature Block 3 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+  <div class="p-6 bg-gray-50 rounded-xl shadow-sm">
+    <h2 class="text-2xl font-semibold mb-2">Digital Contracts & Documentation</h2>
+    <p class="text-sm text-teal-600 mb-6">Secure, track, and manage all HR legal documents digitally</p>
+    <ul class="text-gray-700 leading-relaxed space-y-3">
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Appointment letters</span> generated instantly</span></li>
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">NDAs & agreements</span> managed with e-signature</span></li>
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Compliance forms</span> stored securely online</span></li>
+    </ul>
+  </div>
+  <div><img src="/Lakeside-Asia-Holdings---HR-services/assets/images/applicant-tracking.png" alt="Applicant Tracking" class="w-[220px] h-[220px] mx-auto"></div>
+</div>
+
+
+      <!-- Feature Block 4 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+  <div class="order-2 lg:order-1"><img src="/Lakeside-Asia-Holdings---HR-services/assets/images/interview-management.png" alt="Interview Management" class="w-[220px] h-[220px] mx-auto"></div>
+  <div class="order-1 lg:order-2 p-6 bg-gray-50 rounded-xl shadow-sm">
+    <h2 class="text-2xl font-semibold mb-2">Policy Automation</h2>
+    <p class="text-sm text-teal-600 mb-6">Standardize HR policies to meet statutory guidelines</p>
+    <ul class="text-gray-700 leading-relaxed space-y-3">
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Leave policies</span> aligned to labor laws</span></li>
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Working hours & overtime</span> auto-tracked</span></li>
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">POSH compliance</span>built into HR policies</li>
+    </ul>
+  </div>
+</div>
+
+
+      <!-- Feature Block 5 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+  <div class="p-6 bg-gray-50 rounded-xl shadow-sm">
+    <h2 class="text-2xl font-semibold mb-2">Leave & Attendance Compliance</h2>
+    <p class="text-sm text-teal-600 mb-6">Track workforce time in line with statutory requirements</p>
+    <ul class="text-gray-700 leading-relaxed space-y-3">
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Attendance records</span> aligned with regulations</span></li>
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Leave accruals</span> automated & transparent</span></li>
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Shift tracking</span> managed with compliance in mind</li>
+    </ul>
+  </div>
+  <div><img src="/Lakeside-Asia-Holdings---HR-services/assets/images/rpo.png" alt="Recruitment Process Outsourcing" class="w-[220px] h-[220px] mx-auto"></div>
+</div>
+
+
+      <!-- Feature Block 6 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+  <div class="order-2 lg:order-1"><img src="/Lakeside-Asia-Holdings---HR-services/assets/images/talent-pipeline.png" alt="Future Talent Pipeline" class="w-[220px] h-[220px] mx-auto"></div>
+  <div class="order-1 lg:order-2 p-6 bg-gray-50 rounded-xl shadow-sm">
+    <h2 class="text-2xl font-semibold mb-2">Audit Readiness</h2>
+    <p class="text-sm text-teal-600 mb-6">Always inspection-ready with digital compliance records</p>
+    <ul class="text-gray-700 leading-relaxed space-y-3">
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Central repository</span> for compliance documents</span></li>
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Version tracking</span> for every update</span></li>
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Quick audit access</span> for inspections anytime</span></li>
+    </ul>
+  </div>
+</div>
+
+
+      <!-- Feature Block 7 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+  <div class="p-6 bg-gray-50 rounded-xl shadow-sm">
+    <h2 class="text-2xl font-semibold mb-2">Risk & Governance Tracking</h2>
+    <p class="text-sm text-teal-600 mb-6">Monitor compliance health across your organization</p>
+    <ul class="text-gray-700 leading-relaxed space-y-3">
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Compliance dashboards</span> for leadership visibility</span></li>
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Alerts & reminders</span> deadlines and risks</span></li>
+      <li class="flex items-start"><span class="text-teal-600 mr-2">✔</span><span><span class="bg-teal-100 text-teal-800 px-1 rounded">Governance reports</span> board & leadership</span></li>
+    </ul>
+  </div>
+  <div><img src="/Lakeside-Asia-Holdings---HR-services/assets/images/recruitment-analytics.png" alt="Recruitment Analytics" class="w-[220px] h-[220px] mx-auto"></div>
+</div>
+
+      
+   <!-- Business Impact -->
+<section class="mb-20">
+  <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Business Impact</h2>
+  
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+    
+    <!-- Impact Card 1 -->
+    <div class="p-8 bg-white rounded-2xl shadow hover:shadow-lg transition">
+      <img src="/Lakeside-Asia-Holdings---HR-services/assets/images/faster-hiring.png" 
+           alt="Error-Free Payroll" 
+           class="w-20 h-20 mx-auto mb-4 object-contain">
+      <h3 class="text-lg font-semibold mb-2">Error-Free Payroll</h3>
+      <p class="text-gray-600 text-sm">Accurate & compliant salary processing</p>
+    </div>
+    
+    <!-- Impact Card 2 -->
+    <div class="p-8 bg-white rounded-2xl shadow hover:shadow-lg transition">
+      <img src="/Lakeside-Asia-Holdings---HR-services/assets/images/quality-hire.png" 
+           alt="Reduced Compliance Risk" 
+           class="w-20 h-20 mx-auto mb-4 object-contain">
+      <h3 class="text-lg font-semibold mb-2">Reduced Compliance Risk</h3>
+      <p class="text-gray-600 text-sm">Avoid penalties and legal disputes</p>
+    </div>
+    
+    <!-- Impact Card 3 -->
+    <div class="p-8 bg-white rounded-2xl shadow hover:shadow-lg transition">
+      <img src="/Lakeside-Asia-Holdings---HR-services/assets/images/ta-costs.png" 
+           alt="Time & Cost Savings" 
+           class="w-20 h-20 mx-auto mb-4 object-contain">
+      <h3 class="text-lg font-semibold mb-2">Time & Cost Savings</h3>
+      <p class="text-gray-600 text-sm">Automate manual filings & reports</p>
+    </div>
+    
+    <!-- Impact Card 4 -->
+    <div class="p-8 bg-white rounded-2xl shadow hover:shadow-lg transition">
+      <img src="/Lakeside-Asia-Holdings---HR-services/assets/images/talent-pipeline-impact.png" 
+           alt="Audit-Ready Processes" 
+           class="w-20 h-20 mx-auto mb-4 object-contain">
+      <h3 class="text-lg font-semibold mb-2">Audit-Ready Processes</h3>
+      <p class="text-gray-600 text-sm">Build confidence with transparent governance</p>
+    </div>
+    
+  </div>
+</section>
+
+
+      <!-- CTA -->
+      <div class="text-center bg-gradient-to-r from-blue-900 to-teal-600 text-white p-12 rounded-2xl shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">Ready to Simplify Compliance?</h2>
+        <p class="mb-6">Partner with us to eliminate errors and overhead in payroll, policies, and statutory filings.</p>
+        <a href="/Lakeside-Asia-Holdings---HR-services/index.html#contact" 
+           class="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100">
+          Book a Consultation
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-gray-100 mt-16">
+    <p>&copy; 2025 Lakeside HR Services. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>  
