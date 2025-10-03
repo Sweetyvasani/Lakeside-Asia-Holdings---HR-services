@@ -1095,14 +1095,6 @@ footer {
   to { width: 100%; }
 }
 
-/* ============================= */
-/* Custom Section Dividers       */
-/* ============================= */
-.vertical-divider {
-  border-left: 2px solid #0a7d7d; /* teal line */
-  height: auto;                   /* will stretch to column height */
-  margin: 0 30px;                 /* spacing between text and divider */
-}
 
 /* ---------- Remove underline for service links (broad first pass) ---------- */
 /* Targets links that go to any /services/ page (safe & non-global) */
@@ -1135,4 +1127,25 @@ a[href*="/services/"]::before,
   content: none !important;
 }
 
+/* ============================= */
+/* Wellbeing Page - Why it Matters */
+/* ============================= */
+.why-matters-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;  /* keeps blocks aligned */
+  gap: 30px;             /* spacing between blocks */
+  max-width: 1200px;
+  margin: 0 auto 60px;   /* center + spacing below */
+  padding: 2rem;
+}
+
+.why-matters-block {
+  flex: 1;
+}
+
+.vertical-divider {
+  border-left: 2px solid #0a7d7d; /* teal vertical line */
+  margin: 0 20px;
+}
 
