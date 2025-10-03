@@ -379,6 +379,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
 }
 
 /* Individual Petal Positioning with Lotus Arrangement */
@@ -624,7 +625,7 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 50;
+  z-index: 100;
 }
 
 .lotus-petal:hover::after {
