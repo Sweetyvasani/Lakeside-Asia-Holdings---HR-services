@@ -1104,16 +1104,35 @@ footer {
   margin: 50px auto;
 }
 
-/* Remove underline from service card links */
-.service-card a {
-  text-decoration: none;
-  color: inherit; /* keeps the text color consistent */
+/* ---------- Remove underline for service links (broad first pass) ---------- */
+/* Targets links that go to any /services/ page (safe & non-global) */
+a[href*="/services/"] {
+  text-decoration: none !important;
+  color: inherit !important;
+  border-bottom: none !important;
 }
 
-/* Optional: Add hover effect for better UX */
-.service-card a:hover {
-  text-decoration: none; /* still no underline */
-  color: #0a7d7d; /* example teal/navy hover color, can match your theme */
+/* Fallback: target likely service-card selectors (if your markup uses these) */
+.service-card a,
+.service-card,
+.services .service-card,
+.service-item a {
+  text-decoration: none !important;
+  color: inherit !important;
+  border-bottom: none !important;
+}
+
+/* Also remove from any nested elements or pseudo-elements */
+a[href*="/services/"] *,
+.service-card a * {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+a[href*="/services/"]::after,
+a[href*="/services/"]::before,
+.service-card a::after,
+.service-card a::before {
+  content: none !important;
 }
 
 
