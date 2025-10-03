@@ -1095,4 +1095,16 @@ footer {
   to { width: 100%; }
 }
 
+/* Remove underline from service card links */
+.service-card a {
+  text-decoration: none;
+  color: inherit; /* keeps the text color consistent */
+}
+
+/* Optional: Add hover effect for better UX */
+.service-card a:hover {
+  text-decoration: none; /* still no underline */
+  color: #0a7d7d; /* example teal/navy hover color, can match your theme */
+}
+
 
