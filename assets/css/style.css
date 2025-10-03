@@ -198,8 +198,10 @@ body {
 }
 
 .services h2, .hr-engine h2 {
-  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
   margin-bottom: 12px;
+  color: #0a2540;
 }
 
 .services p, .hr-engine p.subtitle {
