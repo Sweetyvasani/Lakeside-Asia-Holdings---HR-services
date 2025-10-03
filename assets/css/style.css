@@ -1153,16 +1153,16 @@ a[href*="/services/"]::before,
 /* ============================= */
 
 .explore-link {
-  display: block;
+  display: inline-block;
   margin-top: 8px;
   font-size: 0.8rem;       /* small, subtle text */
   text-decoration: underline;
-  color: #0a2540;          /* navy to match headings */
+  color: #0645AD;          /* standard web link blue */
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .service-card:hover .explore-link {
-  color: #14b8a6;          /* teal hover, consistent with card hover */
+  color: #0a58ca;          /* teal hover, consistent with card hover */
 }
 
