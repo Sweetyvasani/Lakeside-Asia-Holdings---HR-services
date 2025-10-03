@@ -1095,6 +1095,15 @@ footer {
   to { width: 100%; }
 }
 
+/* ============================= */
+/* Custom Section Dividers       */
+/* ============================= */
+.section-divider {
+  border-top: 2px solid #0a7d7d; /* teal */
+  width: 80px;                   /* short line, centered */
+  margin: 50px auto;
+}
+
 /* Remove underline from service card links */
 .service-card a {
   text-decoration: none;
