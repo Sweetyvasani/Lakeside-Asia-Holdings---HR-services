@@ -604,6 +604,35 @@ body {
   }
 }
 
+/* ================== Tooltip hover text for Lotus petals ================== */
+
+.lotus-petal::after {
+  content: attr(data-hover);  /* text comes from HTML attribute */
+  position: absolute;
+  bottom: -40px;              /* place below the petal */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 31, 84, 0.95); /* navy semi-transparent */
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  padding: 6px 10px;
+  border-radius: 6px;
+  max-width: 180px;           /* prevents tooltip being too wide */
+  white-space: normal;        /* allows wrapping into 2 lines */
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 50;
+}
+
+.lotus-petal:hover::after {
+  opacity: 1;
+}
+
+
+
 /* ================== HR LIFECYCLE ROADMAP ================== */
 .hr-lifecycle {
   text-align: center;
