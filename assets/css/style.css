@@ -1168,3 +1168,26 @@ a[href*="/services/"]::before,
 .service-card:hover .explore-link {
   color: #0a58ca;          /* teal hover, consistent with card hover */
 }
+
+/* ================== Growth Dilemma Section ================== */
+.growth-dilemma h2 {
+  color: #0a2540; /* navy heading */
+}
+
+.growth-dilemma .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.growth-dilemma .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+/* ================== Smarter Approach Section ================== */
+.smarter-approach h2 {
+  color: #0a2540;
+}
+
+.smarter-approach img {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
