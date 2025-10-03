@@ -1148,3 +1148,21 @@ a[href*="/services/"]::before,
   border-left: 2px solid #0a7d7d; height: 100%; /* teal vertical line */
 }
 
+/* ============================= */
+/* Explore this service */
+/* ============================= */
+
+.explore-link {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;       /* small, subtle text */
+  text-decoration: underline;
+  color: #0a2540;          /* navy to match headings */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .explore-link {
+  color: #14b8a6;          /* teal hover, consistent with card hover */
+}
+
