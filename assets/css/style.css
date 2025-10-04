@@ -1300,17 +1300,17 @@ a[href*="/services/"]::before,
 
 /* Hero Section */
 .about-hero {
-  background: #f5f5f5; /* light gray background */
+background: linear-gradient(to right, #f0fdfa, #ecfdf5); /* subtle green/teal gradient */
   padding: 80px 20px;
 }
 .about-hero h1 {
   font-size: 2.5rem;
-  color: #146c43; /* your green */
+  color: #0a2540; 
 }
 .about-hero .tagline {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  color: #555;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #14b8a6;
   font-style: italic;
 }
 
@@ -1359,6 +1359,13 @@ a[href*="/services/"]::before,
   .vision-mission .box {
     max-width: 100%;
   }
+  .vision-mission .box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.vision-mission .box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
   }
 
 /* ================== FOUNDERS ================== */
@@ -1402,6 +1409,13 @@ a[href*="/services/"]::before,
   object-position: top center; /* adjust focus */
   margin-bottom: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.founder-img {
+  transition: transform 0.3s ease;
+}
+.founder:hover .founder-img {
+  transform: scale(1.05);
 }
 
 .founders-wrapper {
