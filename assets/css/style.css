@@ -1252,9 +1252,11 @@ a[href*="/services/"]::before,
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1250px; /* ✅ matches Growth Dilemma width */
+  width: 95%;          /* ✅ same left-right margin as Growth Dilemma */
+  margin: 0 auto;     /* centers container but with controlled width */
   align-items: center;
+  text-align: left;    /* ✅ start content from left, not center */
 }
 
 .smarter-text {
@@ -1277,7 +1279,7 @@ a[href*="/services/"]::before,
 
 .smarter-image {
   flex: 1 1 40%;
-  text-align: center;
+  text-align: left;  /* ✅ image aligned to left margin */
 }
 
 .smarter-image img {
