@@ -1262,7 +1262,7 @@ a[href*="/services/"]::before,
   }
 
 .smarter-text {
-  flex: 0 0 38%;  /* ✅ lock text width to ~38% */
+  flex: 0 0 40%;  /* ✅ lock text width to ~40% */
 }
 
 .smarter-text h2 {
