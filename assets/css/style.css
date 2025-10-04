@@ -1291,32 +1291,6 @@ a[href*="/services/"]::before,
 
 /* ================== ABOUT US PAGE ================== */
 
-/* ================= Hero Section (About Page) ================= */
-.about-hero {
-  background: linear-gradient(to right, #c9f3f0, #cce6fa); /* soft teal to sky blue */
-  color: #0f172a;
-  text-align: center;
-  padding: 4rem 1.5rem 3rem 1.5rem; /* reduced height */
-}
-
-.about-hero h1 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 0.6rem;
-}
-
-.about-hero .tagline {
-  font-size: 1.2rem;
-  color: #0f172a;
-  margin-bottom: 0.3rem;
-}
-
-.about-hero .sub-tagline {
-  font-size: 1rem;
-  color: #0f172a;
-  opacity: 0.85;
-}
-
 /* ================= About Content ================= */
 .about-content {
   max-width: 900px;
