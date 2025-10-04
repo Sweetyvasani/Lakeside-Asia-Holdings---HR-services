@@ -1301,6 +1301,7 @@ a[href*="/services/"]::before,
   }
 }
 
+/* Highlighted final line in Smarter Approach */
 .highlight-line {
   font-weight: 600;           /* bold overall */
   color: #333;                /* normal text color */
