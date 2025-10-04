@@ -1362,111 +1362,50 @@ a[href*="/services/"]::before,
 
 /* ================== FOUNDERS ================== */
 .founders {
-  padding: 2rem 0;
-  background: transparent;
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0a2540;
-  text-align: center;
-  margin-bottom: 0.25rem;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: #555;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.founders-wrapper {
   display: flex;
   gap: 2rem;
   justify-content: center;
-  align-items: stretch;
+  padding: 2rem;
   flex-wrap: wrap;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .founder {
-  flex: 0 1 48%;
-  max-width: 480px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 420px;
+  border-radius: 8px;
+  padding: 1.25rem;
   text-align: center;
-  padding: 1.5rem 1rem 2rem;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.founder:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 
 .founder-img {
   width: 220px;
   height: 220px;
+  border-radius: 50%;
   object-fit: cover;
   object-position: top center;
-  border-radius: 50%;
   margin-bottom: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.founder h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
+.founders h2 {
   color: #0a2540;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
 }
 
-.founder-role {
+.founders h3 {
   font-size: 1rem;
-  color: #14b8a6;
   font-weight: 600;
+  color: #14b8a6;
   margin-bottom: 0.75rem;
 }
 
-.founder p {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.6;
-  margin: 0;
-  max-width: 90%;
+/* ================== FOUNDERS (ABOUT US PAGE) ================== */
+.founders-about {
+  padding: 2rem 0;
+  background: transparent;
+  text-align: center;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .founders-wrapper {
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 100%;
-    padding: 0 12px;
-  }
-  .founder {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-  .founder-img {
-    width: 180px;
-    height: 180px;
-  }
-}
-
-/* ======== ABOUT PAGE FOUNDERS FIX ======== */
-
-/* Only applies when .founders-wrapper exists (About page) */
-.founders-wrapper {
+.founders-about-wrapper {
   display: flex;
   gap: 2rem;
   justify-content: center;
@@ -1475,7 +1414,7 @@ a[href*="/services/"]::before,
   margin: 2rem auto 0;
 }
 
-.founders-wrapper .founder {
+.founders-about-wrapper .founder {
   flex: 0 1 48%;
   max-width: 480px;
   display: flex;
@@ -1483,9 +1422,12 @@ a[href*="/services/"]::before,
   align-items: center;
   text-align: center;
   padding: 1.5rem 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.founders-wrapper .founder-img {
+.founders-about-wrapper .founder-img {
   width: 220px;
   height: 220px;
   object-fit: cover;
@@ -1495,21 +1437,21 @@ a[href*="/services/"]::before,
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.founders-wrapper h3 {
+.founders-about-wrapper h3 {
   font-size: 1.25rem;
   font-weight: 700;
   color: #0a2540;
   margin-bottom: 0.35rem;
 }
 
-.founders-wrapper .founder-role {
+.founders-about-wrapper .founder-role {
   font-size: 1rem;
   color: #14b8a6;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
-.founders-wrapper p {
+.founders-about-wrapper p {
   font-size: 0.95rem;
   color: #444;
   line-height: 1.6;
@@ -1518,17 +1460,17 @@ a[href*="/services/"]::before,
 
 /* Responsive */
 @media (max-width: 768px) {
-  .founders-wrapper {
+  .founders-about-wrapper {
     flex-direction: column;
     gap: 1.5rem;
     max-width: 100%;
     padding: 0 12px;
   }
-  .founders-wrapper .founder {
+  .founders-about-wrapper .founder {
     flex: 1 1 100%;
     max-width: 100%;
   }
-  .founders-wrapper .founder-img {
+  .founders-about-wrapper .founder-img {
     width: 180px;
     height: 180px;
   }
