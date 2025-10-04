@@ -1520,4 +1520,45 @@ a[href*="/services/"]::before,
   .founder-img { width: 180px; height: 180px; }
 }
 
+  /* ======== TAILWIND OVERRIDE: FIX FOUNDERS FLEX ALIGNMENT ======== */
+
+/* Force Tailwind container to behave normally within Founders section */
+section.founders .container {
+  display: block !important;     /* neutralize Tailwind’s display:flex/block overrides */
+  width: 100%;
+}
+
+/* Ensure the wrapper actually applies flex layout even if Tailwind loads later */
+.founders-wrapper {
+  display: flex !important;      /* force flex to win */
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Make sure individual cards have expected width */
+.founder {
+  flex: 0 1 48%;
+  max-width: 480px;
+  box-sizing: border-box;
+}
+
+/* Responsive stacking */
+@media (max-width: 768px) {
+  .founders-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 100%;
+    padding: 0 12px;
+  }
+  .founder {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
 
