@@ -737,10 +737,11 @@ body {
   gap: 2rem;
   justify-content: center;
   padding: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* allows stacking when screen is small */
 }
 
-.founder {
+.founders .founder {
+  flex: 1;
   max-width: 420px;
   border-radius: 8px;
   padding: 1.25rem;
@@ -759,6 +760,8 @@ body {
   color: #0a2540;
   margin-bottom: 0.5rem;
 }
+
+
 
 /* ================== 4-STEP PATH TO HR EXCELLENCE ================== */
 .our-model-premium {
