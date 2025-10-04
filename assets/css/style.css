@@ -1311,6 +1311,6 @@ a[href*="/services/"]::before,
 }
 
 .highlight-line span {
-  color: #001F54;             /* only highlighted words in brand blue */
+  color: #0a58ca;             /* only highlighted words in brand blue */
   font-weight: 700;
 }
