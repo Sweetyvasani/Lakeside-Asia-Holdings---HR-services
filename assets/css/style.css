@@ -1232,6 +1232,14 @@ a[href*="/services/"]::before,
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
+.card-img {
+  width: 64px;            /* uniform size */
+  height: auto;
+  margin-bottom: 15px;    /* spacing below image */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;     /* centers image */
+}
 
 /* ================== Smarter Approach Section ================== */
 .smarter-approach {
