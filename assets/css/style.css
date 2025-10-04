@@ -1252,7 +1252,7 @@ a[href*="/services/"]::before,
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  max-width: 1250px; /* ✅ matches Growth Dilemma width */
+  max-width: 1380px; /* ✅ matches Growth Dilemma width */
   width: 95%;          /* ✅ same left-right margin as Growth Dilemma */
   margin: 0 auto;     /* centers container but with controlled width */
   align-items: center;
