@@ -1293,35 +1293,131 @@ a[href*="/services/"]::before,
 
 /* ================= Hero Section (About Page) ================= */
 .about-hero {
-  background: linear-gradient(to right, #0f172a, #0d9488); /* navy blue to teal */
-  color: white;
+  background: linear-gradient(to right, #c8f3ef, #c9e6fa); /* soft teal to sky blue */
+  color: #0f172a;
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 5rem 2rem;
 }
 
 .about-hero h1 {
   font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
 }
 
 .about-hero .tagline {
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
+  color: #0f172a;
 }
 
 .about-hero .sub-tagline {
-  font-size: 1rem;
-  opacity: 0.9;
+  font-size: 1.05rem;
+  color: #0f172a;
+  opacity: 0.8;
 }
 
+.about-content {
+  text-align: center; /* ✅ Center the paragraphs */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
 
-/* ================= About Content ================= */
 .about-content p {
   margin-bottom: 0.9rem;
   font-size: 1rem;
   line-height: 1.7;
+  color: #333;
 }
+
+
+/* ================= Our Journey Section ================= */
+.our-journey {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.our-journey .section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  color: #0f172a;
+}
+
+/* ===== Timeline Base Layout ===== */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #d1d5db; /* subtle gray line */
+  z-index: 0;
+}
+
+/* ===== Each timeline item ===== */
+.timeline-item {
+  position: relative;
+  width: 200px;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Dot */
+.timeline-item .dot {
+  width: 14px;
+  height: 14px;
+  background: #0d9488;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Year + Event */
+.timeline-item .year {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  color: #0f172a;
+}
+
+.timeline-item .event {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+/* ===== Alternate layout (text above & below) ===== */
+.timeline-item:nth-child(odd) .year,
+.timeline-item:nth-child(odd) .event {
+  position: relative;
+  top: -4.5rem; /* move text above line */
+}
+
+.timeline-item:nth-child(even) .year,
+.timeline-item:nth-child(even) .event {
+  position: relative;
+  top: 4.5rem; /* move text below line */
+}
+
 
 /* Vision & Mission */
 .vision-mission {
@@ -1528,25 +1624,69 @@ a[href*="/services/"]::before,
   }
 }
 
+/* ================= Hero Section (About Page) ================= */
+.about-hero {
+  background: linear-gradient(to right, #c8f3ef, #c9e6fa); /* soft teal to sky blue */
+  color: #0f172a;
+  text-align: center;
+  padding: 6rem 2rem 5rem 2rem;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+
+.about-hero .tagline {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #0f172a;
+}
+
+.about-hero .sub-tagline {
+  font-size: 1.05rem;
+  color: #0f172a;
+  opacity: 0.8;
+}
+
+.about-content {
+  text-align: center; /* ✅ Center the paragraphs */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.about-content p {
+  margin-bottom: 0.9rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+
 /* ================= Our Journey Section ================= */
 .our-journey {
   text-align: center;
   padding: 4rem 2rem;
+  background-color: #fff;
 }
 
 .our-journey .section-title {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  color: #0f172a;
 }
 
+/* ===== Timeline Base Layout ===== */
 .timeline {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
-  margin-top: 2rem;
-  position: relative;
+  margin-top: 3rem;
 }
 
 .timeline::before {
@@ -1556,29 +1696,37 @@ a[href*="/services/"]::before,
   left: 0;
   width: 100%;
   height: 2px;
-  background: #ccc; /* horizontal line */
+  background: #d1d5db; /* subtle gray line */
   z-index: 0;
 }
 
+/* ===== Each timeline item ===== */
 .timeline-item {
   position: relative;
   width: 200px;
   z-index: 1;
+  text-align: center;
 }
 
+/* Dot */
 .timeline-item .dot {
   width: 14px;
   height: 14px;
   background: #0d9488;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 0.5rem auto;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
+/* Year + Event */
 .timeline-item .year {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
   color: #0f172a;
 }
 
@@ -1586,14 +1734,19 @@ a[href*="/services/"]::before,
   font-size: 0.95rem;
   color: #444;
   line-height: 1.5;
+  max-width: 240px;
+  margin: 0 auto;
 }
 
-
-/* ================= Alternate Positioning ================= */
-.timeline-item:nth-child(odd) {
-  transform: translateY(-2.5rem); /* shift up */
+/* ===== Alternate layout (text above & below) ===== */
+.timeline-item:nth-child(odd) .year,
+.timeline-item:nth-child(odd) .event {
+  position: relative;
+  top: -4.5rem; /* move text above line */
 }
 
-.timeline-item:nth-child(even) {
-  transform: translateY(2.5rem); /* shift down */
+.timeline-item:nth-child(even) .year,
+.timeline-item:nth-child(even) .event {
+  position: relative;
+  top: 4.5rem; /* move text below line */
 }
