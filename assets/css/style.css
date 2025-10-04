@@ -1293,10 +1293,10 @@ a[href*="/services/"]::before,
 
 /* ================= About Content ================= */
 .about-content {
-  max-width: 900px;
+  max-width: 1100px;  /* slightly wider content block */
   margin: 0 auto;
-  padding: 3rem 1rem;
-  text-align: left; /* ✅ paragraphs left-aligned */
+  padding: 3rem 2.5rem; /* more breathing room on sides */
+  text-align: justify; /* already looks great in your current setup */
 }
 
 .about-content p {
