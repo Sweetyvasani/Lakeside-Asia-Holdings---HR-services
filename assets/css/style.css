@@ -1300,3 +1300,14 @@ a[href*="/services/"]::before,
     flex: 1 1 100%;
   }
 }
+
+.highlight-line {
+  font-weight: 600;           /* bold overall */
+  color: #333;                /* normal text color */
+  margin-top: 20px;
+}
+
+.highlight-line span {
+  color: #0a58ca;             /* bright blue highlight */
+  font-weight: 700;           /* make blue words a bit bolder */
+}
