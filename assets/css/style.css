@@ -981,7 +981,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1380px;
   margin: 0 auto;
 }
 
@@ -1023,7 +1023,7 @@ footer {
 
 /* Right Column - Navy + Gold Theme */
 .why-us-highlight {
-  flex: 1 1 30%;
+  flex: 1 1 35%;
   background: linear-gradient(135deg, #ffffff, #f9f9f9); /* subtle gray-white */
   border: 2px solid #0a2540; /* navy border */
   padding: 2.5rem;
@@ -1270,6 +1270,7 @@ a[href*="/services/"]::before,
   font-weight: 700;
   color: #0a2540; /* navy */
   margin-bottom: 20px;
+    line-height: 1.05;   /* ✅ tighten spacing between lines */
 }
 
 .smarter-text p {
