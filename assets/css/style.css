@@ -732,7 +732,7 @@ body {
 }
 
 /* ================== FOUNDERS ================== */
-.founders {
+.founders .container{
   display: flex;
   gap: 2rem;
   justify-content: center;
@@ -740,7 +740,7 @@ body {
   flex-wrap: wrap; /* allows stacking when screen is small */
 }
 
-.founders .founder {
+.founders {
   flex: 1;
   max-width: 420px;
   border-radius: 8px;
@@ -761,6 +761,15 @@ body {
   margin-bottom: 0.5rem;
 }
 
+@media (max-width: 768px) {
+  .founders .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .founder {
+    max-width: 90%;
+  }
+}
 
 
 /* ================== 4-STEP PATH TO HR EXCELLENCE ================== */
@@ -1360,7 +1369,14 @@ a[href*="/services/"]::before,
   font-weight: 700;
 }
 
-/* ================== About US Section ================== */
+/* ================== ABOUT US ================== */
+.about-content .container {
+  max-width: 900px;
+  margin: 0 auto;      /* centers block */
+  text-align: justify; /* or center if you prefer */
+  line-height: 1.7;
+  padding: 2rem 1rem;
+}
 
 /* Hero Section */
 .about-hero {
