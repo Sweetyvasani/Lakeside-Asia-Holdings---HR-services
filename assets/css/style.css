@@ -1409,3 +1409,14 @@ a[href*="/services/"]::before,
   color: #146c43;
 }
 
+@media (max-width: 768px) {
+  .vision-mission .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .vision-mission .box {
+    max-width: 100%; /* take full width on mobile */
+  }
+}
+
+
