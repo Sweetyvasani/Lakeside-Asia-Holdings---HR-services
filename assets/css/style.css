@@ -216,7 +216,7 @@ body {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr)); /* 6 equal columns */
   gap: 10px;                  /* smaller gap to help fit 6th card */
-  max-width: 1400px;          /* widen container so grid has space */
+  max-width: 1420px;          /* widen container so grid has space */
   margin: 0 auto;
   padding: 0 12px;
   align-items: start;
