@@ -864,84 +864,6 @@ footer {
   padding: 1rem;
 }
 
-/* ================== FOUNDERS ================== */
-
-/* Founders Section */
-.founders {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  padding: 2rem;
-  flex-wrap: wrap;
-}
-
-.founder {
-  max-width: 420px;
-  border-radius: 8px;
-  padding: 1.25rem;
-  text-align: center;
-}
-
-/* Founders section headings */
-.founders h2 {
-  color: #0a2540;
-  margin-bottom: 0.25rem;
-}
-
-.founders h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #14b8a6;  /* teal subheading for role */
-  margin-bottom: 0.75rem;
-}
-
-
-/* ✅ Standardize founder images */
-.founder-img {
-  width: 220px;       /* standard width */
-  height: 220px;      /* standard height */
-  border-radius: 50%;    /* circle */
-  object-fit: cover;  /* crop to fill circle */
-  object-position: top center; /* adjust focus (top-center works well for portraits) */
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.founders-wrapper {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0a2540;
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: #555;
-  margin-bottom: 2rem;
-  font-size: 1rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 768px) {
-  .founders {
-    flex-direction: column;
-    align-items: center;
-  }
-  .founder {
-    max-width: 90%;
-  }
-}
 
 /* Trust / Expertise Section (inside Why Us) */
 .trust {
@@ -1369,7 +1291,7 @@ a[href*="/services/"]::before,
 
 /* ================== ABOUT US ================== */
 .about-content .container {
-  max-width: 900px;
+  max-width: 900px;  
   margin: 0 auto;      /* centers block */
   text-align: justify; /* or center if you prefer */
   line-height: 1.7;
@@ -1438,57 +1360,12 @@ a[href*="/services/"]::before,
     max-width: 100%;
   }
 
-/* ========== ABOUT / FOUNDERS ALIGNMENT FIX ========== */
-
-/* Optional: unify site container on static pages (overrides Tailwind .container behavior)
-   Keep this if you want a consistent centered width across pages. */
-.container {
-  max-width: 1100px;        /* same max width used across key sections */
-  margin: 0 auto;           /* center horizontally */
-  padding: 0 20px;          /* left/right gutter */
-  box-sizing: border-box;
-}
-
-/* Align founders section to same centered column */
+/* ================== FOUNDERS ================== */
 .founders {
   padding: 2rem 0;
-  background: transparent; /* keep same background as other sections */
+  background: transparent;
 }
 
-/* Inner wrapper that controls the two-profile layout */
-.founders-wrapper {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: stretch; /* equal heights if content differs */
-  flex-wrap: wrap;
-  max-width: 900px;     /* match paragraph width for visual alignment */
-  margin: 0 auto;       /* center the wrapper inside .container */
-  box-sizing: border-box;
-}
-
-/* individual founder card sizing */
-.founder {
-  flex: 0 1 48%;        /* two-up layout (approx 50% each with gap) */
-  max-width: 480px;
-  box-sizing: border-box;
-  padding: 1.25rem;
-  text-align: center;
-  border-radius: 8px;
-}
-
-/* make sure image sizing is consistent */
-.founder-img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-/* headings/subtitle to mirror homepage */
 .section-title {
   font-size: 2rem;
   font-weight: 700;
@@ -1496,16 +1373,79 @@ a[href*="/services/"]::before,
   text-align: center;
   margin-bottom: 0.25rem;
 }
+
 .section-subtitle {
   text-align: center;
   color: #555;
   margin-bottom: 1.5rem;
+  font-size: 1rem;
   max-width: 760px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Responsive: stack on small screens */
+.founders-wrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.founder {
+  flex: 0 1 48%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.founder-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.founder h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a2540;
+  margin-bottom: 0.35rem;
+}
+
+.founder-role {
+  font-size: 1rem;
+  color: #14b8a6;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.founder p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 90%;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .founders-wrapper {
     flex-direction: column;
@@ -1517,75 +1457,8 @@ a[href*="/services/"]::before,
     flex: 1 1 100%;
     max-width: 100%;
   }
-  .founder-img { width: 180px; height: 180px; }
+  .founder-img {
+    width: 180px;
+    height: 180px;
+  }
 }
-
-  /* ======== FOUNDERS CARD VISUAL ALIGNMENT FIX ======== */
-
-/* Standardize the founder cards visually */
-.founders-wrapper {
-  align-items: flex-start;      /* keep top alignment of both profiles */
-}
-
-/* Consistent padding and vertical rhythm */
-.founder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  padding: 1.5rem 1rem 2rem;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.founder:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-}
-
-/* Ensure equal image sizing and centered alignment */
-.founder-img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* Founder name and role spacing */
-.founder h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #0a2540;
-  margin-bottom: 0.35rem;
-}
-
-.founder-role {
-  font-size: 1rem;
-  color: #14b8a6; /* teal subheading */
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-
-/* Paragraph uniformity */
-.founder p {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.6;
-  margin: 0;
-  max-width: 90%;
-}
-
-/* Keep both cards equal height even if text differs */
-.founder p:last-of-type {
-  flex-grow: 1;
-}
-
-
-  
