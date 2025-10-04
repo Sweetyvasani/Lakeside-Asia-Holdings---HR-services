@@ -1280,7 +1280,7 @@ a[href*="/services/"]::before,
 }
 
 .smarter-image {
-  flex: 0 0 60%;     /* ✅ lock image width to ~60% */
+  flex: 0 0 50%;     /* ✅ lock image width to ~50% */
   text-align: left;  /* ✅ image aligned to left margin */
 }
 
