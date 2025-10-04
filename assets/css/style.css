@@ -731,46 +731,6 @@ body {
   color: #0a2540;
 }
 
-/* ================== FOUNDERS ================== */
-.founders .container{
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  padding: 2rem;
-  flex-wrap: wrap; /* allows stacking when screen is small */
-}
-
-.founders {
-  flex: 1;
-  max-width: 420px;
-  border-radius: 8px;
-  padding: 1.25rem;
-  text-align: center;
-}
-
-.founder-img {
-  width: 180px;
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.founder h2 {
-  color: #0a2540;
-  margin-bottom: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .founders .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .founder {
-    max-width: 90%;
-  }
-}
-
 
 /* ================== 4-STEP PATH TO HR EXCELLENCE ================== */
 .our-model-premium {
@@ -904,6 +864,8 @@ footer {
   padding: 1rem;
 }
 
+/* ================== FOUNDERS ================== */
+
 /* Founders Section */
 .founders {
   display: flex;
@@ -943,6 +905,16 @@ footer {
   object-position: top center; /* adjust focus (top-center works well for portraits) */
   margin-bottom: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .founders {
+    flex-direction: column;
+    align-items: center;
+  }
+  .founder {
+    max-width: 90%;
+  }
 }
 
 /* Trust / Expertise Section (inside Why Us) */
@@ -1440,13 +1412,5 @@ a[href*="/services/"]::before,
     max-width: 100%;
   }
 
-  .founders {
-    flex-direction: column;
-    align-items: center;
-  }
-  .founders .founder {
-    max-width: 90%;
-  }
-}
 
 
