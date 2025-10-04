@@ -1260,7 +1260,7 @@ a[href*="/services/"]::before,
 }
 
 .smarter-text {
-  flex: 1 1 55%;
+  flex: 1 1 40%;  /* ✅ smaller text block */
 }
 
 .smarter-text h2 {
@@ -1278,7 +1278,7 @@ a[href*="/services/"]::before,
 }
 
 .smarter-image {
-  flex: 1 1 40%;
+  flex: 1 1 60%;      /* ✅ larger image block */
   text-align: left;  /* ✅ image aligned to left margin */
 }
 
