@@ -215,13 +215,14 @@ body {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr)); /* 6 equal columns */
-  gap: 10px;                  /* smaller gap to help fit 6th card */
-  max-width: 1420px;          /* widen container so grid has space */
-  margin: 0 auto;
-  padding: 0 12px;
+  gap: 20px;                  /* a bit more spacing for cleaner look */
+  max-width: 1400px;          /* widen container so grid has space */
+  margin-left: 0;           /* ✅ align grid to the left */
+  margin-right: auto;       /* ✅ leave space on the right */
+  padding-left: 40px;       /* ✅ controlled breathing room from the left edge */
+  padding-right: 20px;      /* ✅ smaller padding on right */
   align-items: start;
   box-sizing: border-box;
-  justify-content: start;     /* grid columns start at left inside container */
 }
 
 /* ---- Service Card Consistency & Typography ---- */
