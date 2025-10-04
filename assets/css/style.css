@@ -214,15 +214,15 @@ body {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr)); /* 6 equal columns */
+  grid-template-columns: repeat(6, minmax(220px, 1fr)); /* ✅ widen cards slightly */
   gap: 20px;                  /* a bit more spacing for cleaner look */
-  max-width: 1400px;          /* widen container so grid has space */
-  margin-left: 0;           /* ✅ align grid to the left */
-  margin-right: auto;       /* ✅ leave space on the right */
-  padding-left: 40px;       /* ✅ controlled breathing room from the left edge */
-  padding-right: 20px;      /* ✅ smaller padding on right */
+  max-width: 1500px;          /* widen container so grid has space */
+   width: 96%;                    /* ✅ utilize more screen space */
+ margin: 0 auto;                /* ✅ keep equal space on both sides */
+  padding: 0 20px;               /* ✅ soft inner gutter */
   align-items: start;
   box-sizing: border-box;
+  justify-content: center;       /* ✅ ensure cards stay balanced */
 }
 
 /* ---- Service Card Consistency & Typography ---- */
