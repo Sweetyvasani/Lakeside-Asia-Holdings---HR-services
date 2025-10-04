@@ -1294,14 +1294,14 @@ a[href*="/services/"]::before,
   max-width: 950px;  
   margin: 0 auto;      /* centers block */
   text-align: justify; /* or center if you prefer */
-    padding: 2rem 1.5rem;
+    padding: 2rem 2rem;
 }
 
 /* Hero Section */
 .about-hero {
-background: linear-gradient(to right, #0f766e, #14b8a6); /* teal gradient */
+background: linear-gradient(to right, #ccfbf1, #99f6e4); /* lighter teal */
   padding: 60px 20px; /* reduced height */
-  color: #fff;
+  color: #0a2540;
 }
 .about-hero h1 {
   font-size: 2.5rem;
@@ -1311,12 +1311,13 @@ background: linear-gradient(to right, #0f766e, #14b8a6); /* teal gradient */
   margin-top: 0.75rem;
   font-size: 1.25rem;
     font-weight: 500;
+  color: #0f766e;
 }
 
 .about-hero .sub-tagline {
   margin-top: 0.25rem;
   font-size: 1.1rem;
-  color: #f0fdfa;
+  color: #115e59;
 }
 
 /* About Content */
@@ -1352,9 +1353,10 @@ background: linear-gradient(to right, #0f766e, #14b8a6); /* teal gradient */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .vision-mission h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #146c43;
+  font-size: 1.75rem;
+  font-weight: 800;   /* bolder */
+  margin-bottom: 1rem;
+  color: #0a2540;
 }
 
 @media (max-width: 768px) {
@@ -1538,10 +1540,10 @@ background: linear-gradient(to right, #0f766e, #14b8a6); /* teal gradient */
   }
 }
 
-/* ================== OUR JOURNEY ================== */
+/* ================== OUR JOURNEY TIMELINE ================== */
 .our-journey {
   padding: 4rem 2rem;
-  background: #f9fafb; /* light gray */
+  background: #f9fafb;
   text-align: center;
 }
 
@@ -1555,27 +1557,44 @@ background: linear-gradient(to right, #0f766e, #14b8a6); /* teal gradient */
 .timeline {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-  max-width: 1100px;
+  align-items: flex-start;
+  max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 28px; /* align with dots */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #14b8a6; /* teal line */
+  z-index: 1;
 }
 
 .timeline-item {
-  flex: 1 1 calc(25% - 2rem);
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  flex: 1;
   text-align: center;
-  transition: transform 0.3s ease;
+  position: relative;
 }
-.timeline-item:hover {
-  transform: translateY(-6px);
+
+.timeline-item .dot {
+  width: 20px;
+  height: 20px;
+  background: #14b8a6;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1rem;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #14b8a6;
 }
 
 .timeline-item .year {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #0a2540;
   margin-bottom: 0.5rem;
@@ -1585,17 +1604,35 @@ background: linear-gradient(to right, #0f766e, #14b8a6); /* teal gradient */
   font-size: 0.95rem;
   color: #555;
   line-height: 1.6;
+  max-width: 220px;
+  margin: 0 auto;
 }
 
-/* Responsive */
+/* Responsive (vertical timeline) */
 @media (max-width: 768px) {
   .timeline {
     flex-direction: column;
     align-items: center;
   }
+  .timeline::before {
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+  }
   .timeline-item {
+    text-align: left;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
     width: 100%;
     max-width: 500px;
+    position: relative;
+  }
+  .timeline-item .dot {
+    position: absolute;
+    left: -12px;
+    top: 0.25rem;
   }
 }
+
 
