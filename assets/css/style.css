@@ -1174,7 +1174,7 @@ a[href*="/services/"]::before,
 .growth-dilemma {
   padding: 80px 20px;
   background: #f9fafb;
-  text-align: center;
+  text-align: left;
 }
 
 .growth-dilemma h2 {
