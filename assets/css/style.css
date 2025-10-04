@@ -1391,15 +1391,18 @@ a[href*="/services/"]::before,
   padding: 80px 20px;
 }
 .vision-mission .container {
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+  justify-content: center;
 }
 .vision-mission .box {
   flex: 1;
-  min-width: 280px;
-  padding: 20px;
-  border-left: 4px solid #146c43; /* green accent */
+  max-width: 420px;  /* reduced width */
+  padding: 25px;
+  border-left: 4px solid #146c43;
   background: #fafafa;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
@@ -1415,7 +1418,15 @@ a[href*="/services/"]::before,
     align-items: center;
   }
   .vision-mission .box {
-    max-width: 100%; /* take full width on mobile */
+    max-width: 100%;
+  }
+
+  .founders {
+    flex-direction: column;
+    align-items: center;
+  }
+  .founders .founder {
+    max-width: 90%;
   }
 }
 
