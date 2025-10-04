@@ -1291,27 +1291,32 @@ a[href*="/services/"]::before,
 
 /* ================== ABOUT US ================== */
 .about-content .container {
-  max-width: 900px;  
+  max-width: 950px;  
   margin: 0 auto;      /* centers block */
   text-align: justify; /* or center if you prefer */
-  line-height: 1.7;
-  padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
 }
 
 /* Hero Section */
 .about-hero {
-background: linear-gradient(to right, #f0fdfa, #ecfdf5); /* subtle green/teal gradient */
-  padding: 80px 20px;
+background: linear-gradient(to right, #0f766e, #14b8a6); /* teal gradient */
+  padding: 60px 20px; /* reduced height */
+  color: #fff;
 }
 .about-hero h1 {
   font-size: 2.5rem;
-  color: #0a2540; 
+  font-weight: 700;
 }
 .about-hero .tagline {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   font-size: 1.25rem;
-  color: #14b8a6;
-  font-style: italic;
+    font-weight: 500;
+}
+
+.about-hero .sub-tagline {
+  margin-top: 0.25rem;
+  font-size: 1.1rem;
+  color: #f0fdfa;
 }
 
 /* About Content */
@@ -1321,7 +1326,9 @@ background: linear-gradient(to right, #f0fdfa, #ecfdf5); /* subtle green/teal gr
   color: #444;
 }
 .about-content p {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
 /* Vision & Mission */
@@ -1338,12 +1345,11 @@ background: linear-gradient(to right, #f0fdfa, #ecfdf5); /* subtle green/teal gr
   justify-content: center;
 }
 .vision-mission .box {
-  flex: 1;
-  max-width: 420px;  /* reduced width */
-  padding: 25px;
-  border-left: 4px solid #146c43;
-  background: #fafafa;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  padding: 2rem;
+  background: #f9fafb;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .vision-mission h2 {
   font-size: 1.5rem;
@@ -1356,17 +1362,18 @@ background: linear-gradient(to right, #f0fdfa, #ecfdf5); /* subtle green/teal gr
     flex-direction: column;
     align-items: center;
   }
-  .vision-mission .box {
-    max-width: 100%;
-  }
-  .vision-mission .box {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+
 .vision-mission .box:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
   }
+
+.vision-mission .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #14b8a6;
+}
 
 /* ================== FOUNDERS ================== */
 
@@ -1548,44 +1555,28 @@ background: linear-gradient(to right, #f0fdfa, #ecfdf5); /* subtle green/teal gr
 .timeline {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1000px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1100px;
   margin: 0 auto;
-  position: relative;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 40px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #14b8a6; /* teal line */
-  z-index: 1;
 }
 
 .timeline-item {
-  flex: 1;
+  flex: 1 1 calc(25% - 2rem);
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   text-align: center;
-  position: relative;
-  padding: 0 1rem;
+  transition: transform 0.3s ease;
 }
-
-.timeline-item .dot {
-  width: 16px;
-  height: 16px;
-  background: #14b8a6;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-  margin-bottom: 1rem;
+.timeline-item:hover {
+  transform: translateY(-6px);
 }
 
 .timeline-item .year {
+  font-size: 1.3rem;
   font-weight: 700;
-  font-size: 1.25rem;
   color: #0a2540;
   margin-bottom: 0.5rem;
 }
@@ -1594,8 +1585,6 @@ background: linear-gradient(to right, #f0fdfa, #ecfdf5); /* subtle green/teal gr
   font-size: 0.95rem;
   color: #555;
   line-height: 1.6;
-  max-width: 280px;
-  margin: 0 auto;
 }
 
 /* Responsive */
@@ -1604,24 +1593,9 @@ background: linear-gradient(to right, #f0fdfa, #ecfdf5); /* subtle green/teal gr
     flex-direction: column;
     align-items: center;
   }
-  .timeline::before {
-    top: 0;
-    left: 50%;
-    width: 2px;
-    height: 100%;
-  }
   .timeline-item {
-    text-align: left;
-    padding-left: 2rem;
-    margin-bottom: 2rem;
     width: 100%;
     max-width: 500px;
-    position: relative;
-  }
-  .timeline-item .dot {
-    position: absolute;
-    left: -8px;
-    top: 0.25rem;
   }
 }
 
