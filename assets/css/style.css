@@ -1290,37 +1290,32 @@ a[href*="/services/"]::before,
 }
 
 /* ================== ABOUT US ================== */
-.about-content .container {
-  max-width: 1000px;  /* slightly wider */
-  margin: 0 auto;      /* centers block */
-  text-align: justify; /* or center if you prefer */
-    padding: 1.5rem 2rem; /* reduced space top/bottom */
-}
 
 /* Hero Section */
 .about-hero {
-background: linear-gradient(to right, #d9fef4, #d8effe); /* same soft gradient as 'Why It Matters' */
-  padding: 30px 20px; /* smaller overall height */
+  background: linear-gradient(90deg, #e0fff6 0%, #d7f3ff 100%); /* identical gradient to 'Why It Matters' */
+  padding: 20px 15px; /* smaller height */
   color: #0a2540;
   text-align: center;
 }
 .about-hero h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
 }
 .about-hero .tagline {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #0f766e;
   font-weight: 500;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
 }
-
 .about-hero .sub-tagline {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: #115e59;
   font-style: italic;
+  margin-top: 0;
 }
+
 
 /* About Content */
 .about-content {
@@ -1329,16 +1324,16 @@ background: linear-gradient(to right, #d9fef4, #d8effe); /* same soft gradient a
 }
 
 .about-content .container {
-  max-width: 1000px;
+  max-width: 1040px; /* slightly wider frame */
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem 0.5rem; /* larger side padding creates left visual start */;
   text-align: justify;
 }
 
 .about-content p {
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.8rem;
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 
@@ -1567,19 +1562,22 @@ background: linear-gradient(to right, #d9fef4, #d8effe); /* same soft gradient a
 .timeline {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;  /* perfect centering */
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;  /* single straight line */
   max-width: 1100px;
   margin: 0 auto;
+  overflow-x: auto;  /* allows scrolling if screen is narrow */
+  padding-bottom: 1rem;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  top: 40px;
-  left: 5%;
-  right: 5%;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
   height: 2px;
   background: #14b8a6;
   z-index: 1;
@@ -1604,8 +1602,8 @@ background: linear-gradient(to right, #d9fef4, #d8effe); /* same soft gradient a
 }
 
 .timeline-item .dot.highlight {
-  background: #0f766e; /* darker teal for 2023 */
-  box-shadow: 0 0 0 3px #99f6e4;
+  background: #0f766e;
+  box-shadow: 0 0 8px #14b8a6, 0 0 0 3px #99f6e4;
 }
 
 .timeline-item .year {
