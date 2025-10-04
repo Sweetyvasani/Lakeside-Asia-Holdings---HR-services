@@ -1193,7 +1193,6 @@ a[href*="/services/"]::before,
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-}
 
 /* ✅ Center + left nudge */
   max-width: 1100px;    /* keep the grid compact */
