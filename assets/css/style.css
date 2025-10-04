@@ -225,6 +225,12 @@ body {
   justify-content: center;       /* ✅ ensure cards stay balanced */
   }
 
+.service-grid {
+  /* existing properties... */
+  align-items: stretch;   /* ✅ ensures all cards in a row have equal height */
+}
+
+
 /* ---- Service Card Consistency & Typography ---- */
 .service-card {
   display: flex;
@@ -235,7 +241,7 @@ body {
   border-radius: 14px;
   background: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  min-height: 320px;        /* ensures all cards same height */
+  min-height: 340px;        /* ensures all cards same height */
   width: 100%;                   /* ensures cards expand with grid column */
   box-sizing: border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -330,6 +336,7 @@ body {
   .service-grid { grid-template-columns: 1fr; gap: 12px; padding: 0 12px; }
   .service-card img { width: 48px; } /* slightly larger on small screens */
 }
+
 
 
 /* ================== HR LIFECYCLE - Circular Lifecycle Wheel - Lotus Petals  ================== */
