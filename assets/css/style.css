@@ -1531,4 +1531,97 @@ background: linear-gradient(to right, #f0fdfa, #ecfdf5); /* subtle green/teal gr
   }
 }
 
+/* ================== OUR JOURNEY ================== */
+.our-journey {
+  padding: 4rem 2rem;
+  background: #f9fafb; /* light gray */
+  text-align: center;
+}
+
+.our-journey .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #0a2540;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #14b8a6; /* teal line */
+  z-index: 1;
+}
+
+.timeline-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.timeline-item .dot {
+  width: 16px;
+  height: 16px;
+  background: #14b8a6;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1rem;
+}
+
+.timeline-item .year {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #0a2540;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item .event {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+  .timeline::before {
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+  }
+  .timeline-item {
+    text-align: left;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+  }
+  .timeline-item .dot {
+    position: absolute;
+    left: -8px;
+    top: 0.25rem;
+  }
+}
 
