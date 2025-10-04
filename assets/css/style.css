@@ -1356,3 +1356,56 @@ a[href*="/services/"]::before,
   color: #0a58ca;             /* only highlighted words in brand blue */
   font-weight: 700;
 }
+
+/* ================== About US Section ================== */
+
+/* Hero Section */
+.about-hero {
+  background: #f5f5f5; /* light gray background */
+  padding: 80px 20px;
+}
+.about-hero h1 {
+  font-size: 2.5rem;
+  color: #146c43; /* your green */
+}
+.about-hero .tagline {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* About Content */
+.about-content {
+  padding: 60px 20px;
+  line-height: 1.7;
+  color: #444;
+}
+.about-content p {
+  margin-bottom: 20px;
+}
+
+/* Vision & Mission */
+.vision-mission {
+  background: #fff;
+  padding: 80px 20px;
+}
+.vision-mission .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.vision-mission .box {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  border-left: 4px solid #146c43; /* green accent */
+  background: #fafafa;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.vision-mission h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #146c43;
+}
+
