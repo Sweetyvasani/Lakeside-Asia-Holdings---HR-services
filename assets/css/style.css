@@ -1520,45 +1520,72 @@ a[href*="/services/"]::before,
   .founder-img { width: 180px; height: 180px; }
 }
 
-  /* ======== TAILWIND OVERRIDE: FIX FOUNDERS FLEX ALIGNMENT ======== */
+  /* ======== FOUNDERS CARD VISUAL ALIGNMENT FIX ======== */
 
-/* Force Tailwind container to behave normally within Founders section */
-section.founders .container {
-  display: block !important;     /* neutralize Tailwind’s display:flex/block overrides */
-  width: 100%;
-}
-
-/* Ensure the wrapper actually applies flex layout even if Tailwind loads later */
+/* Standardize the founder cards visually */
 .founders-wrapper {
-  display: flex !important;      /* force flex to win */
-  gap: 2rem;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  max-width: 900px;
-  margin: 0 auto;
-  box-sizing: border-box;
+  align-items: flex-start;      /* keep top alignment of both profiles */
 }
 
-/* Make sure individual cards have expected width */
+/* Consistent padding and vertical rhythm */
 .founder {
-  flex: 0 1 48%;
-  max-width: 480px;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 1.5rem 1rem 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Responsive stacking */
-@media (max-width: 768px) {
-  .founders-wrapper {
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 100%;
-    padding: 0 12px;
-  }
-  .founder {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
+.founder:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* Ensure equal image sizing and centered alignment */
+.founder-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Founder name and role spacing */
+.founder h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a2540;
+  margin-bottom: 0.35rem;
+}
+
+.founder-role {
+  font-size: 1rem;
+  color: #14b8a6; /* teal subheading */
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Paragraph uniformity */
+.founder p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 90%;
+}
+
+/* Keep both cards equal height even if text differs */
+.founder p:last-of-type {
+  flex-grow: 1;
 }
 
 
+  
