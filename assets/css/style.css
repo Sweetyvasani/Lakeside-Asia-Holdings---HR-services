@@ -1291,32 +1291,32 @@ a[href*="/services/"]::before,
 
 /* ================== ABOUT US ================== */
 .about-content .container {
-  max-width: 950px;  
+  max-width: 1000px;  /* slightly wider */
   margin: 0 auto;      /* centers block */
   text-align: justify; /* or center if you prefer */
-    padding: 2rem 2rem;
+    padding: 1.5rem 2rem; /* reduced space top/bottom */
 }
 
 /* Hero Section */
 .about-hero {
-background: linear-gradient(to right, #ccfbf1, #99f6e4); /* lighter teal */
-  padding: 60px 20px; /* reduced height */
+background: linear-gradient(to right, #f0fdfa, #e0f2fe); /* soft teal-blue gradient */
+  padding: 40px 20px; /* smaller height */
   color: #0a2540;
 }
 .about-hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
 }
 .about-hero .tagline {
-  margin-top: 0.75rem;
-  font-size: 1.25rem;
-    font-weight: 500;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
   color: #0f766e;
 }
 
 .about-hero .sub-tagline {
   margin-top: 0.25rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  font-style: italic;
   color: #115e59;
 }
 
@@ -1327,9 +1327,7 @@ background: linear-gradient(to right, #ccfbf1, #99f6e4); /* lighter teal */
   color: #444;
 }
 .about-content p {
-  margin-bottom: 1.25rem;
-  font-size: 1rem;
-  line-height: 1.8;
+  margin-bottom: 1rem; /* tighter paragraph spacing */
 }
 
 /* Vision & Mission */
