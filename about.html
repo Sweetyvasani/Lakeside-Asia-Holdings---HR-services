@@ -12,21 +12,125 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
   <style>
-@keyframes softPulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 12px 4px rgba(13, 148, 136, 0.6);
-  }
+/* Timeline: grid-based, stable layout */
+.timeline-grid {
+  max-width: 1060px;
+  margin: 0 auto;
+  position: relative;
+  padding: 1rem 0 2rem;
 }
 
+/* vertical spine — placed after the left year column (160px wide) */
+.timeline-grid::before {
+  content: "";
+  position: absolute;
+  left: calc(160px + 20px); /* year-col (160px) + half of spine-col (40px)/2 */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #0d9488; /* teal */
+  z-index: 0;
+}
+
+/* each row is a 3-column grid: year | spine cell | content */
+.timeline-row {
+  display: grid;
+  grid-template-columns: 160px 40px 1fr;
+  gap: 0;
+  align-items: start;
+  position: relative;
+  padding: 18px 0;
+  z-index: 1; /* above the spine line */
+}
+
+/* year column */
+.timeline-row .year {
+  text-align: right;
+  padding-right: 16px;
+  font-weight: 700;
+  color: #001F54;
+  font-size: 0.95rem;
+}
+
+/* spine cell centers the dot */
+.timeline-row .spine-cell {
+  display: flex;
+  align-items: start; /* align dot near the top of row */
+  justify-content: center;
+  position: relative;
+  min-height: 1px;
+}
+
+/* dot basics */
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  background: #0d9488; /* teal */
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-sizing: content-box;
+  z-index: 2;
+}
+
+/* base glow animation for all dots */
+@keyframes softPulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(13,148,136,0.28); }
+  50% { box-shadow: 0 0 12px 6px rgba(13,148,136,0.38); }
+}
+.dot-glow {
+  animation: softPulse 2.8s ease-in-out infinite;
+}
+
+/* highlight animation for 2023 */
 @keyframes highlightPulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+  0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.45); }
+  50% { box-shadow: 0 0 18px 8px rgba(34,197,94,0.6); }
+}
+.dot-highlight {
+  width: 22px;
+  height: 22px;
+  background: #22c55e; /* green */
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  animation: highlightPulse 3s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(34,197,94,0.25);
+}
+
+/* content column styling */
+.timeline-row .content h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  color: #0d9488; /* teal for stage */
+  font-weight: 600;
+}
+.timeline-row .content p {
+  margin: 0;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* responsive: stack on small screens */
+@media (max-width: 760px) {
+  .timeline-grid::before { left: 28px; } /* move spine to dot column position */
+  .timeline-row {
+    grid-template-columns: 40px 1fr; /* dot column + content column */
+    gap: 12px;
   }
-  50% {
-    box-shadow: 0 0 16px 6px rgba(34, 197, 94, 0.7);
+  .timeline-row .year {
+    grid-column: 2 / 3; /* year moves into content flow (above or inline) */
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+  }
+  .timeline-row .spine-cell {
+    grid-column: 1 / 2;
+    align-items: start;
+  }
+  .timeline-row .content {
+    grid-column: 2 / 3;
+    padding-top: 0;
   }
 }
 </style>
@@ -125,137 +229,100 @@
     </div>
   </div>
 </section>
-
-<!-- Our Journey Timeline (Final Fix) -->
+<!-- Our Journey — stable grid timeline -->
 <section class="py-16 bg-white">
-  <div class="container mx-auto px-6 lg:px-20 max-w-6xl">
+  <div class="container mx-auto px-6 lg:px-20">
     <h2 class="text-3xl font-bold text-[#001F54] mb-12 text-center">Our Journey</h2>
 
-    <div class="relative">
+    <div class="timeline-grid">
 
-      <!-- Timeline spine -->
-<div class="absolute left-1/4 top-0 bottom-0 border-l-2 border-teal-600 transform translate-x-[11px]"></div>
-
-<!-- 2018 -->
-<div class="relative flex items-start mb-12">
-  <!-- Year -->
-  <div class="w-1/4 pr-6 text-right font-bold text-[#001F54]">2018</div>
-
-  <!-- Dot -->
-  <div class="relative w-6 h-6 flex items-center justify-center">
-    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-teal-600 border-2 border-white rounded-full [animation:softPulse_2.5s_ease-in-out_infinite]"></div>
-
-  <!-- Content -->
-  <div class="w-3/4 pl-6">
-    <h3 class="text-lg font-semibold text-teal-600">Foundation</h3>
-    <p class="text-gray-600 text-sm">
-      Lakeside Asia Holdings was established with a vision to build impactful, technology-driven enterprises, initiating research and innovation in human well-being sectors through Lakeside Asia Technologies.
-    </p>
-  </div>
-</div>
-
+      <!-- 2018 -->
+      <div class="timeline-row">
+        <div class="year">2018</div>
+        <div class="spine-cell">
+          <div class="timeline-dot dot-glow" aria-hidden="true"></div>
+        </div>
+        <div class="content">
+          <h3>Foundation</h3>
+          <p>Lakeside Asia Holdings was established with a vision to build impactful, technology-driven enterprises, initiating research and innovation in human well-being sectors through Lakeside Asia Technologies.</p>
+        </div>
+      </div>
 
       <!-- 2019 -->
-      <div class="relative flex items-start mb-12">
-        <!-- Year -->
-        <div class="w-1/4 pr-6 text-right font-bold text-[#001F54]">2019</div>
-        <!-- Dot -->
-        <div class="relative w-6 h-6 flex items-center justify-center">
-              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-teal-600 border-2 border-white rounded-full [animation:softPulse_2.5s_ease-in-out_infinite]"></div>
-        <div class="w-3/4 pl-6">
-          <h3 class="text-lg font-semibold text-teal-600">First Venture Launch</h3>
-          <p class="text-gray-600 text-sm">
-            Lakeside Asia Technologies was officially launched, offering deep-tech consulting solutions and acquiring the first set of enterprise clients.
-          </p>
+      <div class="timeline-row">
+        <div class="year">2019</div>
+        <div class="spine-cell">
+          <div class="timeline-dot dot-glow" aria-hidden="true"></div>
+        </div>
+        <div class="content">
+          <h3>First Venture Launch</h3>
+          <p>Lakeside Asia Technologies was officially launched, offering deep-tech consulting solutions and acquiring the first set of enterprise clients.</p>
         </div>
       </div>
 
       <!-- 2020–2021 -->
-      <div class="relative flex items-start mb-12">
-        <!-- Year -->
-        <div class="w-1/4 pr-6 text-right font-bold text-[#001F54]">2020-2021</div>
-        <!-- Dot -->
-        <div class="relative w-6 h-6 flex items-center justify-center">
-              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-teal-600 border-2 border-white rounded-full [animation:softPulse_2.5s_ease-in-out_infinite]"></div>
-        <div class="w-3/4 pl-6">
-          <h3 class="text-lg font-semibold text-teal-600">Expansion</h3>
-          <p class="text-gray-600 text-sm">
-            The portfolio expanded to include Lakeside Asia Health and Breathe Easier, growing to three interconnected companies and serving over 50 corporate clients across four countries, while achieving multi-billion-dollar addressable markets.
-          </p>
+      <div class="timeline-row">
+        <div class="year">2020–2021</div>
+        <div class="spine-cell">
+          <div class="timeline-dot dot-glow" aria-hidden="true"></div>
+        </div>
+        <div class="content">
+          <h3>Expansion</h3>
+          <p>The portfolio expanded to include Lakeside Asia Health and Breathe Easier, growing to three interconnected companies and serving over 50 corporate clients across four countries, while achieving multi-billion-dollar addressable markets.</p>
         </div>
       </div>
 
       <!-- 2022 -->
-      <div class="relative flex items-start mb-12">
-        <!-- Year -->
-        <div class="w-1/4 pr-6 text-right font-bold text-[#001F54]">2022</div>
-        <!-- Dot -->
-        <div class="relative w-6 h-6 flex items-center justify-center">
-              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-teal-600 border-2 border-white rounded-full [animation:softPulse_2.5s_ease-in-out_infinite]"></div>
-
-        <div class="w-3/4 pl-6">
-          <h3 class="text-lg font-semibold text-teal-600">Growth & Scale</h3>
-          <p class="text-gray-600 text-sm">
-            Lakeside strengthened its market presence, built strategic partnerships, and secured new funding rounds to support continued growth across all portfolio companies.
-          </p>
+      <div class="timeline-row">
+        <div class="year">2022</div>
+        <div class="spine-cell">
+          <div class="timeline-dot dot-glow" aria-hidden="true"></div>
+        </div>
+        <div class="content">
+          <h3>Growth & Scale</h3>
+          <p>Lakeside strengthened its market presence, built strategic partnerships, and secured new funding rounds to support continued growth across all portfolio companies.</p>
         </div>
       </div>
 
-      <!-- 2023 -->
-      <div class="relative flex items-start mb-12">
-        <!-- Year -->
-        <div class="w-1/4 pr-6 text-right font-bold text-[#001F54]">2023</div>
-        <!-- Dot -->
-        <div class="relative w-6 h-6 flex items-center justify-center">
-             <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-green-500 border-2 border-white rounded-full shadow-lg [animation:highlightPulse_2s_ease-in-out_infinite]"></div>
-
-        <div class="w-3/4 pl-6">
-          <h3 class="text-lg font-semibold text-teal-600">Launch of Lakeside HR Services</h3>
-          <p class="text-gray-600 text-sm">
-            Lakeside HR Services was launched under Lakeside Asia Holdings as a dedicated practice focused on people-first transformation and strategic HR consulting.
-          </p>
+      <!-- 2023 (highlight) -->
+      <div class="timeline-row">
+        <div class="year">2023</div>
+        <div class="spine-cell">
+          <div class="dot-highlight" aria-hidden="true"></div>
+        </div>
+        <div class="content">
+          <h3>Launch of Lakeside HR Services</h3>
+          <p>Lakeside HR Services was launched under Lakeside Asia Holdings as a dedicated practice focused on people-first transformation and strategic HR consulting.</p>
         </div>
       </div>
 
       <!-- 2024 -->
-      <div class="relative flex items-start mb-12">
-        <!-- Year -->
-        <div class="w-1/4 pr-6 text-right font-bold text-[#001F54]">2024</div>
-        <!-- Dot -->
-        <div class="relative w-6 h-6 flex items-center justify-center">
-              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-teal-600 border-2 border-white rounded-full [animation:softPulse_2.5s_ease-in-out_infinite]"></div>
-
-        <div class="w-3/4 pl-6">
-          <h3 class="text-lg font-semibold text-teal-600">Digital HR Expansion</h3>
-          <p class="text-gray-600 text-sm">
-            Expanded service offerings across India and GCC, introducing Digital HR Transformation, People Insights, and Workforce Well-being as key consulting verticals.
-          </p>
+      <div class="timeline-row">
+        <div class="year">2024</div>
+        <div class="spine-cell">
+          <div class="timeline-dot dot-glow" aria-hidden="true"></div>
+        </div>
+        <div class="content">
+          <h3>Digital HR Expansion</h3>
+          <p>Expanded service offerings across India and GCC, introducing Digital HR Transformation, People Insights, and Workforce Well-being as key consulting verticals.</p>
         </div>
       </div>
 
       <!-- 2025 -->
-       <div class="relative flex items-start mb-12">
-        <!-- Year -->
-        <div class="w-1/4 pr-6 text-right font-bold text-[#001F54]">2025</div>
-        <!-- Dot -->
-        <div class="relative w-6 h-6 flex items-center justify-center">
-              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-teal-600 border-2 border-white rounded-full [animation:softPulse_2.5s_ease-in-out_infinite]"></div>
-
-        <div class="w-3/4 pl-6">
-          <h3 class="text-lg font-semibold text-teal-600">Future-Ready HR</h3>
-          <p class="text-gray-600 text-sm">
-            Driving measurable business impact through integrated HR technology, AI-driven analytics, and employee experience frameworks, positioning Lakeside HR as a strategic transformation partner.
-          </p>
+      <div class="timeline-row">
+        <div class="year">2025</div>
+        <div class="spine-cell">
+          <div class="timeline-dot dot-glow" aria-hidden="true"></div>
+        </div>
+        <div class="content">
+          <h3>Future-Ready HR</h3>
+          <p>Driving measurable business impact through integrated HR technology, AI-driven analytics, and employee experience frameworks, positioning Lakeside HR as a strategic transformation partner.</p>
         </div>
       </div>
 
     </div>
   </div>
 </section>
-
-
-
-
   
 <!-- Founders Section (About Page) -->
 <section class="founders-about">
@@ -311,6 +378,7 @@
 </html>
   </nav>
 </header>
+
 
 
 
