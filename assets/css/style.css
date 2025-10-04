@@ -1262,7 +1262,7 @@ a[href*="/services/"]::before,
   }
 
 .smarter-text {
-  flex: 0 0 50%;  /* ✅ lock text width to ~50% */
+  flex: 0 0 45%;  /* ✅ lock text width to ~45% */
 }
 
 .smarter-text h2 {
@@ -1303,14 +1303,15 @@ a[href*="/services/"]::before,
 
 /* Highlighted final line in Smarter Approach */
 .highlight-line {
-  font-weight: 700 !important;    /* ✅ force full bold */
-  color: #333 !important;         /* dark text */
-  margin-top: 20px;
-    font-size: 1.05rem;             /* slightly larger for emphasis */
-    line-height: 1.6;
+  font-weight: 700;           /* bold entire line */
+  color: #333;                /* regular dark text */
+  margin-top: 22px;
+  font-size: 1.1rem;          /* slightly larger than normal */
+  line-height: 1.6;
 }
 
 .highlight-line span {
-  color: #001F54 !important;      /* ✅ same navy as company name */
-  font-weight: 700 !important;    /* make highlighted words bold */
+  color: #001F54;             /* only highlighted words in brand blue */
+  font-weight: 700;
 }
+
