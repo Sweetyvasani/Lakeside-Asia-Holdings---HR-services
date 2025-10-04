@@ -215,7 +215,7 @@ body {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(220px, 1fr)); /* ✅ widen cards slightly */
-  gap: 20px;                  /* a bit more spacing for cleaner look */
+  gap: 24px;                  /* a bit more spacing for cleaner look */
   max-width: 1560px;          /* widen container so grid has space */
    width: 96%;                    /* ✅ utilize more screen space */
  margin: 0 auto;                /* ✅ keep equal space on both sides */
