@@ -1196,9 +1196,28 @@ a[href*="/services/"]::before,
 }
 
 /* ✅ Center the grid inside the page */
-  max-width: 1100px;    /* controls total width */
+  max-width: 1100px;    /* keep the grid compact */
   margin: 0 auto;       /* equal left + right spacing */
   padding: 0 20px;      /* optional: small inner padding */
+}
+
+/* small left offset — tweak this value to taste */
+  transform: translateX(-48px);
+}
+
+/* reduce nudge on medium screens */
+@media (max-width: 1300px) {
+  .growth-cards {
+    transform: translateX(-32px);
+  }
+}
+
+/* remove nudge on small screens (stacked/mobile) */
+@media (max-width: 900px) {
+  .growth-cards {
+    transform: none;
+    padding: 0 12px;
+  }
 }
 
 .growth-cards .card {
