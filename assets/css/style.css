@@ -1191,27 +1191,27 @@ a[href*="/services/"]::before,
 
 .growth-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr));
-  gap: 28px;
-
+  grid-template-columns: repeat(3, minmax(300px, 1fr)); /* force 3 equal columns */
+  gap: 24px;
+width: 90%;                /* makes the section slightly wider */
 /* ✅ Center + left nudge */
   max-width: 1250px;    /* keep the grid compact */
   margin: 0 auto;       /* equal left + right spacing */
-  padding: 0 30px;      /* optional: small inner padding */
+  padding: 0 10px;       /* small side padding */
+  box-sizing: border-box;    /* ensure padding doesn’t cause overflow */
 }
 
-/* reduce nudge on medium screens */
-@media (max-width: 1300px) {
+/* responsive adjustment for smaller screens */
+@media (max-width: 992px) {
   .growth-cards {
-    transform: translateX(-25px);
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
   }
 }
 
 /* remove nudge on small screens (stacked/mobile) */
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .growth-cards {
-    transform: none;
-    padding: 0 12px;
+    grid-template-columns: 1fr; /* stack on mobile */
   }
 }
 
