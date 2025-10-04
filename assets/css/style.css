@@ -1310,6 +1310,6 @@ a[href*="/services/"]::before,
 }
 
 .highlight-line span {
-  color: #0a58ca !important;      /* ✅ blue highlight */
+  color: #001F54 !important;      /* ✅ blue highlight */
   font-weight: 700 !important;    /* make highlighted words bold */
 }
