@@ -1299,36 +1299,48 @@ a[href*="/services/"]::before,
 
 /* Hero Section */
 .about-hero {
-background: linear-gradient(to right, #f0fdfa, #e0f2fe); /* soft teal-blue gradient */
-  padding: 40px 20px; /* smaller height */
+background: linear-gradient(to right, #d9fef4, #d8effe); /* same soft gradient as 'Why It Matters' */
+  padding: 30px 20px; /* smaller overall height */
   color: #0a2540;
+  text-align: center;
 }
 .about-hero h1 {
   font-size: 2.2rem;
   font-weight: 700;
+  margin-bottom: 0.4rem;
 }
 .about-hero .tagline {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: #0f766e;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
 }
 
 .about-hero .sub-tagline {
-  margin-top: 0.25rem;
   font-size: 1.05rem;
-  font-style: italic;
   color: #115e59;
+  font-style: italic;
 }
 
 /* About Content */
 .about-content {
-  padding: 60px 20px;
-  line-height: 1.7;
-  color: #444;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
+
+.about-content .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  text-align: justify;
+}
+
 .about-content p {
-  margin-bottom: 1rem; /* tighter paragraph spacing */
+  margin-bottom: 0.9rem;
+  font-size: 1rem;
+  line-height: 1.7;
 }
+
 
 /* Vision & Mission */
 .vision-mission {
@@ -1538,75 +1550,80 @@ background: linear-gradient(to right, #f0fdfa, #e0f2fe); /* soft teal-blue gradi
   }
 }
 
-/* ================== OUR JOURNEY TIMELINE ================== */
+/* ================== OUR JOURNEY - HORIZONTAL TIMELINE ================== */
 .our-journey {
-  padding: 4rem 2rem;
   background: #f9fafb;
   text-align: center;
+  padding: 3rem 2rem;
 }
 
 .our-journey .section-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 3rem;
   color: #0a2540;
+  margin-bottom: 3rem;
 }
 
 .timeline {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1000px;
+  flex-wrap: wrap;
+  max-width: 1100px;
   margin: 0 auto;
-  position: relative;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  top: 28px; /* align with dots */
-  left: 0;
-  right: 0;
+  top: 40px;
+  left: 5%;
+  right: 5%;
   height: 2px;
-  background: #14b8a6; /* teal line */
+  background: #14b8a6;
   z-index: 1;
 }
 
 .timeline-item {
-  flex: 1;
-  text-align: center;
   position: relative;
+  width: 12%;
+  text-align: center;
+  z-index: 2;
 }
 
 .timeline-item .dot {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background: #14b8a6;
   border-radius: 50%;
   display: inline-block;
-  position: relative;
-  z-index: 2;
-  margin-bottom: 1rem;
-  border: 3px solid #fff;
+  margin-bottom: 0.75rem;
+  border: 3px solid #f9fafb;
   box-shadow: 0 0 0 2px #14b8a6;
 }
 
+.timeline-item .dot.highlight {
+  background: #0f766e; /* darker teal for 2023 */
+  box-shadow: 0 0 0 3px #99f6e4;
+}
+
 .timeline-item .year {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #0a2540;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .timeline-item .event {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #555;
-  line-height: 1.6;
-  max-width: 220px;
+  line-height: 1.5;
+  max-width: 140px;
   margin: 0 auto;
 }
 
-/* Responsive (vertical timeline) */
+/* Responsive: switch to vertical on small screens */
 @media (max-width: 768px) {
   .timeline {
     flex-direction: column;
@@ -1619,18 +1636,15 @@ background: linear-gradient(to right, #f0fdfa, #e0f2fe); /* soft teal-blue gradi
     height: 100%;
   }
   .timeline-item {
+    width: 100%;
     text-align: left;
     padding-left: 2rem;
     margin-bottom: 2rem;
-    width: 100%;
-    max-width: 500px;
-    position: relative;
   }
   .timeline-item .dot {
     position: absolute;
-    left: -12px;
+    left: -8px;
     top: 0.25rem;
   }
 }
-
 
