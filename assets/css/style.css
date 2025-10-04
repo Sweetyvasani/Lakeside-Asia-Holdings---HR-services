@@ -223,7 +223,7 @@ body {
   align-items: start;
   box-sizing: border-box;
   justify-content: center;       /* ✅ ensure cards stay balanced */
-}
+  }
 
 /* ---- Service Card Consistency & Typography ---- */
 .service-card {
