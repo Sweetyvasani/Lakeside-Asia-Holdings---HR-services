@@ -1211,11 +1211,46 @@ a[href*="/services/"]::before,
 }
 
 /* ================== Smarter Approach Section ================== */
-.smarter-approach h2 {
-  color: #0a2540;
+.smarter-approach {
+  padding: 60px 20px;
+  background: #fff;
 }
 
-.smarter-approach img {
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+.smarter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
 }
 
+.smarter-text {
+  flex: 1 1 55%;
+}
+
+.smarter-text h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0a2540; /* navy */
+  margin-bottom: 20px;
+}
+
+.smarter-text p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.smarter-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.smarter-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
