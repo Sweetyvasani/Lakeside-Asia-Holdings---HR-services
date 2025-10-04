@@ -1303,12 +1303,13 @@ a[href*="/services/"]::before,
 
 /* Highlighted final line in Smarter Approach */
 .highlight-line {
-  font-weight: 600;           /* bold overall */
-  color: #333;                /* normal text color */
+  font-weight: 700 !important;    /* ✅ force full bold */
+  color: #333 !important;         /* dark text */
   margin-top: 20px;
+  font-size: 1.05rem;             /* slightly larger for emphasis */
 }
 
 .highlight-line span {
-  color: #0a58ca;             /* bright blue highlight */
-  font-weight: 700;           /* make blue words a bit bolder */
+  color: #0a58ca !important;      /* ✅ blue highlight */
+  font-weight: 700 !important;    /* make highlighted words bold */
 }
