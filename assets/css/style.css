@@ -978,16 +978,19 @@ footer {
 
 .why-us-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;         /* ✅ force side-by-side (no wrapping) */
   justify-content: space-between;
+  align-items: flex-start;
   gap: 2rem;
-  max-width: 1380px;
+  max-width: 1380px;  /* ✅ matches Growth Dilemma / Smarter Approach */
   margin: 0 auto;
+  padding: 0 10px;           /* ✅ consistent left/right padding */
+  box-sizing: border-box;
 }
 
 /* Left Column */
 .why-us-text {
-  flex: 1 1 60%;
+  flex: 0 0 60%;   /* ✅ fix width instead of flexible grow/shrink */
 }
 
 .why-us-text h2 {
@@ -1023,7 +1026,7 @@ footer {
 
 /* Right Column - Navy + Gold Theme */
 .why-us-highlight {
-  flex: 1 1 35%;
+  flex: 0 0 35%;  /* ✅ fix width so it always stays side by side */
   background: linear-gradient(135deg, #ffffff, #f9f9f9); /* subtle gray-white */
   border: 2px solid #0a2540; /* navy border */
   padding: 2.5rem;
@@ -1096,6 +1099,24 @@ footer {
 @keyframes progressAnim {
   from { width: 0%; }
   to { width: 100%; }
+}
+
+/* Mobile layout for Why Us section */
+@media (max-width: 768px) {
+  .why-us-container {
+    flex-wrap: wrap;            /* ✅ allow stacking on small screens */
+  }
+
+  .why-us-text {
+    flex: 1 1 100%;             /* ✅ take full width */
+    order: 1;                   /* ✅ show first */
+  }
+
+  .why-us-highlight {
+    flex: 1 1 100%;             /* ✅ take full width */
+    order: 2;                   /* ✅ always comes below */
+    margin-top: 20px;           /* ✅ add spacing from text */
+  }
 }
 
 
