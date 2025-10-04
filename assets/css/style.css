@@ -1202,7 +1202,7 @@ a[href*="/services/"]::before,
 }
 
 /* small left offset — tweak this value to taste */
-  transform: translateX(-48px);
+  transform: translateX(-30px);
 }
 
 /* reduce nudge on medium screens */
