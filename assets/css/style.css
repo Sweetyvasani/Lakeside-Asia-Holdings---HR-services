@@ -245,6 +245,15 @@ body {
   width: 100%;                   /* ensures cards expand with grid column */
   box-sizing: border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;   /* ✅ makes each card fill equal height of its grid cell */
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* ✅ evenly distribute top/middle/bottom content */
+  align-items: center;
+  text-align: center;
 }
 
 /* ---- Service Card Hover Effects ---- */
