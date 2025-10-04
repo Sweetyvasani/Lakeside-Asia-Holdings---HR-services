@@ -1250,17 +1250,19 @@ a[href*="/services/"]::before,
 
 .smarter-container {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   gap: 40px;
   max-width: 1380px; /* ✅ matches Growth Dilemma width */
   width: 95%;          /* ✅ same left-right margin as Growth Dilemma */
   margin: 0 auto;     /* centers container but with controlled width */
-  align-items: center;
-  text-align: left;    /* ✅ start content from left, not center */
-}
+  padding: 0 10px;
+  box-sizing: border-box;
+  flex-wrap: nowrap;   /* ✅ keep text + image in one row */
+  }
 
 .smarter-text {
-  flex: 1 1 40%;  /* ✅ smaller text block */
+  flex: 0 0 38%;  /* ✅ lock text width to ~38% */
 }
 
 .smarter-text h2 {
@@ -1278,7 +1280,7 @@ a[href*="/services/"]::before,
 }
 
 .smarter-image {
-  flex: 1 1 60%;      /* ✅ larger image block */
+  flex: 0 0 60%;     /* ✅ lock image width to ~60% */
   text-align: left;  /* ✅ image aligned to left margin */
 }
 
@@ -1287,4 +1289,14 @@ a[href*="/services/"]::before,
   height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ✅ On tablets/mobiles, stack them */
+@media (max-width: 992px) {
+  .smarter-container {
+    flex-wrap: wrap;
+  }
+  .smarter-text, .smarter-image {
+    flex: 1 1 100%;
+  }
 }
