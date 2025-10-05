@@ -742,14 +742,14 @@ body {
 .our-model-premium h2 {
   font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   color: #0a2540;
 }
 
 .our-model-premium p {
   font-size: 1rem;
   color: #555;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 /* ---- 4-Step Path Styling ---- */
