@@ -145,9 +145,9 @@ body {
 /* CTA Buttons */
 .btn-primary,
 .btn-secondary {
-  background: #14b8a6;       /* your teal color */
+  background: #00BFA5;       /* your teal color */
   color: #fff !important;    /* ✅ white text */
-  width: 220px;              /* ✅ fixed equal width */
+  width: 250px;              /* ✅ fixed equal width */
   height: 55px;              /* ✅ equal height */
   display: inline-flex;      /* center text both ways */
   align-items: center;
