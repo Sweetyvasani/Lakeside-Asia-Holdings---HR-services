@@ -119,6 +119,7 @@ body {
   max-width: 1500px;
   margin: 0 auto;
   animation: fadeIn 1.5s ease-in-out;
+  padding-top: 1rem; /* ✅ Add this to shift entire content up */
 }
 
 /* Heading */
