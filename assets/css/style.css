@@ -91,12 +91,12 @@ body {
   align-items: center;
   text-align: center;
   padding: 3rem 1.5rem;
-  background-image: url("../images/banner-new.png");
+  background-image: url("../images/banner-new.png") no-repeat center center;;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  min-height: 420px;
+  min-height: 480px;
 }
 
 /* Dark overlay */
