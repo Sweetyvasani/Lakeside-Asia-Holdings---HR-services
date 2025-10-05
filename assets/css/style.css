@@ -219,7 +219,7 @@ body {
 }
 
 .services h2, .hr-engine h2 {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 12px;
   color: #0a2540;
@@ -1172,10 +1172,10 @@ a[href*="/services/"]::before,
 }
 
 .growth-dilemma h2 {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #0a2540;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .growth-dilemma p {
@@ -1260,10 +1260,10 @@ a[href*="/services/"]::before,
 }
 
 .smarter-text h2 {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #0a2540; /* navy */
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
     line-height: 1.05;   /* ✅ tighten spacing between lines */
 }
 
