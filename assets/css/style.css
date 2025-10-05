@@ -87,12 +87,11 @@ body {
 
 /* ================== HERO ================== */
 .hero {
-  position: relative;
   display: flex;
-  justify-content: flex-start; /* ✅ aligns text to the left side */
-  align-items: flex-start;   /* ✅ pushes text higher toward top */
-  text-align: left;          /* ✅ left-align heading + paragraph */
-  padding: 7rem 0 3rem 10%;  /* ✅ top + left offset similar to NVC */
+  justify-content: center; /* ✅ aligns text to the center */
+  align-items: center;  
+  text-align: center;          
+  padding: 3rem 1.5rem 
   background-image: 
   linear-gradient(rgba(0, 90, 156, 0.5), rgba(0, 90, 156, 0.6)),
   url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop");
@@ -116,24 +115,20 @@ body {
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
-  margin-left: 0;     /* ✅ anchor to left */
-  margin-right: 0;    /* ✅ prevent re-centering */
   animation: fadeIn 1.5s ease-in-out;
-  text-align: left;        /* ✅ align text left inside the block */
 }
 
 /* Heading */
 .hero h1 {
-  font-size: 3.6rem;
-  margin-bottom: 1.1rem;
+  font-size: 3.8rem;
+  margin-bottom: 1rem;
   font-weight: 800;
   color: #fff;
   white-space: normal; /* ✅ allow wrapping */
   text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
   animation: fadeInUp 1.2s ease-in-out;
-   line-height: 1.1; /* ✅ tighter spacing between lines */
  }
 
 /* Subtext */
@@ -145,33 +140,6 @@ body {
   white-space: normal; /* ✅ allow wrapping */
   text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
   animation: fadeInUp 1.5s ease-in-out;
-  max-width: 600px;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-  .hero {
-    padding: 6rem 5% 3rem;
-    align-items: center;
-  }
-  .hero-content {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 6rem 1.5rem 3rem;
-  }
-  .hero-content {
-    text-align: center;
-  }
-  .hero-buttons {
-    justify-content: center;
-  }
 }
 
 /* CTA Buttons */
@@ -218,6 +186,16 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* On small screens */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
   }
 }
 
