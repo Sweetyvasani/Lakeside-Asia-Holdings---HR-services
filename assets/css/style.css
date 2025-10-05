@@ -1400,8 +1400,9 @@ a[href*="/services/"]::before,
   display: flex;
   gap: 2rem;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem 2rem 2rem; /* reduced top padding for tighter spacing */
   flex-wrap: wrap;
+  margin-top: 20px; /* ✅ adds small gap after paragraph */
 }
 
 .founder {
@@ -1411,42 +1412,38 @@ a[href*="/services/"]::before,
   text-align: center;
 }
 
-/* Founders section headings */
+/* Founder Name */
 .founders h2 {
-  font-size: 2rem;  /* ✅ adjust 1–2 font sizes smaller */
+  font-size: 2rem;
   font-weight: 600;
   color: #0a2540;
   margin-bottom: 0.25rem;
 }
 
-.founders p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 60px;
-}
-
-
+/* Founder Role (teal) */
 .founders h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #14b8a6;  /* teal subheading for role */
+  color: #14b8a6;
   margin-bottom: 0.75rem;
 }
 
-
+/* ✅ Paragraphs inside founder cards */
+.founder p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px; /* reduced from 60px */
+}
 
 /* ✅ Standardize founder images */
 .founder-img {
-  width: 220px;       /* standard width */
-  height: 220px;      /* standard height */
-  border-radius: 50%;    /* circle */
-  object-fit: cover;  /* crop to fill circle */
-  object-position: top center; /* adjust focus */
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
   margin-bottom: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.founder-img {
   transition: transform 0.3s ease;
 }
 .founder:hover .founder-img {
@@ -1462,7 +1459,7 @@ a[href*="/services/"]::before,
 }
 
 .section-title {
-  font-size: 2r.8em;
+  font-size: 2.8rem; /* ✅ fixed typo (was 2r.8em) */
   font-weight: 700;
   color: #0a2540;
   text-align: center;
@@ -1472,13 +1469,14 @@ a[href*="/services/"]::before,
 .section-subtitle {
   text-align: center;
   color: #555;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* ✅ reduced from 2rem */
   font-size: 1rem;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .founders {
     flex-direction: column;
@@ -1488,7 +1486,6 @@ a[href*="/services/"]::before,
     max-width: 90%;
   }
 }
-
 /* ================== FOUNDERS (ABOUT PAGE) ================== */
 .founders-about {
   padding: 2rem 0;
