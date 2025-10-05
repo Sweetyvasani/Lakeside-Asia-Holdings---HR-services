@@ -131,7 +131,7 @@ body {
   animation: fadeInUp 1.2s ease-in-out;
    line-height: 1.1; /* ✅ tighter spacing between lines */
   text-align: center;            /* ✅ keeps text centered */
-  transform: translateX(-40px);  /* ✅ shifts the whole heading left */
+  transform: translateX(-30px);  /* ✅ shifts the whole heading left */
 }
 
 /* Subtext */
@@ -1201,8 +1201,8 @@ a[href*="/services/"]::before,
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  max-width: 1500px;  /* wider total area */
-  width: 96%;         /* use more horizontal space */
+  max-width: 1600px;  /* wider total area */
+  width: 97%;         /* use more horizontal space */
   margin: 0 auto;     /* center the grid */
   padding: 0 10px;
   box-sizing: border-box;
@@ -1258,8 +1258,8 @@ a[href*="/services/"]::before,
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  max-width: 1450px; /* ✅ matches Growth Dilemma width */
-  width: 96%;          /* ✅ same left-right margin as Growth Dilemma */
+  max-width: 1600px; /* ✅ matches Growth Dilemma width */
+  width: 97%;          /* ✅ same left-right margin as Growth Dilemma */
   margin: 0 auto;     /* centers container but with controlled width */
   padding: 0 10px;
   box-sizing: border-box;
@@ -1267,7 +1267,7 @@ a[href*="/services/"]::before,
   }
 
 .smarter-text {
-  flex: 0 0 50%;  /* ✅ lock text width to ~45% */
+  flex: 0 0 45%;  /* ✅ lock text width to ~45% */
 }
 
 .smarter-text h2 {
@@ -1286,7 +1286,7 @@ a[href*="/services/"]::before,
 }
 
 .smarter-image {
-  flex: 0 0 50%;     /* ✅ lock image width to ~50% */
+  flex: 0 0 55%;     /* ✅ lock image width to ~50% */
   text-align: left;  /* ✅ image aligned to left margin */
 }
 
