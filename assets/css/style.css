@@ -96,7 +96,7 @@ body {
   background-size: cover;
   background-position: center 15%; /* 👈 shift image upward */
   position: relative;
-  min-height: 480px;
+  min-height: 520px;
 }
 
 
