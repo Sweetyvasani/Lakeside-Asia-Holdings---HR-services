@@ -142,27 +142,43 @@ body {
   animation: fadeInUp 1.5s ease-in-out;
 }
 
-/* CTA buttons */
+/* CTA Buttons */
 .btn-primary,
 .btn-secondary {
-  background: #14b8a6;
-  color: #0a2540 !important; /* ✅ Navy text */
-  padding: 0.75rem 1.5rem;
+  background: #14b8a6;       /* your teal color */
+  color: #fff !important;    /* ✅ white text */
+  width: 220px;              /* ✅ fixed equal width */
+  height: 55px;              /* ✅ equal height */
+  display: inline-flex;      /* center text both ways */
+  align-items: center;
+  justify-content: center;
   margin: 0.5rem;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
-  display: inline-block;
-  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
   border: none;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
   animation: fadeInUp 1.8s ease-in-out;
 }
 
+/* ✅ Hover effect */
 .btn-primary:hover,
 .btn-secondary:hover {
   background: #0fa192;
   transform: translateY(-3px);
 }
+
+/* Optional: Make them stack nicely on smaller screens */
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
 
 /* ================== ANIMATIONS ================== */
 @keyframes fadeIn {
