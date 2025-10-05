@@ -92,16 +92,18 @@ body {
   text-align: center;
   padding: 3rem 1.5rem;
 
-  background-image:
+  /* ✨ Background: gradient overlay + Unsplash banner */
+  background-image: 
     linear-gradient(rgba(0, 90, 156, 0.8), rgba(0, 90, 156, 0.7)),
-    url("../images/banner-new.png");
+    url('https://images.unsplash.com/photo-1556761175-5973dcf32e7?q=80&w=2832&auto=format&fit=crop');
 
   background-size: cover;
-  background-position: center top; /* slight upward focus */
+  background-position: center;
   background-repeat: no-repeat;
+
   position: relative;
   min-height: 480px;
-  color: #fff; /* ensures text is readable */
+  color: #fff;
 }
 
 
