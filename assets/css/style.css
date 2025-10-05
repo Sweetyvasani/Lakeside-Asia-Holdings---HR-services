@@ -89,7 +89,7 @@ body {
 .hero {
   display: flex;
   justify-content: center; /* ✅ aligns text to the center */
-  align-items: center;  
+  align-items: flex-start; /* ✅ Change from center to flex-start */
   text-align: center;          
   padding: 3rem 1.5rem;
   background-image: 
@@ -101,6 +101,7 @@ body {
   position: relative;
   min-height: 450px;
   color: #fff;
+    padding-top: 5rem; /* ✅ Increase top padding to push content down */
 }
 
 
@@ -119,7 +120,8 @@ body {
   max-width: 1500px;
   margin: 0 auto;
   animation: fadeIn 1.5s ease-in-out;
- transform: translateY(-20px); /* ✅ Move entire content block up */
+    margin-top: 2rem; /* ✅ Adjust this to control vertical position */
+
 }
 
 /* Heading */
