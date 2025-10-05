@@ -91,12 +91,17 @@ body {
   align-items: center;
   text-align: center;
   padding: 3rem 1.5rem;
-  background-image: url("../images/banner-new.png");
-  background-repeat: no-repeat;
+
+  background-image:
+    linear-gradient(rgba(0, 90, 156, 0.8), rgba(0, 90, 156, 0.7)),
+    url("../images/banner-new.png");
+
   background-size: cover;
-  background-position: center 15%; /* 👈 shift image upward */
+  background-position: center top; /* slight upward focus */
+  background-repeat: no-repeat;
   position: relative;
-  min-height: 520px;
+  min-height: 480px;
+  color: #fff; /* ensures text is readable */
 }
 
 
