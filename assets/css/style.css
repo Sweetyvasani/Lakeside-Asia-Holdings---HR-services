@@ -223,11 +223,13 @@ body {
   color: #0a2540;
 }
 
-.services p, {
+.services p {
   max-width: 780px;
-  margin-bottom: 60px;
+  margin: 0 auto 35px;  /* ✅ balanced space between paragraph & service cards */
   text-align: center;
   font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
 }
 
 .hr-engine p.subtitle {
