@@ -1242,7 +1242,7 @@ a[href*="/services/"]::before,
   font-size: 2.2rem;
   font-weight: 700;
   color: #0a2540; /* navy */
-  margin-bottom: 28px;
+  margin-bottom: 30px;
     line-height: 1.05;   /* ✅ tighten spacing between lines */
 }
 
