@@ -92,12 +92,13 @@ body {
   text-align: center;
   padding: 3rem 1.5rem;
   background-image: url("../images/banner-new.png");
-  background-position: center 25%; /* adjust this % to make the face visible */
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 15%; /* 👈 shift image upward */
   position: relative;
   min-height: 480px;
 }
+
 
 /* Dark overlay */
 .hero::before {
