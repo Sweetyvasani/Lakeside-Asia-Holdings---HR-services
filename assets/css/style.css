@@ -144,7 +144,7 @@ body {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
   animation: fadeInUp 1.5s ease-in-out;
   max-width: 600px;
-  transform: translateX(40px); /* ✅ visually moves paragraph slightly to the right */
+  transform: translateX(55px); /* ✅ visually moves paragraph slightly to the right */
 }
 
 /* CTA Buttons */
