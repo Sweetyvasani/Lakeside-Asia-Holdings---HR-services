@@ -118,7 +118,17 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   animation: fadeIn 1.5s ease-in-out;
+
+  left: -40px; /* ✅ shifts the entire text block slightly left */
+  text-align: center; /* keeps lines centered */
 }
+
+@media (max-width: 768px) {
+  .hero-content {
+    left: 0; /* ✅ re-center text on mobile */
+  }
+}
+
 
 /* Heading */
 .hero h1 {
@@ -131,8 +141,7 @@ body {
   animation: fadeInUp 1.2s ease-in-out;
    line-height: 1.1; /* ✅ tighter spacing between lines */
   text-align: center;            /* ✅ keeps text centered */
-  transform: translateX(-30px);  /* ✅ shifts the whole heading left */
-}
+ }
 
 /* Subtext */
 .hero p {
