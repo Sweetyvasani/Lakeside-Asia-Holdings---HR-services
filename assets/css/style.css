@@ -1397,10 +1397,8 @@ a[href*="/services/"]::before,
 
 /* Founders section headings */
 .founders h2 {
-    font-size: 2.8rem;
-  font-weight: 700;
   color: #0a2540;
-  margin-bottom: 12px;
+  margin-bottom: 0.25rem;
 }
 
 
@@ -1439,7 +1437,7 @@ a[href*="/services/"]::before,
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 2r.8em;
   font-weight: 700;
   color: #0a2540;
   text-align: center;
