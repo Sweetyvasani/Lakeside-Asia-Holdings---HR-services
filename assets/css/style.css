@@ -3,7 +3,6 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   color: var(--neutral-text-color);
-  line-height: 1.6;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
@@ -96,7 +95,7 @@ body {
   text-align: center;
   padding: 3rem 1.5rem;
   background-image: 
-  linear-gradient(rgba(0, 90, 156, 0.8), rgba(0, 90, 156, 0.7)),
+  linear-gradient(rgba(0, 90, 156, 0.6), rgba(0, 90, 156, 0.6)),
   url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop");
   background-size: cover;
   background-position: center;
