@@ -769,7 +769,7 @@ body {
 .page-header p {
   font-size: 1.1rem;
   color: #555;
-  margin-bottom: 60px;
+margin-bottom: 16px !important; /* ✅ reduce gap below intro paragraph */
 }
 
 /* ================== 4-STEP PATH TO HR EXCELLENCE ================== */
@@ -1561,4 +1561,15 @@ a[href*="/services/"]::before,
     width: 180px;
     height: 180px;
   }
+}
+
+
+/* === Tighten spacing between founders paragraph and photos (FOUNDERS SECTION ON HOME PAGE=== */
+.page-headers p {
+  margin-bottom: 16px !important; /* ✅ reduce gap below intro paragraph */
+}
+
+.founders {
+  margin-top: 0 !important;       /* ✅ remove any top margin on founders section */
+  padding-top: 0 !important;      /* ✅ ensure no extra padding */
 }
