@@ -91,9 +91,11 @@ body {
   align-items: center;
   text-align: center;
   padding: 3rem 1.5rem;
-  background-image: url("../images/bannernew1.png");
+  background-image: 
+  linear-gradient(rgba(0, 90, 156, 0.55), rgba(0, 90, 156, 0.45)),
+  url("../images/bannernew1.png");
   background-size: cover;
-  background-position: center;
+  background-position: center 5%;
   background-repeat: no-repeat;
   position: relative;
   min-height: 420px;
