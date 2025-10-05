@@ -225,6 +225,13 @@ body {
   color: #0a2540;
 }
 
+.services p, {
+  max-width: 780px;
+  margin: 0 auto 28px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
 .services p, .hr-engine p.subtitle {
   max-width: 780px;
   margin: 0 auto 28px;
@@ -761,14 +768,14 @@ body {
 }
 
 .our-model-premium h2 {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 22px;
   color: #0a2540;
 }
 
 .our-model-premium p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
   margin-bottom: 60px;
 }
@@ -893,7 +900,7 @@ footer {
   background: #f9f9f9;   /* ✅ subtle light gray background */
   border-radius: 12px;
   margin-bottom: 2rem;
-}
+  }
 
 .trust h2 {
   font-size: 2.8rem;
@@ -904,7 +911,7 @@ footer {
 
 .trust p {
   color: #444;
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
   max-width: 700px;   /* ✅ restrict width */
   margin-left: auto;
@@ -1183,6 +1190,7 @@ a[href*="/services/"]::before,
   max-width: 780px;
   margin: 0 auto 50px;
   line-height: 1.6;
+  font-size: 1.1rem; /* ✅ slightly larger text */
 }
 
 /* Wider and evenly spaced 3-box grid */
@@ -1269,7 +1277,7 @@ a[href*="/services/"]::before,
 
 .smarter-text p {
   color: #555;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 16px;
 }
