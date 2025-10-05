@@ -92,19 +92,19 @@ body {
   text-align: center;
   padding: 3rem 1.5rem;
 
-  /* ✨ Background: gradient overlay + Unsplash banner */
-  background-image: 
+  /* ✨ Working Unsplash gradient overlay */
+  background-image:
     linear-gradient(rgba(0, 90, 156, 0.8), rgba(0, 90, 156, 0.7)),
-    url('https://images.unsplash.com/photo-1556761175-5973dcf32e7?q=80&w=2832&auto=format&fit=crop');
+    url("https://images.unsplash.com/photo-1556761175-5973dcf32e7?q=80&w=2832&auto=format&fit=crop");
 
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-
   position: relative;
-  min-height: 480px;
+  min-height: 520px;
   color: #fff;
 }
+
 
 
 /* Dark overlay */
