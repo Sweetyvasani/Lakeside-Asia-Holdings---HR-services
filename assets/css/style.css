@@ -225,12 +225,12 @@ body {
 
 .services p, {
   max-width: 780px;
-  margin: 0 auto 28px;
+  margin-bottom: 60px;
   text-align: center;
   font-size: 1.1rem;
 }
 
-.services p, .hr-engine p.subtitle {
+.hr-engine p.subtitle {
   max-width: 780px;
   margin: 0 auto 28px;
   text-align: center;
@@ -390,7 +390,7 @@ body {
 }
 
 .lifecycle-wheel p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: #555;
   margin-bottom: 40px;
   max-width: 600px;
@@ -762,6 +762,12 @@ body {
 
 .page-headers + .founders {
   margin-top: 30px; /* space between para and images */
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 60px;
 }
 
 /* ================== 4-STEP PATH TO HR EXCELLENCE ================== */
@@ -1411,6 +1417,12 @@ a[href*="/services/"]::before,
   margin-bottom: 0.25rem;
 }
 
+.founders p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 60px;
+}
+
 
 .founders h3 {
   font-size: 1.5rem;
@@ -1418,6 +1430,7 @@ a[href*="/services/"]::before,
   color: #14b8a6;  /* teal subheading for role */
   margin-bottom: 0.75rem;
 }
+
 
 
 /* ✅ Standardize founder images */
