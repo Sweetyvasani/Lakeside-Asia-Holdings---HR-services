@@ -116,7 +116,7 @@ body {
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 500px;
+  max-width: 1500px;
   margin: 0 auto;
   animation: fadeIn 1.5s ease-in-out;
 }
