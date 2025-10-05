@@ -1,13 +1,22 @@
 /* ================== GLOBAL ================== */
+/* Base text styling */
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  color: var(--neutral-text-color);
+  font-weight: 400; /* smooth readable body weight */
+  color: #374151;   /* neutral dark grey for good contrast */
+  line-height: 1.6;
 }
+
+/* Headings styling */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
-  color: #1f2937; /* A slightly darker grey for headings */
-  }
+  font-weight: 700; /* strong, clean heading look */
+  color: #1f2937;   /* slightly darker for contrast */
+  line-height: 1.2;
+  margin-top: 0;
+}
+
 
 /* ================== HEADER ================== */
 header {
