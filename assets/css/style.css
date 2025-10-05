@@ -124,7 +124,7 @@ body {
 /* Heading */
 .hero h1 {
   font-size: 3.8rem;
-  margin-bottom: 1.6rem;  /* ✅ increase spacing below heading */
+  margin-bottom: 1rem;  /* ✅ increase spacing below heading */
   font-weight: 800;
   color: #fff;
   white-space: normal; /* ✅ allow wrapping */
