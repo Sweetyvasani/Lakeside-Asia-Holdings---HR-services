@@ -91,7 +91,7 @@ body {
   justify-content: flex-start; /* ✅ aligns text to the left side */
   align-items: flex-start;   /* ✅ pushes text higher toward top */
   text-align: left;          /* ✅ left-align heading + paragraph */
-  padding: 7rem 0 3rem 10%;  /* ✅ top + left offset similar to NVC */
+  padding: 6rem 0 3rem 10%;  /* ✅ top + left offset similar to NVC */
   background-image: 
   linear-gradient(rgba(0, 90, 156, 0.5), rgba(0, 90, 156, 0.6)),
   url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop");
@@ -99,7 +99,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  min-height: 420px;
+  min-height: 450px;
 }
 
 
@@ -118,19 +118,13 @@ body {
   max-width: 700px;
   margin: 0 auto;
   animation: fadeIn 1.5s ease-in-out;
+  text-align: left;        /* ✅ align text left inside the block */
 }
-
-@media (max-width: 768px) {
-  .hero-content {
-    left: 0; /* ✅ re-center text on mobile */
-  }
-}
-
 
 /* Heading */
 .hero h1 {
   font-size: 3.6rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
   font-weight: 800;
   color: #fff;
   white-space: normal; /* ✅ allow wrapping */
@@ -149,6 +143,32 @@ body {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
   animation: fadeInUp 1.5s ease-in-out;
   max-width: 600px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero {
+    padding: 6rem 5% 3rem;
+    align-items: center;
+  }
+  .hero-content {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 1.5rem 3rem;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
 }
 
 /* CTA Buttons */
@@ -180,15 +200,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* Optional: Make them stack nicely on smaller screens */
-@media (max-width: 768px) {
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    max-width: 280px;
-  }
-}
-
 
 /* ================== ANIMATIONS ================== */
 @keyframes fadeIn {
@@ -207,30 +218,7 @@ body {
   }
 }
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-  .hero {
-    padding: 6rem 5% 3rem;
-    align-items: center;
-  }
-  .hero-content {
-    max-width: 90%;
-  }
-}
 
-@media (max-width: 768px) {
-  .hero {
-    text-align: center;
-    justify-content: center;
-    padding: 6rem 1.5rem 3rem;
-  }
-  .hero-content {
-    text-align: center;
-  }
-  .hero-buttons {
-    justify-content: center;
-  }
-}
 
 /* ================== SERVICES ================== */
 /* ================== END-TO-END HR GROWTH ENGINE ================== */
