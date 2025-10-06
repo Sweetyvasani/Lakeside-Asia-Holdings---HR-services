@@ -1701,7 +1701,7 @@ a[href*="/services/"]::before,
   font-size: 1.1rem;
   color: #eaf2f8;
   margin-top: 0.5rem; /* ✅ Add this to control spacing from heading */
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   line-height: 1.7;
   max-width: 800px;
   margin-left: auto;  /* ✅ Add this */
