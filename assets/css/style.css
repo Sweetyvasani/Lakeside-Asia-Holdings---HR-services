@@ -1652,68 +1652,81 @@ a[href*="/services/"]::before,
 
 /* ================== FOOTER ================== */
 .site-footer {
-  background-color: #162231; /* dark navy background */
+  background-color: #162231;      /* Dark navy */
   color: #e0e0e0;
-  padding: 60px 20px 30px;
+  padding: 70px 20px 35px;
+  font-family: 'Lato', sans-serif;
 }
 
 .footer-container {
+  max-width: 1500px;             /* ✅ center width cap */
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 60px;
 }
 
-/* Column 1 - Brand + Tagline */
+/* --- Column 1: Brand --- */
 .footer-brand {
-  flex: 1 1 300px;
+  flex: 1 1 280px;
 }
 
 .footer-logo {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #14b8a6; /* teal highlight */
-  margin-bottom: 0.75rem;
+  color: #14b8a6;
+  margin-bottom: 0.8rem;
 }
 
 .footer-tagline {
   color: #cfd8dc;
   font-size: 0.95rem;
   line-height: 1.6;
-  max-width: 320px;
+  max-width: 300px;
 }
 
-/* Column 2 - Quick Links */
-.footer-links {
-  flex: 1 1 200px;
+/* --- Column 2 + 3: Links --- */
+.footer-links,
+.footer-services {
+  flex: 1 1 220px;
 }
 
-.footer-links ul {
-  list-style: none;
+.footer-links ul,
+.footer-services ul {
+  list-style: none;     /* ✅ remove bullets */
   padding: 0;
   margin: 0;
 }
 
-.footer-links ul li {
-  margin-bottom: 0.6rem;
+.footer-links ul li,
+.footer-services ul li {
+  margin-bottom: 0.55rem;
 }
 
-.footer-links ul li a {
+.footer-links ul li a,
+.footer-services ul li a {
   color: #cfd8dc;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footer-links ul li a:hover {
+.footer-links ul li a:hover,
+.footer-services ul li a:hover {
   color: #14b8a6;
 }
 
-/* Column 3 - Contact */
+.footer-services h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #e0e0e0;
+}
+
+/* --- Column 4: Contact --- */
 .footer-contact {
-  flex: 1 1 250px;
+  flex: 1 1 230px;
   font-size: 0.95rem;
   color: #cfd8dc;
 }
@@ -1722,12 +1735,12 @@ a[href*="/services/"]::before,
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0.5rem 0;
+  margin: 0.6rem 0;
 }
 
 .footer-contact i {
   color: #14b8a6;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .footer-contact a {
@@ -1739,7 +1752,7 @@ a[href*="/services/"]::before,
   color: #14b8a6;
 }
 
-/* Bottom Bar */
+/* --- Bottom Bar --- */
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
@@ -1749,21 +1762,15 @@ a[href*="/services/"]::before,
   color: #9ea7af;
 }
 
-/* Responsive Footer */
-@media (max-width: 768px) {
+/* --- Responsive --- */
+@media (max-width: 992px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
-    align-items: center;
-  }
-
-  .footer-brand, .footer-links, .footer-contact {
-    flex: 1 1 100%;
-    margin-bottom: 25px;
+    gap: 35px;
   }
 
   .footer-contact p {
     justify-content: center;
   }
 }
-
