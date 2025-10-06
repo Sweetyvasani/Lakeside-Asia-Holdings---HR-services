@@ -1700,8 +1700,12 @@ a[href*="/services/"]::before,
 .cta-section p {
   font-size: 1.1rem;
   color: #eaf2f8;
-  margin: 0 0 32px;       /* space below paragraph (before button) */
+  margin-top: 0.5rem; /* ✅ Add this to control spacing from heading */
+  margin-bottom: 2rem;
   line-height: 1.7;
+  max-width: 900px;
+  margin-left: auto;  /* ✅ Add this */
+  margin-right: auto; /* ✅ Add this */
 }
 
 /* 3) Taller CTA button */
