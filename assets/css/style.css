@@ -1700,10 +1700,10 @@ a[href*="/services/"]::before,
 .cta-section p {
   font-size: 1.1rem;
   color: #eaf2f8;
-  margin-top: 1rem; /* ✅ Add this to control spacing from heading */
+  margin-top: 1.5rem; /* ✅ Add this to control spacing from heading */
   margin-bottom: 3rem;
   line-height: 1.7;
-  max-width: 900px;
+  max-width: 800px;
   margin-left: auto;  /* ✅ Add this */
   margin-right: auto; /* ✅ Add this */
 }
