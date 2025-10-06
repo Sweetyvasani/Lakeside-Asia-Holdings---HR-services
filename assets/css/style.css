@@ -1651,10 +1651,8 @@ a[href*="/services/"]::before,
 }
 
 /* ================== FOOTER ================== */
-
-/* --- Footer Base (Gray Background) --- */
 .site-footer {
-  background-color: #f5f5f5;  /* ✅ grayish tone restored */
+  background-color: #f5f5f5; /* ✅ gray tone */
   color: #333;
   font-family: 'Lato', sans-serif;
   padding-top: 50px;
@@ -1673,15 +1671,11 @@ a[href*="/services/"]::before,
   padding: 0 30px;
 }
 
-/* --- Column 1: Brand --- */
-.footer-brand {
-  flex: 1 1 260px;
-}
-
+/* --- Brand Column --- */
 .footer-logo {
   font-size: 1.6rem;
   font-weight: 800;
-  color: #0a2540; /* ✅ brand navy */
+  color: #0a2540;
   margin-bottom: 0.6rem;
 }
 
@@ -1692,7 +1686,7 @@ a[href*="/services/"]::before,
   max-width: 320px;
 }
 
-/* --- Column Headings --- */
+/* --- Headings --- */
 .sub-heading {
   font-size: 1rem;
   font-weight: 700;
@@ -1701,7 +1695,6 @@ a[href*="/services/"]::before,
   position: relative;
 }
 
-/* ✅ Teal underline accent */
 .teal-underline::after {
   content: "";
   display: block;
@@ -1712,7 +1705,7 @@ a[href*="/services/"]::before,
   border-radius: 2px;
 }
 
-/* --- Link Columns --- */
+/* --- Links --- */
 .footer-column ul {
   list-style: none;
   padding: 0;
@@ -1724,7 +1717,7 @@ a[href*="/services/"]::before,
 }
 
 .footer-column ul li a {
-  color: #444; /* ✅ softer gray */
+  color: #444;
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.3s ease;
@@ -1734,7 +1727,7 @@ a[href*="/services/"]::before,
   color: #14b8a6;
 }
 
-/* --- Contact Section --- */
+/* --- Contact --- */
 .footer-contact {
   flex: 1 1 260px;
 }
@@ -1743,30 +1736,23 @@ a[href*="/services/"]::before,
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0.5rem 0;
+  margin: 0.6rem 0;
   color: #444;
 }
 
 .footer-contact i {
-  color: #14b8a6; /* ✅ visible teal icons */
-  font-size: 1rem;
-  width: 20px;
-  min-width: 20px;
-  text-align: center;
-}
-
-.footer-contact a {
-  color: #444;
-  text-decoration: none;
-}
-
-.footer-contact a:hover {
   color: #14b8a6;
+  font-size: 1.05rem;
+  width: 22px;
+  min-width: 22px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-/* --- Bottom Bar (Navy Section) --- */
+/* --- Bottom Navy Bar --- */
 .footer-bottom {
-  background-color: #0a2540; /* ✅ navy blue only here */
+  background-color: #0a2540;
   color: #fff;
   text-align: center;
   margin-top: 40px;
@@ -1777,7 +1763,7 @@ a[href*="/services/"]::before,
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* --- Responsive Layout --- */
+/* --- Responsive --- */
 @media (max-width: 992px) {
   .footer-container {
     flex-direction: column;
@@ -1789,3 +1775,4 @@ a[href*="/services/"]::before,
     justify-content: center;
   }
 }
+
