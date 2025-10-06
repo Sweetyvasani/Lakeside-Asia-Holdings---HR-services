@@ -1661,7 +1661,7 @@ a[href*="/services/"]::before,
 
 /* --- Container Layout --- */
 .footer-container {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -1734,20 +1734,30 @@ a[href*="/services/"]::before,
 
 .footer-contact p {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 12px;
   margin: 0.6rem 0;
   color: #444;
+  line-height: 1.5;
 }
 
 .footer-contact i {
   color: #14b8a6;
   font-size: 1.05rem;
-  width: 22px;
-  min-width: 22px;
+  width: 20px;
+  min-width: 20px;
   text-align: center;
-  display: inline-block;
-  vertical-align: middle;
+  margin-top: 2px;
+}
+
+.footer-contact a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #14b8a6;
 }
 
 /* --- Bottom Navy Bar --- */
