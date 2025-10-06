@@ -748,6 +748,20 @@ body {
   padding: 2rem;
 }
 
+/* Full-bleed (forces the section to occupy full viewport width) */
+.cta-section {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  padding: 80px 0;
+  box-sizing: border-box;
+  background-color: #005a9c;
+}
+
+
 /* ================== PAGE HEADERS ================== */
 .page-header {
   padding: 2rem 2rem;
