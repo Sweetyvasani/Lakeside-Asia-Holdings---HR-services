@@ -151,11 +151,11 @@ body {
 /* CTA Buttons */
 .btn-primary,
 .btn-secondary {
-  background: #00BFA5;       /* your teal color */
-  color: #fff !important;    /* ✅ white text */
-  width: 250px;              /* ✅ fixed equal width */
-  height: 55px;              /* ✅ equal height */
-  display: inline-flex;      /* center text both ways */
+  background: #00BFA5;        /* Teal brand color */
+  color: #fff !important;     /* White text */
+  min-width: 270px;           /* ✅ wider for longer text (was 250px) */
+  height: 58px;               /* ✅ slightly taller for better proportion */
+  display: inline-flex;       /* centers content horizontally & vertically */
   align-items: center;
   justify-content: center;
   margin: 0.5rem;
@@ -163,18 +163,32 @@ body {
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
   border: none;
   transition: all 0.3s ease;
   animation: fadeInUp 1.8s ease-in-out;
+  text-align: center;         /* ✅ ensures multi-line text stays centered */
+  padding: 0 1.2rem;          /* ✅ adds a bit of breathing room inside */
+  box-sizing: border-box;     /* ✅ keeps size consistent */
 }
 
-/* ✅ Hover effect */
+/* Hover effect */
 .btn-primary:hover,
 .btn-secondary:hover {
-  background: #0fa192;
+  background: #0fa192;        /* Darker teal on hover */
   transform: translateY(-3px);
+}
+
+/* ✅ Responsive: allow flexible width on smaller screens */
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary {
+    width: 90%;               /* full width for mobile */
+    min-width: unset;
+    font-size: 1rem;
+    height: 52px;
+  }
 }
 
 
