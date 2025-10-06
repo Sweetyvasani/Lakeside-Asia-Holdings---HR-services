@@ -1713,8 +1713,8 @@ a[href*="/services/"]::before,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 34px;     /* taller button: 16px top/bottom */
-  min-height: 56px;       /* ensures a consistent height */
+  padding: 14px 34px;     /* taller button: 16px top/bottom */
+  min-height: 50px;       /* ensures a consistent height */
   font-size: 1.05rem;
   font-weight: 700;
   border-radius: 8px;
