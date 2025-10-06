@@ -1652,32 +1652,32 @@ a[href*="/services/"]::before,
 
 /* ================== FOOTER ================== */
 .site-footer {
-  background-color: #f5f5f5; /* ✅ matches light background from screenshot */
+  background-color: #f5f5f5;
   color: #333;
-  padding: 70px 20px 35px;
-  font-family: 'Lato', sans-serif; /* ✅ uniform font for all columns */
+  padding: 50px 20px 0;
+  font-family: 'Lato', sans-serif;
 }
 
 .footer-container {
-  max-width: 1500px; /* ✅ center container width */
+  max-width: 1500px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 60px;
+  gap: 40px; /* ✅ tighter spacing */
 }
 
-/* --- Column 1: Brand --- */
+/* Column 1 */
 .footer-brand {
-  flex: 1 1 280px;
+  flex: 1 1 260px;
 }
 
 .footer-logo {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #0a2540; /* ✅ navy blue (matches navbar) */
-  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0a2540;
+  margin-bottom: 0.6rem;
 }
 
 .footer-tagline {
@@ -1687,22 +1687,25 @@ a[href*="/services/"]::before,
   max-width: 300px;
 }
 
-/* --- Column 2 + 3: Links --- */
-.footer-links,
-.footer-services {
-  flex: 1 1 220px;
+/* Column Headings */
+.footer-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0a2540;
+  margin-bottom: 0.8rem;
 }
 
+/* Lists */
 .footer-links ul,
 .footer-services ul {
-  list-style: none; /* ✅ remove bullets */
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .footer-links ul li,
 .footer-services ul li {
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.45rem;
 }
 
 .footer-links ul li a,
@@ -1718,22 +1721,21 @@ a[href*="/services/"]::before,
   color: #14b8a6;
 }
 
-/* --- Column 4: Contact --- */
+/* Contact */
 .footer-contact {
-  flex: 1 1 230px;
+  flex: 1 1 240px;
   font-size: 0.95rem;
-  color: #333;
 }
 
 .footer-contact p {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0.6rem 0;
+  margin: 0.5rem 0;
 }
 
 .footer-contact i {
-  color: #14b8a6; /* ✅ teal icon color */
+  color: #14b8a6;
   font-size: 1rem;
   width: 20px;
 }
@@ -1747,25 +1749,23 @@ a[href*="/services/"]::before,
   color: #14b8a6;
 }
 
-/* --- Bottom Bar --- */
+/* Bottom bar */
 .footer-bottom {
+  background-color: #0a2540;
+  color: #fff;
   text-align: center;
-  margin-top: 40px;
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
-  font-size: 0.85rem;
-  color: #555;
-  background-color: #f5f5f5; /* ✅ same background as main footer */
+  margin-top: 35px;
+  padding: 16px 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
-/* --- Responsive --- */
 @media (max-width: 992px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
-    gap: 35px;
+    gap: 25px;
   }
-
   .footer-contact p {
     justify-content: center;
   }
