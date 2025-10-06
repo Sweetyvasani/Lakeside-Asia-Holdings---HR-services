@@ -1665,16 +1665,16 @@ a[href*="/services/"]::before,
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px; /* ✅ tighter spacing */
+  gap: 40px;
 }
 
-/* Column 1 */
+/* --- Column 1: Brand --- */
 .footer-brand {
   flex: 1 1 260px;
 }
 
 .footer-logo {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: #0a2540;
   margin-bottom: 0.6rem;
@@ -1687,44 +1687,68 @@ a[href*="/services/"]::before,
   max-width: 300px;
 }
 
-/* Column Headings */
-.footer-heading {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #0a2540;
-  margin-bottom: 0.8rem;
+/* --- Explore Section (Columns 2+3 Combined) --- */
+.footer-explore {
+  flex: 1 1 550px;
 }
 
-/* Lists */
-.footer-links ul,
-.footer-services ul {
+.footer-heading {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0a2540;
+  margin-bottom: 1rem;
+}
+
+.explore-columns {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.explore-sub {
+  flex: 1;
+}
+
+.sub-heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0a2540;
+  margin-bottom: 0.6rem;
+}
+
+.explore-sub ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-links ul li,
-.footer-services ul li {
+.explore-sub ul li {
   margin-bottom: 0.45rem;
 }
 
-.footer-links ul li a,
-.footer-services ul li a {
+.explore-sub ul li a {
   color: #333;
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
-.footer-links ul li a:hover,
-.footer-services ul li a:hover {
+.explore-sub ul li a:hover {
   color: #14b8a6;
 }
 
-/* Contact */
+/* --- Column 4: Contact --- */
 .footer-contact {
-  flex: 1 1 240px;
+  flex: 1 1 250px;
   font-size: 0.95rem;
+}
+
+.footer-contact h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0a2540;
+  margin-bottom: 0.9rem;
 }
 
 .footer-contact p {
@@ -1749,7 +1773,7 @@ a[href*="/services/"]::before,
   color: #14b8a6;
 }
 
-/* Bottom bar */
+/* --- Bottom Bar --- */
 .footer-bottom {
   background-color: #0a2540;
   color: #fff;
@@ -1760,12 +1784,19 @@ a[href*="/services/"]::before,
   line-height: 1.5;
 }
 
+/* --- Responsive --- */
 @media (max-width: 992px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
+  }
+
+  .explore-columns {
+    flex-direction: column;
     gap: 25px;
   }
+
   .footer-contact p {
     justify-content: center;
   }
