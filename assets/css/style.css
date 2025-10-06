@@ -748,19 +748,6 @@ body {
   padding: 2rem;
 }
 
-/* Full-bleed (forces the section to occupy full viewport width) */
-.cta-section {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-  padding: 80px 0;
-  box-sizing: border-box;
-  background-color: #005a9c;
-}
-
 
 /* ================== PAGE HEADERS ================== */
 .page-header {
@@ -1681,12 +1668,18 @@ a[href*="/services/"]::before,
 }
 
 /* ================== CTA SECTION ================== */
+
+/* Full-bleed (forces the section to occupy full viewport width) */
 .cta-section {
-  background-color: #005a9c; /* your deep blue brand color */
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
-  font-family: 'Lato', sans-serif;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  padding: 80px 0;
+  box-sizing: border-box;
+  background-color: #005a9c;
 }
 
 .cta-container {
@@ -1697,47 +1690,40 @@ a[href*="/services/"]::before,
 .cta-section h2 {
   font-size: 2.8rem;
   font-weight: 800;
-  margin-bottom: 1rem;
-  line-height: 1.6;
+   margin: 0 0 32px;       /* 32px gap under heading — increase if you want more */
+  line-height: 1.2;
   color: #eaf2f8;
 }
 
 .cta-section p {
   font-size: 1.1rem;
   color: #eaf2f8;
-  margin-bottom: 2.5rem;
+  margin: 0 0 32px;       /* space below paragraph (before button) */
   line-height: 1.7;
 }
 
-/* CTA button */
+/* 3) Taller CTA button */
 .cta-btn {
-  background-color: #14b8a6; /* teal brand color */
-  color: #fff;
-  padding: 0.9rem 2rem;
-  border-radius: 6px;
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 34px;     /* taller button: 16px top/bottom */
+  min-height: 56px;       /* ensures a consistent height */
+  font-size: 1.05rem;
   font-weight: 700;
-  display: inline-block;
-  transition: background 0.3s ease, transform 0.2s ease;
+  border-radius: 8px;
+  background-color: #14b8a6;
+  color: #fff;
+  text-decoration: none;
+  transition: transform .18s ease, background-color .18s ease;
 }
 
-.cta-btn:hover {
-  background-color: #0fa192;
-  transform: translateY(-3px);
-}
+.cta-btn:hover { transform: translateY(-3px); background-color: #0fa192; }
 
-/* Responsive adjustments */
+/* responsive tweaks */
 @media (max-width: 768px) {
-  .cta-section {
-    padding: 60px 15px;
-  }
-
-  .cta-section h2 {
-    font-size: 1.7rem;
-  }
-
-  .cta-section p {
-    font-size: 1rem;
-  }
+  .cta-section { padding: 60px 0; }
+  .cta-section h2 { font-size: 1.7rem; margin-bottom: 22px; }
+  .cta-section p { font-size: 1rem; margin-bottom: 22px; }
+  .cta-btn { padding: 12px 22px; min-height: 48px; font-size: 1rem; }
 }
-
