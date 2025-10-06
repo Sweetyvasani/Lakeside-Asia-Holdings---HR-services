@@ -1573,3 +1573,96 @@ a[href*="/services/"]::before,
   margin-top: 0 !important;       /* ✅ remove any top margin on founders section */
   padding-top: 0 !important;      /* ✅ ensure no extra padding */
 }
+
+
+/* ================== FOOTER ================== */
+.site-footer {
+  background-color: #f8f9fa;
+  color: #0a2540;
+  padding: 60px 20px 30px;
+  font-family: 'Lato', sans-serif;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a2540;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-column ul li a {
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #14b8a6;
+}
+
+/* Social links */
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0a2540;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.social-links a:hover {
+  color: #14b8a6;
+}
+
+.social-links img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Bottom footer note */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .footer-column {
+    margin-bottom: 30px;
+  }
+}
+
