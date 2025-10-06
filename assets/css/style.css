@@ -1652,20 +1652,23 @@ a[href*="/services/"]::before,
 
 /* ================== FOOTER ================== */
 .site-footer {
-  background-color: #f5f5f5;
-  color: #333;
-  padding: 50px 20px 0;
+  background-color: #0a2540; /* ✅ full navy background */
+  color: #fff;
   font-family: 'Lato', sans-serif;
+  padding-top: 50px;
+  padding-bottom: 0;
 }
 
+/* --- Container --- */
 .footer-container {
-  max-width: 1400px; /* ✅ tightened width */
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
+  padding: 0 30px;
 }
 
 /* --- Column 1: Brand --- */
@@ -1676,44 +1679,26 @@ a[href*="/services/"]::before,
 .footer-logo {
   font-size: 1.6rem;
   font-weight: 800;
-  color: #0a2540; /* ✅ navy blue brand color */
+  color: #14b8a6; /* ✅ brand teal */
   margin-bottom: 0.6rem;
 }
 
 .footer-tagline {
-  color: #555;
+  color: #ddd;
   font-size: 0.95rem;
   line-height: 1.6;
   max-width: 320px;
 }
 
-/* --- Explore Section (Columns 2+3) --- */
-.footer-explore {
-  flex: 1 1 520px;
-}
-
-.footer-heading {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #0a2540;
-  margin-bottom: 1rem;
-}
-
-.explore-columns {
-  display: flex;
-  gap: 40px;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.explore-sub {
-  flex: 1;
+/* --- Common Columns --- */
+.footer-column {
+  flex: 1 1 240px;
 }
 
 .sub-heading {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: #0a2540;
+  color: #fff;
   margin-bottom: 0.6rem;
   position: relative;
 }
@@ -1729,49 +1714,30 @@ a[href*="/services/"]::before,
   border-radius: 2px;
 }
 
-.explore-sub ul {
+.footer-column ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.explore-sub ul li {
+.footer-column ul li {
   margin-bottom: 0.45rem;
 }
 
-.explore-sub ul li a {
-  color: #333;
+.footer-column ul li a {
+  color: #ccc;
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
-.explore-sub ul li a:hover {
+.footer-column ul li a:hover {
   color: #14b8a6;
 }
 
-/* --- Column 4: Contact --- */
+/* --- Contact Section --- */
 .footer-contact {
-  flex: 1 1 240px;
-  font-size: 0.95rem;
-}
-
-.footer-contact h3 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #0a2540;
-  margin-bottom: 0.8rem;
-  position: relative;
-}
-
-.footer-contact h3.teal-underline::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 3px;
-  background-color: #14b8a6;
-  margin-top: 6px;
-  border-radius: 2px;
+  flex: 1 1 260px;
 }
 
 .footer-contact p {
@@ -1779,6 +1745,7 @@ a[href*="/services/"]::before,
   align-items: center;
   gap: 10px;
   margin: 0.5rem 0;
+  color: #ccc;
 }
 
 .footer-contact i {
@@ -1790,7 +1757,7 @@ a[href*="/services/"]::before,
 }
 
 .footer-contact a {
-  color: #333;
+  color: #ccc;
   text-decoration: none;
 }
 
@@ -1803,10 +1770,11 @@ a[href*="/services/"]::before,
   background-color: #0a2540;
   color: #fff;
   text-align: center;
-  margin-top: 35px;
+  margin-top: 40px;
   padding: 16px 10px;
   font-size: 0.9rem;
   line-height: 1.5;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* --- Responsive --- */
@@ -1815,11 +1783,6 @@ a[href*="/services/"]::before,
     flex-direction: column;
     text-align: center;
     gap: 30px;
-  }
-
-  .explore-columns {
-    flex-direction: column;
-    gap: 25px;
   }
 
   .footer-contact p {
