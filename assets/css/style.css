@@ -1651,15 +1651,17 @@ a[href*="/services/"]::before,
 }
 
 /* ================== FOOTER ================== */
+
+/* --- Footer Base (Gray Background) --- */
 .site-footer {
-  background-color: #0a2540; /* ✅ full navy background */
-  color: #fff;
+  background-color: #f5f5f5;  /* ✅ grayish tone restored */
+  color: #333;
   font-family: 'Lato', sans-serif;
   padding-top: 50px;
   padding-bottom: 0;
 }
 
-/* --- Container --- */
+/* --- Container Layout --- */
 .footer-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -1679,26 +1681,22 @@ a[href*="/services/"]::before,
 .footer-logo {
   font-size: 1.6rem;
   font-weight: 800;
-  color: #14b8a6; /* ✅ brand teal */
+  color: #0a2540; /* ✅ brand navy */
   margin-bottom: 0.6rem;
 }
 
 .footer-tagline {
-  color: #ddd;
+  color: #555;
   font-size: 0.95rem;
   line-height: 1.6;
   max-width: 320px;
 }
 
-/* --- Common Columns --- */
-.footer-column {
-  flex: 1 1 240px;
-}
-
+/* --- Column Headings --- */
 .sub-heading {
   font-size: 1rem;
   font-weight: 700;
-  color: #fff;
+  color: #0a2540;
   margin-bottom: 0.6rem;
   position: relative;
 }
@@ -1714,6 +1712,7 @@ a[href*="/services/"]::before,
   border-radius: 2px;
 }
 
+/* --- Link Columns --- */
 .footer-column ul {
   list-style: none;
   padding: 0;
@@ -1725,7 +1724,7 @@ a[href*="/services/"]::before,
 }
 
 .footer-column ul li a {
-  color: #ccc;
+  color: #444; /* ✅ softer gray */
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.3s ease;
@@ -1745,11 +1744,11 @@ a[href*="/services/"]::before,
   align-items: center;
   gap: 10px;
   margin: 0.5rem 0;
-  color: #ccc;
+  color: #444;
 }
 
 .footer-contact i {
-  color: #14b8a6;
+  color: #14b8a6; /* ✅ visible teal icons */
   font-size: 1rem;
   width: 20px;
   min-width: 20px;
@@ -1757,7 +1756,7 @@ a[href*="/services/"]::before,
 }
 
 .footer-contact a {
-  color: #ccc;
+  color: #444;
   text-decoration: none;
 }
 
@@ -1765,19 +1764,20 @@ a[href*="/services/"]::before,
   color: #14b8a6;
 }
 
-/* --- Bottom Bar --- */
+/* --- Bottom Bar (Navy Section) --- */
 .footer-bottom {
-  background-color: #0a2540;
+  background-color: #0a2540; /* ✅ navy blue only here */
   color: #fff;
   text-align: center;
   margin-top: 40px;
   padding: 16px 10px;
   font-size: 0.9rem;
   line-height: 1.5;
+  width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* --- Responsive --- */
+/* --- Responsive Layout --- */
 @media (max-width: 992px) {
   .footer-container {
     flex-direction: column;
