@@ -1669,22 +1669,24 @@ a[href*="/services/"]::before,
 
 /* ================== CTA SECTION ================== */
 
-/* Full-bleed (forces the section to occupy full viewport width) */
+/* CTA — simple full-width background, constrained content */
 .cta-section {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-  padding: 80px 0;
+  width: 100%;
+  display: block;
   box-sizing: border-box;
-  background-color: #005a9c;
+  padding: 80px 0;                 /* top / bottom only so background goes edge-to-edge */
+  background-color: #005a9c;       /* or your preferred color */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 
+/* content container keeps text centered and constrained */
 .cta-container {
-  max-width: 900px;
+  max-width: 1100px;      /* control content width */
   margin: 0 auto;
+  padding: 0 20px;        /* horizontal gutter so text never touches edges */
+  text-align: center;
 }
 
 .cta-section h2 {
