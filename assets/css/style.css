@@ -1652,14 +1652,14 @@ a[href*="/services/"]::before,
 
 /* ================== FOOTER ================== */
 .site-footer {
-  background-color: #162231;      /* Dark navy */
-  color: #e0e0e0;
+  background-color: #f5f5f5; /* ✅ matches light background from screenshot */
+  color: #333;
   padding: 70px 20px 35px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif; /* ✅ uniform font for all columns */
 }
 
 .footer-container {
-  max-width: 1500px;             /* ✅ center width cap */
+  max-width: 1500px; /* ✅ center container width */
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -1676,12 +1676,12 @@ a[href*="/services/"]::before,
 .footer-logo {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #14b8a6;
+  color: #0a2540; /* ✅ navy blue (matches navbar) */
   margin-bottom: 0.8rem;
 }
 
 .footer-tagline {
-  color: #cfd8dc;
+  color: #555;
   font-size: 0.95rem;
   line-height: 1.6;
   max-width: 300px;
@@ -1695,7 +1695,7 @@ a[href*="/services/"]::before,
 
 .footer-links ul,
 .footer-services ul {
-  list-style: none;     /* ✅ remove bullets */
+  list-style: none; /* ✅ remove bullets */
   padding: 0;
   margin: 0;
 }
@@ -1707,8 +1707,9 @@ a[href*="/services/"]::before,
 
 .footer-links ul li a,
 .footer-services ul li a {
-  color: #cfd8dc;
+  color: #333;
   text-decoration: none;
+  font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
@@ -1717,18 +1718,11 @@ a[href*="/services/"]::before,
   color: #14b8a6;
 }
 
-.footer-services h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.8rem;
-  color: #e0e0e0;
-}
-
 /* --- Column 4: Contact --- */
 .footer-contact {
   flex: 1 1 230px;
   font-size: 0.95rem;
-  color: #cfd8dc;
+  color: #333;
 }
 
 .footer-contact p {
@@ -1739,12 +1733,13 @@ a[href*="/services/"]::before,
 }
 
 .footer-contact i {
-  color: #14b8a6;
+  color: #14b8a6; /* ✅ teal icon color */
   font-size: 1rem;
+  width: 20px;
 }
 
 .footer-contact a {
-  color: #cfd8dc;
+  color: #333;
   text-decoration: none;
 }
 
@@ -1756,10 +1751,11 @@ a[href*="/services/"]::before,
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
-  border-top: 1px solid #243447;
+  border-top: 1px solid #ddd;
   padding-top: 20px;
   font-size: 0.85rem;
-  color: #9ea7af;
+  color: #555;
+  background-color: #f5f5f5; /* ✅ same background as main footer */
 }
 
 /* --- Responsive --- */
