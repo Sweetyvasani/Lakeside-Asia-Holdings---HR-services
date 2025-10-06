@@ -1700,8 +1700,8 @@ a[href*="/services/"]::before,
 .cta-section p {
   font-size: 1.1rem;
   color: #eaf2f8;
-  margin-top: 0.5rem; /* ✅ Add this to control spacing from heading */
-  margin-bottom: 2rem;
+  margin-top: 1rem; /* ✅ Add this to control spacing from heading */
+  margin-bottom: 3rem;
   line-height: 1.7;
   max-width: 900px;
   margin-left: auto;  /* ✅ Add this */
@@ -1715,7 +1715,7 @@ a[href*="/services/"]::before,
   justify-content: center;
   padding: 14px 34px;     /* taller button: 16px top/bottom */
   min-height: 50px;       /* ensures a consistent height */
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 700;
   border-radius: 8px;
   background-color: #14b8a6;
