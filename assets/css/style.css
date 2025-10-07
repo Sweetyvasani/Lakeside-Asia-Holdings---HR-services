@@ -980,7 +980,7 @@ margin-bottom: 16px !important; /* ✅ reduce gap below intro paragraph */
   display: flex;
   flex-wrap: nowrap;         /* ✅ force side-by-side (no wrapping) */
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 2rem;
   max-width: 1380px;  /* ✅ matches Growth Dilemma / Smarter Approach */
   margin: 0 auto;
@@ -994,7 +994,7 @@ margin-bottom: 16px !important; /* ✅ reduce gap below intro paragraph */
 }
 
 .why-us-text h2 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
     font-weight: 700;
   margin-bottom: 2.4rem;
   color: #0a2540;
