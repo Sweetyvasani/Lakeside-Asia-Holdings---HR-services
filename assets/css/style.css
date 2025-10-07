@@ -1363,30 +1363,32 @@ a[href*="/services/"]::before,
 
 /* ================== Vision, Mission & Values — 3 box layout ================== */
 
+
 .vision-mission.three-box {
   background: #fff;
-  padding: 60px 20px;
+  padding: 70px 20px;
 }
 
 .vision-mission.three-box .container {
-  max-width: 1200px;
+  max-width: 1300px; /* Increased from 1200px */
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 36px;
 }
 
 /* Base box design */
 .vision-mission.three-box .box {
-  flex: 1 1 300px;
+  flex: 1 1 360px; /* Slightly larger width */
   text-align: center;
-  padding: 2rem;
+  padding: 2.5rem; /* Increased box height */
   border-radius: 14px;
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
   background: #f9fafb;
+  min-height: 360px; /* Added height for balance */
 }
 
 /* Individual gradients for each box */
@@ -1402,13 +1404,14 @@ a[href*="/services/"]::before,
   background: linear-gradient(135deg, #dcecff 0%, #e6faf8 100%);
 }
 
-/* Hover effect with glow and lift */
+/* Hover effect: lift + soft glow */
 .vision-mission.three-box .box:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
   filter: brightness(1.07);
 }
 
+/* Glow overlay on hover */
 .vision-mission.three-box .box::after {
   content: "";
   position: absolute;
@@ -1418,12 +1421,11 @@ a[href*="/services/"]::before,
   opacity: 0;
   transition: opacity 0.4s ease;
 }
-
 .vision-mission.three-box .box:hover::after {
   opacity: 1;
 }
 
-/* Heading & Icon */
+/* Headings */
 .vision-mission.three-box h2 {
   font-size: 1.75rem;
   font-weight: 800;
@@ -1431,10 +1433,25 @@ a[href*="/services/"]::before,
   color: #0a2540;
 }
 
+/* Larger icons with glow pulse animation */
 .vision-mission.three-box .icon {
-  font-size: 2rem;
+  font-size: 2.6rem; /* Increased icon size */
   margin-bottom: 1rem;
   color: #14b8a6;
+  animation: glowPulse 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+/* Soft glow pulse keyframes */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 0 rgba(20, 184, 166, 0);
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 18px rgba(20, 184, 166, 0.6);
+    transform: scale(1.05);
+  }
 }
 
 /* Responsive stacking for mobile */
@@ -1444,27 +1461,6 @@ a[href*="/services/"]::before,
     align-items: center;
   }
 }
-
-/* Subtle icon animation on hover */
-.vision-mission.three-box .box:hover .icon {
-  transform: scale(1.15);
-  transition: transform 0.3s ease;
-}
-
-/* Optional soft pulse effect (continuous) */
-@keyframes iconPulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-.vision-mission.three-box .icon {
-  animation: iconPulse 4s ease-in-out infinite;
-}
-
 
 
 /* ================== FOUNDERS ================== */
