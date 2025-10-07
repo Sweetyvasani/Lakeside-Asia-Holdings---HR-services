@@ -1357,13 +1357,14 @@ a[href*="/services/"]::before,
   color: #333;
 }
 
-
+/* ================= VISION & MISSION ================= */
 
 /* Vision & Mission */
 .vision-mission {
   background: #fff;
-  padding: 60px 20px; /* reduced padding */
+  padding: 60px 20px;
 }
+
 .vision-mission .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -1372,28 +1373,64 @@ a[href*="/services/"]::before,
   gap: 40px;
   justify-content: center;
 }
+
+/* Vision & Mission Cards */
 .vision-mission .box {
   text-align: center;
   padding: 2rem;
-  background: #f9fafb;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #f9fafb; /* fallback color */
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Gradients for each box */
+.vision-mission .vision {
+  background: linear-gradient(135deg, #d2f6f3 0%, #e0f2ff 100%);
+}
+
+.vision-mission .mission {
+  background: linear-gradient(135deg, #e0f2ff 0%, #d2f6f3 100%);
+}
+
+/* Hover effect with soft glow & brighter gradient */
 .vision-mission .box:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.07);
 }
+
+.vision-mission .box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.vision-mission .box:hover::after {
+  opacity: 1;
+}
+
+/* Headings */
 .vision-mission h2 {
   font-size: 1.75rem;
-  font-weight: 800;  /* bold headings */
+  font-weight: 800;
   margin-bottom: 1rem;
   color: #0a2540;
 }
+
+/* Icons */
 .vision-mission .icon {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #14b8a6;
 }
+
+/* Responsive */
 @media (max-width: 768px) {
   .vision-mission .container {
     flex-direction: column;
