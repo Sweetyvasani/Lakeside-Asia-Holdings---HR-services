@@ -1447,8 +1447,10 @@ a[href*="/services/"]::before,
     transform: scale(1);
   }
   50% {
-    text-shadow: 0 0 20px rgba(20, 184, 166, 0.6);
-    transform: scale(1.05);
+     /* Increased intensity and spread */
+    text-shadow: 0 0 28px rgba(20, 184, 166, 0.9);
+                0 0 45px rgba(20, 184, 166, 0.6);
+    transform: scale(1.08); 
   }
 }
 
