@@ -1394,6 +1394,13 @@ a[href*="/services/"]::before,
   background: linear-gradient(135deg, #e0f2ff 0%, #d2f6f3 100%);
 }
 
+/* Values box below mission */
+.vision-mission .values {
+  background: linear-gradient(135deg, #d2f6f3 0%, #e0f2ff 100%);
+  text-align: center;
+}
+
+
 /* Hover effect with soft glow & brighter gradient */
 .vision-mission .box:hover {
   transform: translateY(-6px);
@@ -1437,6 +1444,90 @@ a[href*="/services/"]::before,
     align-items: center;
   }
 }
+
+/* ================== Vision, Mission & Values — 3 box layout ================== */
+
+.vision-mission.three-box {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.vision-mission.three-box .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.vision-mission.three-box .box {
+  flex: 1 1 300px;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  background: #f9fafb;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Individual gradients */
+.vision-mission.three-box .vision {
+  background: linear-gradient(135deg, #d2f6f3 0%, #e0f2ff 100%);
+}
+
+.vision-mission.three-box .mission {
+  background: linear-gradient(135deg, #e0f2ff 0%, #d2f6f3 100%);
+}
+
+.vision-mission.three-box .values {
+  background: linear-gradient(135deg, #dcecff 0%, #e6faf8 100%);
+}
+
+/* Hover effect */
+.vision-mission.three-box .box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.07);
+}
+
+.vision-mission.three-box .box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.vision-mission.three-box .box:hover::after {
+  opacity: 1;
+}
+
+/* Headings and icons reuse same styles */
+.vision-mission.three-box h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #0a2540;
+}
+
+.vision-mission.three-box .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #14b8a6;
+}
+
+/* Responsive stacking */
+@media (max-width: 900px) {
+  .vision-mission.three-box .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 /* ================== FOUNDERS ================== */
 
