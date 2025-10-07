@@ -1448,9 +1448,9 @@ a[href*="/services/"]::before,
   }
   50% {
      /* Increased intensity and spread */
-    text-shadow: 0 0 28px rgba(20, 184, 166, 0.9);
+    text-shadow: 0 0 30px rgba(20, 184, 166, 0.9);
                 0 0 45px rgba(20, 184, 166, 0.6);
-    transform: scale(1.08); 
+    transform: scale(1.09); 
   }
 }
 
