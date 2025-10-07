@@ -1357,93 +1357,9 @@ a[href*="/services/"]::before,
   color: #333;
 }
 
-/* ================= VISION & MISSION ================= */
-
-/* Vision & Mission */
-.vision-mission {
-  background: #fff;
-  padding: 60px 20px;
-}
-
-.vision-mission .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-}
-
-/* Vision & Mission Cards */
-.vision-mission .box {
-  text-align: center;
-  padding: 2rem;
-  border-radius: 12px;
-  background: #f9fafb; /* fallback color */
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Gradients for each box */
-.vision-mission .vision {
-  background: linear-gradient(135deg, #d2f6f3 0%, #e0f2ff 100%);
-}
-
-.vision-mission .mission {
-  background: linear-gradient(135deg, #e0f2ff 0%, #d2f6f3 100%);
-}
-
-/* Values box below mission */
-.vision-mission .values {
-  background: linear-gradient(135deg, #d2f6f3 0%, #e0f2ff 100%);
-  text-align: center;
-}
-
-
-/* Hover effect with soft glow & brighter gradient */
-.vision-mission .box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
-  filter: brightness(1.07);
-}
-
-.vision-mission .box::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 70%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.vision-mission .box:hover::after {
-  opacity: 1;
-}
-
-/* Headings */
-.vision-mission h2 {
-  font-size: 1.75rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  color: #0a2540;
-}
-
-/* Icons */
-.vision-mission .icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #14b8a6;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .vision-mission .container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+/* ==========================
+   VISION, MISSION & VALUES
+   ========================== */
 
 /* ================== Vision, Mission & Values — 3 box layout ================== */
 
@@ -1461,18 +1377,19 @@ a[href*="/services/"]::before,
   gap: 30px;
 }
 
+/* Base box design */
 .vision-mission.three-box .box {
   flex: 1 1 300px;
   text-align: center;
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 14px;
   transition: all 0.4s ease;
-  background: #f9fafb;
   position: relative;
   overflow: hidden;
+  background: #f9fafb;
 }
 
-/* Individual gradients */
+/* Individual gradients for each box */
 .vision-mission.three-box .vision {
   background: linear-gradient(135deg, #d2f6f3 0%, #e0f2ff 100%);
 }
@@ -1485,7 +1402,7 @@ a[href*="/services/"]::before,
   background: linear-gradient(135deg, #dcecff 0%, #e6faf8 100%);
 }
 
-/* Hover effect */
+/* Hover effect with glow and lift */
 .vision-mission.three-box .box:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
@@ -1496,7 +1413,7 @@ a[href*="/services/"]::before,
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 12px;
+  border-radius: 14px;
   background: radial-gradient(circle at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -1506,7 +1423,7 @@ a[href*="/services/"]::before,
   opacity: 1;
 }
 
-/* Headings and icons reuse same styles */
+/* Heading & Icon */
 .vision-mission.three-box h2 {
   font-size: 1.75rem;
   font-weight: 800;
@@ -1520,13 +1437,34 @@ a[href*="/services/"]::before,
   color: #14b8a6;
 }
 
-/* Responsive stacking */
+/* Responsive stacking for mobile */
 @media (max-width: 900px) {
   .vision-mission.three-box .container {
     flex-direction: column;
     align-items: center;
   }
 }
+
+/* Subtle icon animation on hover */
+.vision-mission.three-box .box:hover .icon {
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
+}
+
+/* Optional soft pulse effect (continuous) */
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.vision-mission.three-box .icon {
+  animation: iconPulse 4s ease-in-out infinite;
+}
+
 
 
 /* ================== FOUNDERS ================== */
