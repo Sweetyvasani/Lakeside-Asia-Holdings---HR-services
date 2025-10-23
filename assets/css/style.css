@@ -1966,92 +1966,69 @@ a[href*="/services/"]::before,
   .hero-content { margin-top: 6vh; padding: 0 6px; }
 }
 
-/* ====== HERO mobile-only overrides (append at end of CSS) ====== */
-@media (max-width: 768px) {
+/* ================= MOBILE HERO FINAL FIX ================= */
+@media screen and (max-width: 768px) {
 
-  /* make hero fill viewport minus header (header assumed ~62px tall on mobile) */
-  :root { --mobile-header-h: 62px; } /* safe variable for calc below */
-
+  /* make hero fill the full visible area minus header */
   .hero {
-    /* keep same background behavior but ensure center positioning */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    min-height: 100vh !important;
+    padding: 0 1rem !important;
+
     background-position: center center !important;
     background-size: cover !important;
-    min-height: calc(100vh - var(--mobile-header-h)) !important;
-    padding: 1.5rem 1rem !important;
-    display: flex !important;             /* ensure flex layout on mobile */
-    align-items: center !important;       /* vertically centers content */
-    justify-content: center !important;   /* horizontally center */
+    background-repeat: no-repeat !important;
   }
 
-  /* ensure overlay sits behind content (your current rules already do this) */
-  .hero::before { z-index: 0; }
-
-  /* center and vertically align hero content */
+  /* ensure hero content vertically centers inside hero */
   .hero-content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: 920px;                      /* narrower on mobile for better line-length */
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;               /* vertical centering within hero */
-    align-items: center;
-    min-height: calc(70vh - (var(--mobile-header-h) * 0.05)); /* keeps content centered even on short screens */
-    padding: 0 6px;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    min-height: 75vh !important;
   }
 
-  /* headline: slightly smaller and allow multi-line center */
+  /* center heading and shrink size */
   .hero h1 {
     font-size: 1.9rem !important;
-    line-height: 1.12 !important;
-    margin-bottom: 0.6rem !important;
+    line-height: 1.2 !important;
     text-align: center !important;
+    margin: 0 0 0.8rem 0 !important;
+    padding: 0 !important;
     white-space: normal !important;
   }
 
-  /* subtext adjustments */
+  /* center and limit width of paragraph */
   .hero p {
     font-size: 1rem !important;
-    margin: 0.4rem 0 1.25rem 0 !important;
-    max-width: 92% !important;
+    line-height: 1.5 !important;
     text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin: 0 0 1.5rem 0 !important;
+    padding: 0 8px !important;
+    width: 100% !important;
+    max-width: 90% !important;
   }
 
-  /* CTA buttons: stacked, centered, consistent spacing */
+  /* stack CTAs and center them */
   .btn-primary,
   .btn-secondary {
-    width: 88% !important;          /* full-bleed feel with side padding */
-    max-width: 340px !important;
-    min-width: unset !important;
-    height: 52px !important;
-    font-size: 1rem !important;
     display: block !important;
-    margin: 0.5rem auto !important;  /* centers and adds spacing between buttons */
-    box-sizing: border-box !important;
-  }
-
-  /* keep animations but reduce translate distance so CTAs don't appear from too far */
-  @keyframes fadeInUp-mobile {
-    from { opacity: 0; transform: translateY(8px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .hero h1,
-  .hero p,
-  .btn-primary,
-  .btn-secondary {
-    animation-name: fadeInUp-mobile !important;
-    animation-duration: 0.9s !important;
-    animation-timing-function: ease-out !important;
-  }
-
-  /* small extra tweak for very short viewports (older phones) */
-  @media (max-height: 640px) {
-    .hero-content { min-height: calc(60vh - var(--mobile-header-h)); }
-    .hero h1 { font-size: 1.7rem !important; }
-    .btn-primary, .btn-secondary { width: 92% !important; max-width: 300px !important; }
+    width: 85% !important;
+    max-width: 340px !important;
+    margin: 0.5rem auto !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 54px !important;
+    font-size: 1rem !important;
   }
 }
-
