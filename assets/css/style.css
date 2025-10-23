@@ -1852,3 +1852,117 @@ a[href*="/services/"]::before,
   }
 }
 
+/* ================== MOBILE NAV + HERO TWEAKS (append only) ================== */
+
+/* mobile hamburger button (hidden on desktop) */
+.menu-toggle {
+  display: none;                /* shown only on small screens below */
+  background: none;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 8px;
+  color: #0a2540;
+  background: transparent;
+  border-radius: 6px;
+}
+
+/* mobile menu container (hidden by default) */
+.mobile-nav {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  top: 72px;                    /* default matching desktop header height; adjusted in media queries */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height .32s ease, opacity .24s ease;
+  z-index: 1500;
+}
+
+/* open state */
+.mobile-nav.open {
+  max-height: 520px;            /* enough for your nav items; adjust if needed */
+  opacity: 1;
+}
+
+/* mobile nav list */
+.mobile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: #0a2540;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* small tap-friendly hover */
+.mobile-nav a:hover {
+  background: rgba(20,184,166,0.06);
+  color: #14b8a6;
+}
+
+/* Small-screen overrides */
+@media (max-width: 768px) {
+
+  /* show hamburger, hide desktop nav */
+  .menu-toggle { display: block; }
+
+  header nav { display: none !important; } /* hide desktop nav on mobile */
+
+  /* reduce logo size to prevent crowding */
+  header img { height: 48px; }
+
+  /* reduce brand name font slightly so it wraps nicely */
+  header .brand-name { font-size: 18px; margin-left: 8px; }
+
+  /* header height adjustments (so body padding-top can be reduced) */
+  body { padding-top: 62px; } /* overrides earlier 70px for mobile */
+
+  /* mobile nav sits just under header — account for header height */
+  .mobile-nav { top: 62px; left: 10px; right: 10px; }
+
+  /* hero tweaks for small screens */
+  .hero {
+    padding: 2.25rem 1rem;        /* a bit less vertical padding on mobile */
+    min-height: calc(100vh - 62px); /* fill viewport minus header */
+    align-items: flex-start;      /* push hero content slightly lower on very small screens */
+  }
+
+  .hero-content { margin-top: 8vh; } /* add breathing room so CTAs aren't too near top */
+
+  .hero h1 { font-size: 1.9rem; line-height: 1.12; } /* slightly smaller than existing rule */
+  .hero p  { font-size: 0.98rem; }
+
+  /* CTA buttons stack and become full width */
+  .btn-primary, .btn-secondary {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    margin: .45rem 0;
+  }
+}
+
+/* Extra small screens (<= 480px) */
+@media (max-width: 480px) {
+  header img { height: 42px; }
+  header { padding: 8px 12px; }
+  body { padding-top: 58px; }
+  .mobile-nav.open { max-height: 420px; } /* slightly less height on very small phones */
+  .hero-content { margin-top: 6vh; padding: 0 6px; }
+}
+
