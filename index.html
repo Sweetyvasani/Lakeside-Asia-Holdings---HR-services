@@ -28,6 +28,9 @@
       <strong class="brand-bold">LAKESIDE HR</strong> <span class="brand-light">Services</span>
     </span>
   </a>
+      <!-- add this inside header, after your <nav> -->
+  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  
   <nav>
     <ul>
       <li><a href="#home" class="active">Home</a></li>
@@ -40,7 +43,21 @@
     </ul>
   </nav>
 </header>
+  
 
+  <!-- ✅ Add the mobile nav block right AFTER the header -->
+  <nav class="mobile-nav" aria-hidden="true">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#our-model">Our Model</a></li>
+      <li><a href="#about">Founders</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
 <!-- Hero -->
 <section id="home" class="hero">
   <div class="hero-content">
@@ -519,9 +536,34 @@ We provide the <span>clarity of a seasoned CHRO </span>and the <span>efficiency 
     <p>All rights reserved.</p>
   </div>
 </footer>
- 
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.menu-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  if (!toggle || !mobileNav) return;
+
+  toggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    mobileNav.classList.toggle('open');
+    const opened = mobileNav.classList.contains('open');
+    toggle.setAttribute('aria-expanded', opened ? 'true' : 'false');
+  });
+
+  // close when clicking outside the mobile menu
+  document.addEventListener('click', function(e) {
+    if (!mobileNav.classList.contains('open')) return;
+    if (mobileNav.contains(e.target) || toggle.contains(e.target)) return;
+    mobileNav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  });
+});
+</script>
+
   </body>
 </html>
+
 
 
 
