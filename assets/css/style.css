@@ -2077,10 +2077,13 @@ a[href*="/services/"]::before,
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+/* Portrait nudge: center then nudge up a touch */
+@media (max-width: 1024px) and (orientation: portrait) and (max-height: 700px) {
   .hero-content {
-    top: 44% !important;
-    transform: translate(-50%, -44%) !important;
+    top: 42% !important;
+    transform: translate(-50%, -42%) !important;
   }
-  .hero-img { object-position: center 20% !important; }
+
+  /* better image focus for headline — use if top of image is important */
+  .hero-img { object-position: center 25% !important; }
 }
