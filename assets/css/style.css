@@ -2106,3 +2106,18 @@ a[href*="/services/"]::before,
     .hero p  { font-size: 0.9rem !important; }
   }
 }
+
+/* Portrait: quick nudge to bring the hero text inside the image */
+@media (max-width: 1024px) and (orientation: portrait) {
+  .hero-content {
+    position: absolute !important;
+    left: 50% !important;
+    top: 42% !important;                 /* ← tweak this value (40%..46%) if needed */
+    transform: translate(-50%, -42%) !important;
+    width: 92% !important;
+    max-width: 760px !important;
+    padding: 0 1rem !important;
+    text-align: center !important;
+    z-index: 10 !important;
+  }
+}
