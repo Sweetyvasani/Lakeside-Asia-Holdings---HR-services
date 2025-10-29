@@ -2074,3 +2074,33 @@ a[href*="/services/"]::before,
   #home.hero .btn-primary, #home.hero .btn-secondary { height: 50px !important; }
 }
 
+/* ===== Final Mobile Hero Height + Content Alignment Fix ===== */
+
+@media (max-width: 1024px) {
+  #home.hero {
+    min-height: 120vh !important; /* increase hero height (try 110vh–130vh) */
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  #home.hero .hero-img {
+    display: block !important;
+    width: 100% !important;
+    height: 120vh !important; /* matches hero height */
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+
+  #home.hero .hero-content {
+    position: absolute !important;
+    top: 50% !important;              /* centers content vertically */
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 92% !important;
+    max-width: 760px !important;
+    text-align: center !important;
+    color: #fff !important;
+    z-index: 10 !important;
+  }
+}
+
