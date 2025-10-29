@@ -565,52 +565,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-  <script>
-(function() {
-  function positionHeroContent() {
-    const hero = document.getElementById('home');
-    if (!hero) return;
-
-    const img = hero.querySelector('.hero-img');
-    const content = hero.querySelector('.hero-content');
-
-    // If we don't have an inline image, bail (desktop still uses background).
-    if (!img || !content) return;
-
-    // Make sure image is loaded
-    if (!img.complete) {
-      img.addEventListener('load', positionHeroContent, { once: true });
-      return;
-    }
-
-    // Compute sizes and desired placement
-    const imgHeight = img.getBoundingClientRect().height;
-    // pick a point around ~42% of the image height (tweak pct if needed)
-    const pct = 0.42;
-    const desiredTopPx = Math.round(imgHeight * pct);
-
-    // Ensure content is relative to hero container
-    // set content top (in px) so it sits *inside* the image and not under header
-    content.style.position = 'absolute';
-    content.style.left = '50%';
-    content.style.transform = 'translateX(-50%)';
-    content.style.top = desiredTopPx + 'px';
-    content.style.zIndex = '10';
-
-    // Make sure hero height matches the image (prevents empty blue band)
-    hero.style.minHeight = imgHeight + 'px';
-  }
-
-  // Run on load, resize, orientationchange
-  window.addEventListener('load', function(){ setTimeout(positionHeroContent, 80); });
-  window.addEventListener('resize', function(){ setTimeout(positionHeroContent, 80); });
-  window.addEventListener('orientationchange', function(){ setTimeout(positionHeroContent, 250); });
-})();
-</script>
-
 
   </body>
 </html>
+
 
 
 
