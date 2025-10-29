@@ -2019,59 +2019,89 @@ a[href*="/services/"]::before,
   z-index: 10;
 }
 
-/* Only for portrait mobile screens */
+/* --------- Portrait mobile: center hero content inside image --------- */
 @media (max-width: 768px) and (orientation: portrait) {
+
+  /* ensure hero is a positioning context and not collapsing */
   .hero {
-    background: none !important;  /* remove background image */
+    position: relative !important;
+    overflow: hidden !important;
     padding: 0 !important;
   }
 
+  /* image: full width, natural height */
   .hero-img {
-    display: block !important;   /* show inline image */
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    z-index: 1;
   }
 
+  /* CENTER the content vertically & horizontally over the image */
   .hero-content {
     position: absolute !important;
-    top: 12%;                    /* adjust vertical placement */
-    left: 0; right: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
+    left: 50% !important;
+    top: 50% !important;                /* center point */
+    transform: translate(-50%, -50%) !important; /* move content center to image center */
+    width: 92% !important;
+    max-width: 760px !important;
+    padding: 0 1rem !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.6rem !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10 !important;
+    pointer-events: auto;
   }
 
+  /* Headline */
   .hero h1 {
-    color: #fff;
-    font-size: 1.6rem;
-    line-height: 1.25;
-    margin: 0.5rem 0;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.55);
+    color: #fff !important;
+    font-size: 1.6rem !important;
+    line-height: 1.15 !important;
+    margin: 0 !important;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.55) !important;
   }
 
+  /* Paragraph */
   .hero p {
-    color: #f3fbfa;
-    font-size: 1rem;
-    line-height: 1.4;
-    max-width: 90%;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.45);
-    margin: 0 0 1rem 0;
+    color: #f3fbfa !important;
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    max-width: 92% !important;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.45) !important;
   }
 
+  /* Buttons stacked and inside image */
   .btn-primary, .btn-secondary {
     width: 92% !important;
     max-width: 360px !important;
     height: 52px !important;
-    margin: 0.5rem auto !important;
+    margin: 0.4rem auto !important;
+    z-index: 11 !important;
   }
 
-  /* For very small phones */
+  /* For very short screens — push content slightly up so CTAs don't spill */
+  @media (max-height: 700px) {
+    .hero-content {
+      top: 46% !important;
+      transform: translate(-50%, -46%) !important;
+    }
+  }
+
+  /* For very small phones narrower than 420px, scale text/buttons down */
   @media (max-width: 420px) {
-    .hero-content { top: 9%; }
-    .hero h1 { font-size: 1.45rem; }
-    .hero p  { font-size: 0.94rem; }
+    .hero h1 { font-size: 1.4rem !important; }
+    .hero p  { font-size: 0.94rem !important; }
+    .btn-primary, .btn-secondary { height: 50px !important; }
   }
 }
+
 
 
 
