@@ -2086,7 +2086,7 @@ a[href*="/services/"]::before,
   #home.hero .hero-img {
     display: block !important;
     width: 100% !important;
-    height: 120vh !important; /* matches hero height */
+    height: 100vh !important; /* matches hero height */
     object-fit: cover !important;
     object-position: center top !important;
   }
