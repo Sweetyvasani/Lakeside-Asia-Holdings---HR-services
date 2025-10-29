@@ -1991,6 +1991,39 @@ a[href*="/services/"]::before,
   }
 }
 
+/* ===== Small-phones only: slight taller hero, crop sides (safe) ===== */
+@media (max-width: 420px) and (orientation: portrait) {
+  /* small-phone container tweak only */
+  #home.hero {
+    min-height: 105vh !important;    /* slight increase only for tiny phones */
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+  }
+
+  /* scale image to match taller container; crop left/right via cover */
+  #home.hero .hero-img {
+    display: block !important;
+    width: 100% !important;
+    height: 105vh !important;        /* keep image same height as hero */
+    object-fit: cover !important;    /* crops left/right as you wanted */
+    object-position: center 22% !important;
+    z-index: 1 !important;
+  }
+
+  /* vertically center text inside that taller image */
+  #home.hero .hero-content {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 92% !important;
+    max-width: 760px !important;
+    text-align: center !important;
+    z-index: 10 !important;
+  }
+}
+
 
 
 
