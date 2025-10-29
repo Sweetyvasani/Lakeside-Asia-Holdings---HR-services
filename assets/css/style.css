@@ -1992,37 +1992,5 @@ a[href*="/services/"]::before,
 }
 
 
-/* ===== Slightly taller mobile hero (replace previous 120vh block) ===== */
-@media (max-width: 1024px) and (orientation: portrait) {
-  /* make hero a little taller (slightly bigger than before) */
-  #home.hero {
-    min-height: 105vh !important;   /* try 105vh; change to 107vh if you want a hair taller */
-    position: relative !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-  }
-
-  /* scale the inline image to the taller height, crop left/right via object-fit */
-  #home.hero .hero-img {
-    display: block !important;
-    width: 100% !important;         /* fill container width */
-    height: 105vh !important;       /* match hero height */
-    object-fit: cover !important;   /* preserves aspect; crops sides if needed */
-    object-position: center 22% !important; /* nudge vertical focal point (adjustable) */
-    z-index: 1 !important;
-  }
-
-  /* center the content vertically inside the taller image */
-  #home.hero .hero-content {
-    position: absolute !important;
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 92% !important;
-    max-width: 760px !important;
-    text-align: center !important;
-    z-index: 10 !important;
-  }
-}
 
 
