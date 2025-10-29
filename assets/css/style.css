@@ -1991,100 +1991,11 @@ a[href*="/services/"]::before,
   }
 }
 
-  /* ====================================================
-   Mobile portrait: use an inline <img> so image is fully visible
-   Append this block at the end of your CSS (overrides portrait)
-   ==================================================== */
-@media (max-width: 768px) and (orientation: portrait) {
+ /* ===== Hero Portrait Mobile Fix: Show Full Image ===== */
+.hero { position: relative; overflow: hidden; }
 
-  /* container becomes positioning context */
-  .hero {
-    position: relative !important;
-    overflow: visible !important;   /* allow image to size naturally */
-    background: none !important;    /* remove previous bg-image rules */
-    min-height: auto !important;
-    padding: 0 !important;
-    display: block !important;
-  }
-
-  /* actual image — show fully, scale to width, preserve aspect */
-  .hero-img {
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    object-fit: contain !important;
-    max-width: 100% !important;
-  }
-
-  /* gradient overlay on top of the image */
-  .hero::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important; /* top:0; right:0; bottom:0; left:0 */
-    background: linear-gradient(180deg, rgba(0,90,156,0.46), rgba(0,90,156,0.56)) !important;
-    pointer-events: none !important;
-    z-index: 5 !important;
-  }
-
-  /* place the content absolutely over the image */
-  .hero-content {
-    position: absolute !important;
-    z-index: 10 !important;
-    left: 0 !important;
-    right: 0 !important;
-    top: 12% !important;           /* adjust vertical position inside image */
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    text-align: center !important;
-    padding: 0 14px !important;
-    box-sizing: border-box !important;
-    max-width: 920px !important;
-    margin: 0 auto !important;
-  }
-
-  /* keep heading & p inside visible area */
-  .hero h1 {
-    font-size: 1.7rem !important;
-    line-height: 1.18 !important;
-    margin: 0 0 0.6rem 0 !important;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.55) !important;
-    color: #fff !important;
-    padding: 0 8px !important;
-  }
-  .hero p {
-    font-size: 1rem !important;
-    margin: 0 0 0.9rem 0 !important;
-    color: #f3fbfa !important;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.45) !important;
-    max-width: 92% !important;
-  }
-
-  /* CTA buttons: keep inside the image area and sized for small screens */
-  .btn-primary, .btn-secondary {
-    width: 92% !important;
-    max-width: 360px !important;
-    margin: 0.45rem auto !important;
-    height: 52px !important;
-    z-index: 11 !important;
-  }
-
-  /* tweak for very small phones */
-  @media (max-width: 420px) {
-    .hero-content { top: 10% !important; }
-    .hero h1 { font-size: 1.45rem !important; }
-    .hero p  { font-size: 0.95rem !important; }
-    .btn-primary, .btn-secondary { width: 96% !important; height: 50px !important; }
-  }
-}
-
-/* ===== Hero: portrait-mobile inline-image fallback ===== */
-.hero { position: relative; /* positioning context for overlay/content */ }
-
-/* base inline image rules (visible unless overridden) */
 .hero-img {
-  display: none;            /* default: hidden on desktop/landscape */
+  display: none;            /* hidden by default (desktop/landscape) */
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -2092,71 +2003,75 @@ a[href*="/services/"]::before,
   z-index: 1;
 }
 
-/* Ensure overlays and content stack correctly */
+/* Gradient overlay to improve text readability */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,90,156,0.46), rgba(0,90,156,0.56));
-  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,90,156,0.45), rgba(0,90,156,0.55));
   z-index: 5;
+  pointer-events: none;
 }
-.hero-content { position: relative; z-index: 10; }
 
-/* Portrait mobile: show inline image and remove background-image (so no conflicts) */
+/* Keep text above overlay */
+.hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Only for portrait mobile screens */
 @media (max-width: 768px) and (orientation: portrait) {
-  /* show the <img> instead of background-image */
-  .hero-img { display: block !important; }
+  .hero {
+    background: none !important;  /* remove background image */
+    padding: 0 !important;
+  }
 
-  /* if you had background-image rules earlier, neutralize them on portrait */
-  .hero { background: none !important; padding: 0 !important; }
+  .hero-img {
+    display: block !important;   /* show inline image */
+  }
 
-  /* position content over the image */
   .hero-content {
     position: absolute !important;
+    top: 12%;                    /* adjust vertical placement */
     left: 0; right: 0;
-    top: 12%;                 /* adjust to move text up/down inside image */
-    margin: 0 auto;
-    padding: 0 14px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
     align-items: center;
-    z-index: 10;
-    box-sizing: border-box;
+    padding: 0 1rem;
   }
 
   .hero h1 {
     color: #fff;
     font-size: 1.6rem;
-    line-height: 1.2;
-    margin: 0;
+    line-height: 1.25;
+    margin: 0.5rem 0;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.55);
   }
+
   .hero p {
     color: #f3fbfa;
-    font-size: 0.98rem;
-    margin: 0;
-    max-width: 92%;
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 90%;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.45);
+    margin: 0 0 1rem 0;
   }
 
   .btn-primary, .btn-secondary {
     width: 92% !important;
     max-width: 360px !important;
-    margin: 0.45rem auto !important;
     height: 52px !important;
-    z-index: 11;
+    margin: 0.5rem auto !important;
   }
 
-  /* small phones */
+  /* For very small phones */
   @media (max-width: 420px) {
     .hero-content { top: 9%; }
     .hero h1 { font-size: 1.45rem; }
     .hero p  { font-size: 0.94rem; }
-    .btn-primary, .btn-secondary { width: 96% !important; height: 50px !important; }
   }
 }
+
 
 
