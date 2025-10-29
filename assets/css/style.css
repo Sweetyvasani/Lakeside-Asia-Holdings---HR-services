@@ -1991,39 +1991,35 @@ a[href*="/services/"]::before,
   }
 }
 
-/* ===== Small-phones only: slight taller hero, crop sides (safe) ===== */
-@media (max-width: 420px) and (orientation: portrait) {
-  /* small-phone container tweak only */
-  #home.hero {
-    min-height: 105vh !important;    /* slight increase only for tiny phones */
-    position: relative !important;
-    overflow: hidden !important;
-    padding: 0 !important;
+/* ===== RESTORE: Desktop / Landscape Hero (safe restore) ===== */
+/* Put this at the end of the CSS after you removed experimental blocks above. */
+
+@media (min-width: 769px) {
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(0,90,156,0.35), rgba(0,90,156,0.45)),
+                url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop')
+                center center / cover no-repeat;
+    min-height: calc(100vh - 62px); /* same as your earlier desktop rule */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    box-sizing: border-box;
   }
 
-  /* scale image to match taller container; crop left/right via cover */
-  #home.hero .hero-img {
-    display: block !important;
-    width: 100% !important;
-    height: 105vh !important;        /* keep image same height as hero */
-    object-fit: cover !important;    /* crops left/right as you wanted */
-    object-position: center 22% !important;
-    z-index: 1 !important;
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 980px;
+    padding: 0 1rem;
+    text-align: center;
+    color: #fff;
   }
 
-  /* vertically center text inside that taller image */
-  #home.hero .hero-content {
-    position: absolute !important;
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 92% !important;
-    max-width: 760px !important;
-    text-align: center !important;
-    z-index: 10 !important;
-  }
+  /* hide inline image on desktop so background-image is used */
+  .hero-img { display: none !important; }
 }
-
-
-
 
