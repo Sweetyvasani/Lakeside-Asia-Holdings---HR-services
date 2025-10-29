@@ -1856,7 +1856,7 @@ a[href*="/services/"]::before,
 
 /* mobile hamburger button (hidden on desktop) */
 .menu-toggle {
-  display: none;                /* shown only on small screens below */
+  display: none;
   background: none;
   border: none;
   font-size: 22px;
@@ -1873,7 +1873,7 @@ a[href*="/services/"]::before,
   position: fixed;
   left: 12px;
   right: 12px;
-  top: 72px;                    /* default matching desktop header height; adjusted in media queries */
+  top: 72px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 16px 40px rgba(0,0,0,0.12);
@@ -1884,13 +1884,11 @@ a[href*="/services/"]::before,
   z-index: 1500;
 }
 
-/* open state */
 .mobile-nav.open {
-  max-height: 520px;            /* enough for your nav items; adjust if needed */
+  max-height: 520px;
   opacity: 1;
 }
 
-/* mobile nav list */
 .mobile-nav ul {
   list-style: none;
   margin: 0;
@@ -1909,7 +1907,6 @@ a[href*="/services/"]::before,
   border-radius: 8px;
 }
 
-/* small tap-friendly hover */
 .mobile-nav a:hover {
   background: rgba(20,184,166,0.06);
   color: #14b8a6;
@@ -1917,43 +1914,64 @@ a[href*="/services/"]::before,
 
 /* Small-screen overrides */
 @media (max-width: 768px) {
-
-  /* show hamburger, hide desktop nav */
   .menu-toggle { display: block; }
-
-  header nav { display: none !important; } /* hide desktop nav on mobile */
-
-  /* reduce logo size to prevent crowding */
+  header nav { display: none !important; }
   header img { height: 48px; }
-
-  /* reduce brand name font slightly so it wraps nicely */
   header .brand-name { font-size: 18px; margin-left: 8px; }
-
-  /* header height adjustments (so body padding-top can be reduced) */
-  body { padding-top: 62px; } /* overrides earlier 70px for mobile */
-
-  /* mobile nav sits just under header — account for header height */
+  body { padding-top: 62px; }
   .mobile-nav { top: 62px; left: 10px; right: 10px; }
 
-  /* hero tweaks for small screens */
+  /* Hero fixes */
   .hero {
-    padding: 2.25rem 1rem;        /* a bit less vertical padding on mobile */
-    min-height: calc(100vh - 62px); /* fill viewport minus header */
-    align-items: flex-start;      /* push hero content slightly lower on very small screens */
+    padding: 2.25rem 1rem;
+    min-height: calc(100vh - 62px);
+    align-items: flex-start;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
   }
 
-  .hero-content { margin-top: 8vh; } /* add breathing room so CTAs aren't too near top */
+  .hero-content { 
+    margin-top: 8vh; 
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
 
-  .hero h1 { font-size: 1.9rem; line-height: 1.12; } /* slightly smaller than existing rule */
-  .hero p  { font-size: 0.98rem; }
+  .hero h1 { 
+    font-size: 1.9rem !important; 
+    line-height: 1.2 !important;
+    text-align: center !important;
+    margin: 0 0 0.8rem 0 !important;
+    padding: 0 10px !important;
+  }
 
-  /* CTA buttons stack and become full width */
-  .btn-primary, .btn-secondary {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    min-width: 0;
-    margin: .45rem 0;
+  .hero p {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    margin: 0 0 1.5rem 0 !important;
+    padding: 0 10px !important;
+    max-width: 90% !important;
+  }
+
+  /* CTA Button fixes - MAIN CORRECTION */
+  .btn-primary, 
+  .btn-secondary {
+    display: inline-flex !important; /* Keep flex for centering */
+    width: 90% !important;
+    max-width: 340px !important;
+    margin: 0.5rem auto !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 54px !important;
+    font-size: 1rem !important;
+    padding: 0 1.2rem !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -1962,73 +1980,14 @@ a[href*="/services/"]::before,
   header img { height: 42px; }
   header { padding: 8px 12px; }
   body { padding-top: 58px; }
-  .mobile-nav.open { max-height: 420px; } /* slightly less height on very small phones */
-  .hero-content { margin-top: 6vh; padding: 0 6px; }
-}
-
-/* ================= MOBILE HERO FINAL FIX ================= */
-@media screen and (max-width: 768px) {
-
-  /* make hero fill the full visible area minus header */
-  .hero {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    min-height: 100vh !important;
-    padding: 0 1rem !important;
-
-    background-position: center center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-  }
-
-  /* ensure hero content vertically centers inside hero */
-  .hero-content {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    height: auto !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    min-height: 75vh !important;
-  }
-
-  /* center heading and shrink size */
-  .hero h1 {
-    font-size: 1.9rem !important;
-    line-height: 1.2 !important;
-    text-align: center !important;
-    margin: 0 0 0.8rem 0 !important;
-    padding: 0 !important;
-    white-space: normal !important;
-  }
-
-  /* center and limit width of paragraph */
-  .hero p {
-    font-size: 1rem !important;
-    line-height: 1.5 !important;
-    text-align: center !important;
-    margin: 0 0 1.5rem 0 !important;
-    padding: 0 8px !important;
-    width: 100% !important;
-    max-width: 90% !important;
-  }
-
-  /* stack CTAs and center them */
-  .btn-primary,
+  .mobile-nav.open { max-height: 420px; }
+  .hero-content { margin-top: 6vh; }
+  
+  .btn-primary, 
   .btn-secondary {
-    display: block !important;
-    width: 85% !important;
-    max-width: 340px !important;
-    margin: 0.5rem auto !important;
-    text-align: center !important;
-    justify-content: center !important;
-    align-items: center !important;
-    height: 54px !important;
-    font-size: 1rem !important;
+    width: 95% !important;
+    font-size: 0.95rem !important;
+    height: 52px !important;
   }
 }
+
