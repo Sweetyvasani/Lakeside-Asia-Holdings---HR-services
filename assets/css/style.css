@@ -2060,3 +2060,71 @@ a[href*="/services/"]::before,
     font-size: 0.85rem !important;
   }
 }
+
+/* -----------------------
+   CONSOLIDATED MOBILE HERO
+   (append this block at the end)
+   ----------------------- */
+
+.hero {
+  /* overlay + background image: use cover so image fills container */
+  background: linear-gradient(rgba(0,90,156,0.45), rgba(0,90,156,0.55)),
+              url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop')
+              center center / cover no-repeat !important;
+  background-color: transparent !important;  /* avoid underlying blue showing through */
+  min-height: calc(100vh - 62px) !important; /* full viewport minus header */
+  display: flex !important;
+  align-items: center !important;            /* vertically center content inside image */
+  justify-content: center !important;
+  padding: 6vh 1rem 6vh 1rem !important;      /* keep text inset from image edges */
+  box-sizing: border-box !important;
+}
+
+/* keep text area width controlled so it never spills out of the image */
+.hero-content {
+  width: 100% !important;
+  max-width: 740px !important;
+  margin: 0 auto !important;
+  padding: 0 12px !important;
+  text-align: center !important;
+}
+
+/* Headline & paragraph sizing for small screens */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.18 !important;
+    margin-bottom: 0.6rem !important;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.55) !important;
+    padding: 0 6px !important;
+  }
+
+  .hero p {
+    font-size: 1rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 1rem !important;
+    padding: 0 10px !important;
+    max-width: 90% !important;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.45) !important;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 92% !important;
+    max-width: 360px !important;
+    margin: 0.6rem auto !important;
+    height: 52px !important;
+  }
+}
+
+/* extra small phones */
+@media (max-width: 480px) {
+  .hero {
+    padding: 8vh 0.8rem 8vh 0.8rem !important; /* a bit more vertical padding to keep CTAs inside image */
+    min-height: calc(100vh - 58px) !important;
+    background-position: center 35% !important; /* push focal point slightly down */
+  }
+  .hero h1 { font-size: 1.5rem !important; }
+  .hero p  { font-size: 0.95rem !important; }
+  .btn-primary, .btn-secondary { width: 96% !important; height: 50px !important; }
+}
+
