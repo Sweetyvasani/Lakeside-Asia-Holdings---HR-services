@@ -2102,6 +2102,92 @@ a[href*="/services/"]::before,
   }
 }
 
+/* ===== Portrait mobile — fix hero sizing + perfect centering ===== */
+@media (max-width: 768px) and (orientation: portrait) {
+
+  /* ensure hero follows the image height (no full-viewport min-height) */
+  .hero {
+    position: relative !important;
+    background: none !important;      /* use inline <img> instead */
+    padding: 0 !important;
+    min-height: 0 !important;         /* IMPORTANT: prevent hero from filling viewport */
+    overflow: hidden !important;
+  }
+
+  /* image: full width, natural height */
+  .hero-img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    object-position: center top;      /* tweak vertical crop if needed */
+    z-index: 1;
+  }
+
+  /* overlay tied to .hero (will only cover .hero which now equals image height) */
+  .hero::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;              /* covers only .hero area (i.e. image height) */
+    background: linear-gradient(180deg, rgba(0,90,156,0.46), rgba(0,90,156,0.56)) !important;
+    z-index: 5 !important;
+    pointer-events: none !important;
+  }
+
+  /* center the content in the visible image area */
+  .hero-content {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;                /* center point */
+    transform: translate(-50%, -50%) !important;
+    width: 92% !important;
+    max-width: 760px !important;
+    box-sizing: border-box !important;
+    padding: 0 1rem !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.6rem !important;
+    align-items: center !important;
+    z-index: 10 !important;
+  }
+
+  .hero h1 {
+    color: #fff !important;
+    font-size: 1.65rem !important;
+    line-height: 1.15 !important;
+    margin: 0 !important;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.55) !important;
+  }
+
+  .hero p {
+    color: #f3fbfa !important;
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    max-width: 92% !important;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.45) !important;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 92% !important;
+    max-width: 360px !important;
+    height: 52px !important;
+    margin: 0.45rem auto !important;
+    z-index: 11 !important;
+  }
+
+  /* slight upward nudge for very short screens so CTAs don't fall below image */
+  @media (max-height: 700px) {
+    .hero-content { top: 46% !important; transform: translate(-50%, -46%) !important; }
+  }
+
+  /* small phones: scale down headline slightly */
+  @media (max-width: 420px) {
+    .hero h1 { font-size: 1.45rem !important; }
+    .hero p  { font-size: 0.94rem !important; }
+  }
+}
 
 
 
