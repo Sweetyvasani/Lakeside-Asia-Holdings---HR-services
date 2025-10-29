@@ -1991,140 +1991,92 @@ a[href*="/services/"]::before,
   }
 }
 
-/* ================= MOBILE PORTRAIT HERO IMAGE FIX ================= */
+  /* ====================================================
+   Mobile portrait: use an inline <img> so image is fully visible
+   Append this block at the end of your CSS (overrides portrait)
+   ==================================================== */
 @media (max-width: 768px) and (orientation: portrait) {
+
+  /* container becomes positioning context */
   .hero {
-    background: 
-      linear-gradient(rgba(0, 90, 156, 0.5), rgba(0, 90, 156, 0.6)),
-      url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop') 
-      center 30% / 140% auto no-repeat !important;
-    min-height: 85vh !important;
-    padding: 4rem 1rem 2rem 1rem !important;
+    position: relative !important;
+    overflow: visible !important;   /* allow image to size naturally */
+    background: none !important;    /* remove previous bg-image rules */
+    min-height: auto !important;
+    padding: 0 !important;
+    display: block !important;
   }
-  
+
+  /* actual image — show fully, scale to width, preserve aspect */
+  .hero-img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    max-width: 100% !important;
+  }
+
+  /* gradient overlay on top of the image */
+  .hero::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important; /* top:0; right:0; bottom:0; left:0 */
+    background: linear-gradient(180deg, rgba(0,90,156,0.46), rgba(0,90,156,0.56)) !important;
+    pointer-events: none !important;
+    z-index: 5 !important;
+  }
+
+  /* place the content absolutely over the image */
   .hero-content {
-    margin-top: 2vh !important;
+    position: absolute !important;
+    z-index: 10 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 12% !important;           /* adjust vertical position inside image */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    padding: 0 14px !important;
+    box-sizing: border-box !important;
+    max-width: 920px !important;
+    margin: 0 auto !important;
   }
-  
+
+  /* keep heading & p inside visible area */
   .hero h1 {
     font-size: 1.7rem !important;
-    line-height: 1.3 !important;
-    margin: 0 0 1rem 0 !important;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7) !important;
-  }
-  
-  .hero p {
-    font-size: 0.95rem !important;
-    line-height: 1.5 !important;
-    margin: 0 0 1.5rem 0 !important;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.7) !important;
-  }
-}
-
-/* For smaller portrait screens */
-@media (max-width: 480px) and (orientation: portrait) {
-  .hero {
-    background: 
-      linear-gradient(rgba(0, 90, 156, 0.5), rgba(0, 90, 156, 0.6)),
-      url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop') 
-      center 35% / 160% auto no-repeat !important;
-    min-height: 90vh !important;
-    padding: 3rem 1rem 1.5rem 1rem !important;
-  }
-  
-  .hero h1 {
-    font-size: 1.5rem !important;
-  }
-  
-  .hero p {
-    font-size: 0.9rem !important;
-  }
-}
-
-/* For very small portrait screens */
-@media (max-width: 768px) and (orientation: portrait) {
-  .hero {
-    background: 
-      linear-gradient(rgba(0, 90, 156, 0.5), rgba(0, 90, 156, 0.6)),
-      url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop') 
-      center 25% / 130% auto no-repeat !important;
-    min-height: 80vh !important;
-    padding: 2.5rem 0.8rem 1rem 0.8rem !important;
-  }
-  
-  .hero h1 {
-    font-size: 1.2rem !important;
-  }
-  
-  .hero p {
-    font-size: 0.85rem !important;
-  }
-}
-
-/* -----------------------
-   CONSOLIDATED MOBILE HERO
-   (append this block at the end)
-   ----------------------- */
-
-.hero {
-  /* overlay + background image: use cover so image fills container */
-  background: linear-gradient(rgba(0,90,156,0.45), rgba(0,90,156,0.55)),
-              url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop')
-              center center / cover no-repeat !important;
-  background-color: transparent !important;  /* avoid underlying blue showing through */
-  min-height: calc(100vh - 62px) !important; /* full viewport minus header */
-  display: flex !important;
-  align-items: center !important;            /* vertically center content inside image */
-  justify-content: center !important;
-  padding: 6vh 1rem 6vh 1rem !important;      /* keep text inset from image edges */
-  box-sizing: border-box !important;
-}
-
-/* keep text area width controlled so it never spills out of the image */
-.hero-content {
-  width: 100% !important;
-  max-width: 740px !important;
-  margin: 0 auto !important;
-  padding: 0 12px !important;
-  text-align: center !important;
-}
-
-/* Headline & paragraph sizing for small screens */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 1.8rem !important;
     line-height: 1.18 !important;
-    margin-bottom: 0.6rem !important;
+    margin: 0 0 0.6rem 0 !important;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.55) !important;
-    padding: 0 6px !important;
+    color: #fff !important;
+    padding: 0 8px !important;
   }
-
   .hero p {
     font-size: 1rem !important;
-    line-height: 1.45 !important;
-    margin-bottom: 1rem !important;
-    padding: 0 10px !important;
-    max-width: 90% !important;
+    margin: 0 0 0.9rem 0 !important;
+    color: #f3fbfa !important;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.45) !important;
+    max-width: 92% !important;
   }
 
+  /* CTA buttons: keep inside the image area and sized for small screens */
   .btn-primary, .btn-secondary {
     width: 92% !important;
     max-width: 360px !important;
-    margin: 0.6rem auto !important;
+    margin: 0.45rem auto !important;
     height: 52px !important;
+    z-index: 11 !important;
+  }
+
+  /* tweak for very small phones */
+  @media (max-width: 420px) {
+    .hero-content { top: 10% !important; }
+    .hero h1 { font-size: 1.45rem !important; }
+    .hero p  { font-size: 0.95rem !important; }
+    .btn-primary, .btn-secondary { width: 96% !important; height: 50px !important; }
   }
 }
 
-/* extra small phones */
-@media (max-width: 480px) {
-  .hero {
-    padding: 8vh 0.8rem 8vh 0.8rem !important; /* a bit more vertical padding to keep CTAs inside image */
-    min-height: calc(100vh - 58px) !important;
-    background-position: center 35% !important; /* push focal point slightly down */
-  }
-  .hero h1 { font-size: 1.5rem !important; }
-  .hero p  { font-size: 0.95rem !important; }
-  .btn-primary, .btn-secondary { width: 96% !important; height: 50px !important; }
-}
 
