@@ -1991,137 +1991,118 @@ a[href*="/services/"]::before,
   }
 }
 
-/* =========================
-   CLEAN HERO: Desktop + Mobile (drop-in replacement)
-   - Desktop/landscape: background-image with overlay
-   - Mobile/tablet: use inline <img class="hero-img"> (no crop)
-   Place this block at the end of your CSS.
-   ========================= */
+/* ===============================
+   FINAL FIXED HERO (mobile + desktop unified)
+   =============================== */
 
-/* Base: positioning context (desktop keeps its background image from other rules) */
+/* Base — desktop & tablet landscape */
 .hero {
   position: relative;
   overflow: hidden;
+  background: linear-gradient(rgba(0,90,156,0.45), rgba(0,90,156,0.55)),
+              url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop')
+              center center / cover no-repeat;
+  min-height: calc(100vh - 62px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
 }
 
-/* Inline image (hidden on desktop/landscape) */
+/* content on top of overlay */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+/* hide inline image by default */
 .hero-img {
   display: none;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center center;
-  z-index: 1;
 }
 
-/* Overlay (used when inline image is visible) */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,90,156,0.46), rgba(0,90,156,0.56));
-  pointer-events: none;
-  z-index: 5;
-}
+/* ===============================
+   MOBILE PORTRAIT: use inline image
+   =============================== */
+@media (max-width: 768px) and (orientation: portrait) {
 
-/* Ensure text sits above overlay */
-.hero-content { position: relative; z-index: 10; }
-
-/* ---------------------------
-   Mobile & Tablet (phones + tablets)
-   Neutralize bg-image and use inline <img> to avoid cropping
-   --------------------------- */
-@media (max-width: 1024px) {
-  /* remove any desktop background on smaller screens */
-  .hero { background: none !important; min-height: 0 !important; padding: 0 !important; }
-
-  /* show inline image and let it define hero height */
-  .hero-img { display: block !important; width: 100% !important; height: auto !important; object-fit: cover !important; object-position: center top !important; z-index: 1; }
-
-  /* overlay covers only the hero (image) area */
-  .hero::before { z-index: 5 !important; }
-
-  /* center content over the visible image */
-  .hero-content {
-    position: absolute !important;
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 92% !important;
-    max-width: 760px !important;
-    padding: 0 1rem !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 0.6rem !important;
-    align-items: center !important;
-    text-align: center !important;
-    z-index: 10 !important;
+  /* remove desktop background */
+  .hero {
+    background: none !important;
+    padding: 0 !important;
+    min-height: 0 !important;
   }
 
-  .hero h1 { color: #fff !important; font-size: 1.6rem !important; line-height: 1.15 !important; margin: 0 !important; text-shadow: 2px 2px 6px rgba(0,0,0,0.55) !important; }
-  .hero p  { color: #f3fbfa !important; font-size: 1rem !important; line-height: 1.4 !important; margin: 0 !important; max-width: 92% !important; text-shadow: 1px 1px 5px rgba(0,0,0,0.45) !important; }
+  /* show inline image */
+  .hero-img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
 
-  .btn-primary, .btn-secondary { width: 92% !important; max-width: 360px !important; height: 52px !important; margin: 0.45rem auto !important; z-index: 11 !important; }
+  /* overlay */
+  .hero::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(180deg, rgba(0,90,156,0.45), rgba(0,90,156,0.55)) !important;
+    z-index: 5 !important;
+  }
 
-  /* slight upward nudge on short viewports so CTAs don't fall below image */
+  /* center hero text vertically */
+  .hero-content {
+    position: absolute !important;
+    top: 52% !important;  /* vertical center adjustment */
+    left: 50% !important;
+    transform: translate(-50%, -52%) !important;
+    width: 92% !important;
+    text-align: center !important;
+    color: #fff !important;
+    z-index: 10 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.6rem !important;
+  }
+
+  /* text size */
+  .hero h1 {
+    font-size: 1.6rem !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.55) !important;
+  }
+
+  .hero p {
+    font-size: 1rem !important;
+    line-height: 1.45 !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.45) !important;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 92% !important;
+    max-width: 360px !important;
+    margin: 0.45rem auto !important;
+    height: 52px !important;
+  }
+
+  /* shorter screens - slight upward shift */
   @media (max-height: 700px) {
-    .hero-content { top: 46% !important; transform: translate(-50%, -46%) !important; }
+    .hero-content { top: 49% !important; transform: translate(-50%, -49%) !important; }
   }
 
-  /* extra small phones */
+  /* tiny phones */
   @media (max-width: 420px) {
-    .hero h1 { font-size: 1.45rem !important; }
-    .hero p  { font-size: 0.94rem !important; }
-    .btn-primary, .btn-secondary { height: 50px !important; }
-  }
-}
-
-
-
-/* ---------- Portrait: anchor hero content from bottom (replace previous portrait rules) ---------- */
-@media (max-width: 1024px) and (orientation: portrait) {
-
-  /* ensure hero uses inline image and sizing rules from the cleaned block are active */
-  .hero { background: none !important; min-height: 0 !important; padding: 0 !important; position: relative !important; overflow: hidden !important; }
-
-  /* image remains full width */
-  .hero-img { display: block !important; width: 100% !important; height: auto !important; object-fit: cover !important; object-position: center top !important; z-index: 1 !important; }
-
-  /* IMPORTANT: anchor content from bottom of image (more reliable than top:50%) */
-  .hero-content {
-    position: absolute !important;
-    left: 50% !important;
-    bottom: 18% !important;          /* distance from the bottom of the image — adjust if needed */
-    transform: translateX(-50%) !important; /* only center horizontally */
-    width: 92% !important;
-    max-width: 760px !important;
-    padding: 0 1rem !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 0.6rem !important;
-    align-items: center !important;
-    z-index: 10 !important;
-    pointer-events: auto !important;
-  }
-
-  /* headline and body sizing */
-  .hero h1 { color: #fff !important; font-size: 1.6rem !important; line-height: 1.15 !important; margin: 0 !important; text-shadow: 2px 2px 6px rgba(0,0,0,0.55) !important; }
-  .hero p  { color: #f3fbfa !important; font-size: 1rem !important; line-height: 1.4 !important; margin: 0 !important; max-width: 92% !important; text-shadow: 1px 1px 5px rgba(0,0,0,0.45) !important; }
-
-  .btn-primary, .btn-secondary { width: 92% !important; max-width: 360px !important; height: 52px !important; margin: 0.45rem auto !important; z-index: 11 !important; }
-
-  /* small screens: push content a little higher if small height */
-  @media (max-height: 720px) {
-    .hero-content { bottom: 22% !important; }
-  }
-
-  /* very small/narrow phones: reduce headline so it fits */
-  @media (max-width: 380px) {
-    .hero h1 { font-size: 1.35rem !important; }
-    .hero p  { font-size: 0.95rem !important; }
-    .hero-content { bottom: 24% !important; }
+    .hero h1 { font-size: 1.4rem !important; }
+    .hero p  { font-size: 0.9rem !important; }
   }
 }
