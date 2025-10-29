@@ -2008,3 +2008,49 @@ a[href*="/services/"]::before,
     background-position: 65% center !important;
   }
 }
+
+/* ================= MOBILE LANDSCAPE HERO FIX ================= */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    background-position: center 25% !important; /* Adjust vertical position */
+    background-size: cover !important;
+    min-height: 100vh !important; /* Use full viewport height */
+    padding: 1rem !important;
+  }
+  
+  .hero-content {
+    margin-top: 2vh !important; /* Less top margin in landscape */
+    min-height: 90vh !important;
+  }
+  
+  .hero h1 {
+    font-size: 1.7rem !important; /* Slightly smaller heading */
+    margin: 0 0 0.5rem 0 !important;
+  }
+  
+  .hero p {
+    font-size: 0.9rem !important; /* Slightly smaller paragraph */
+    margin: 0 0 1rem 0 !important;
+    max-width: 95% !important;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    height: 48px !important; /* Slightly shorter buttons */
+    font-size: 0.9rem !important;
+    width: 90% !important;
+    margin: 0.3rem auto !important;
+  }
+}
+
+/* For smaller landscape screens */
+@media (max-width: 667px) and (orientation: landscape) {
+  .hero {
+    background-position: center 30% !important;
+    min-height: 110vh !important; /* Extra height for very short landscape */
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem !important;
+  }
+}
