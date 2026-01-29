@@ -256,13 +256,12 @@ body {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(260px, 1fr)); /* ✅ widen cards slightly */
+  grid-template-columns: repeat(6, minmax(220px, 1fr)); /* ✅ widen cards slightly */
   gap: 24px;                  /* a bit more spacing for cleaner look */
-  max-width: 1560px;          /* widen container so grid has space */
-   width: 96%;                    /* ✅ utilize more screen space */
+  max-width: 1400px;          /* widen container so grid has space */
  margin: 0 auto;                /* ✅ keep equal space on both sides */
-  padding: 0 20px;               /* ✅ soft inner gutter */
-  align-items: start;
+  padding: 0 32px;               /* ✅ soft inner gutter */
+  align-items: stretch;
   box-sizing: border-box;
   justify-content: center;       /* ✅ ensure cards stay balanced */
   }
@@ -284,7 +283,7 @@ body {
   background: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   min-height: 340px;        /* ensures all cards same height */
-  width: 90%;                   /* ensures cards expand with grid column */
+  width: 100%;                   /* ensures cards expand with grid column */
   box-sizing: border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;   /* ✅ makes each card fill equal height of its grid cell */
