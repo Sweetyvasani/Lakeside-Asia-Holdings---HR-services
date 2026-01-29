@@ -387,6 +387,12 @@ body {
   .service-card img { width: 48px; } /* slightly larger on small screens */
 }
 
+@media (min-width: 1600px) {
+  .service-grid {
+    max-width: 1440px;
+  }
+}
+
 
 
 /* ================== HR LIFECYCLE - Circular Lifecycle Wheel - Lotus Petals  ================== */
