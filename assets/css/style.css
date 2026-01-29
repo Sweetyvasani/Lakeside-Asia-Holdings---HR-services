@@ -284,7 +284,7 @@ body {
   background: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   min-height: 340px;        /* ensures all cards same height */
-  width: 100%;                   /* ensures cards expand with grid column */
+  width: 90%;                   /* ensures cards expand with grid column */
   box-sizing: border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;   /* ✅ makes each card fill equal height of its grid cell */
