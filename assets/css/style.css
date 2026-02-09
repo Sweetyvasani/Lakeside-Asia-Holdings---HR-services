@@ -401,91 +401,94 @@ body {
 
 
 
-.lakeside-care-section {
-  padding: 80px 20px;
-  background: #f9fbfc;
+.lakeside-editorial {
+  padding: 100px 20px;
+  background: #ffffff;
 }
 
-.lakeside-care-section .container {
+.editorial-container {
   max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 80px;
+  align-items: start;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.section-header h2 {
-  font-size: 36px;
+/* LEFT SIDE */
+.editorial-left h2 {
+  font-size: 40px;
+  line-height: 1.2;
   color: #0a2540;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
-.section-header p {
+.editorial-left .lead {
   font-size: 18px;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.editorial-left p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 16px;
+}
+
+/* RIGHT SIDE */
+.editorial-right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 40px;
+}
+
+.force {
+  padding-left: 20px;
+  border-left: 2px solid #e6edf5;
+}
+
+.force-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0a2540;
+  margin-bottom: 6px;
+}
+
+.force-desc {
+  font-size: 15px;
+  line-height: 1.6;
   color: #5f6c7b;
 }
 
-.care-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
-
-.care-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.care-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-}
-
-.care-icon {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
-
-.care-card h3 {
-  font-size: 20px;
-  color: #0a2540;
-  margin-bottom: 10px;
-}
-
-.care-card p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #4a5568;
-}
-
-.care-footer {
+/* FOOTER LINE */
+.editorial-footer {
+  max-width: 900px;
+  margin: 70px auto 0;
   text-align: center;
-  margin-top: 60px;
   font-size: 18px;
   color: #0a2540;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 992px) {
-  .care-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .care-grid {
+  .editorial-container {
     grid-template-columns: 1fr;
+    gap: 50px;
   }
 
-  .section-header h2 {
-    font-size: 28px;
+  .editorial-right {
+    padding-top: 0;
+  }
+
+  .editorial-left h2 {
+    font-size: 32px;
   }
 }
+
 
 
 /* ================== HR LIFECYCLE - Circular Lifecycle Wheel - Lotus Petals  ================== */
