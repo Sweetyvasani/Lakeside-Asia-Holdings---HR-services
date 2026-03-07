@@ -335,7 +335,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-.growth-cards:hover .icon {
+.growth-cards:hover .card-icon {
   transform: scale(1.1);
 }
 
