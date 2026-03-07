@@ -597,6 +597,701 @@ font-size: 18px;
 }
 
 
+/* ---------- WHY US ---------- */
+
+/* ================= Lakeside Difference Section ================= */
+
+.lakeside-difference {
+  padding: 140px 0;
+  background-image: url("../Impact-Background-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.lakeside-difference::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.60);
+  z-index: 0;
+}
+
+.lakeside-difference .container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* NEW WRAPPER FOR COLUMNS */
+.difference-columns {
+  display: flex;
+  gap: 80px;
+  margin-top: 70px;
+  align-items: flex-start;   /* ADD THIS */
+}
+
+
+
+
+/* Vertical separator */
+.difference-columns::after {
+  content: "";
+  position: absolute;
+  top: 155px;         /* slightly tighter */
+  bottom: 135px;      /* tighter end */
+  left: 45%;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(212, 167, 63, 0.18),
+    rgba(212, 167, 63, 0.18),
+    transparent
+  );
+}
+
+/* LEFT SIDE */
+
+/* Unified Subheading Style */
+
+.difference-subheading {
+   font-size: 1.3rem;
+    color: #1E5EFF;
+  font-weight: 600;
+  margin-bottom: 70px;
+}
+
+.capability-row h3 {
+  font-size: 1.3rem;
+  color: #1E5EFF;  /* Strategic Blue Accent */
+  font-weight: 600;
+}
+
+.industry-row h3 {
+  font-size: 1.3rem;
+  color: #1E5EFF;
+  font-weight: 600;
+}
+
+
+.difference-left {
+  flex: 0 0 42%;
+  max-width: 100%;
+  }
+
+.difference-right {
+  flex: 0 0 58%;
+   margin-top: -2px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(0, 31, 84, 0.08);
+}
+
+
+/* LIST */
+.difference-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.difference-list li {
+  margin-bottom: 57px;
+  position: relative;
+  padding-left: 30px;
+  max-width: 95%;
+}
+
+/* Green Tick */
+.difference-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #2BB673;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* Title inside each point */
+.difference-list h4 {
+  font-size: 1.22rem;
+  color: #001F54;
+  margin-bottom: 2px;
+  font-weight: 700;  
+}
+
+/* Supporting text */
+.difference-list p {
+  font-size: 1.03rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+}
+
+
+/* ===========Institutional Capability – Horizontal Cards=========*/
+
+.capability-row {
+  margin-bottom: 50px;
+}
+
+.capability-cards {
+  display: flex;
+  gap: 18px;
+}
+
+.cap-card {
+  flex: 1;
+  background: #ffffff;
+  padding: 26px 28px;
+  border-radius: 14px;
+
+ border-top: 3px solid #2bb673; /* Default fallback */
+  /* Elegant layered shadow */
+  box-shadow: 
+    0 6px 18px rgba(0, 21, 64, 0.08),
+    0 2px 6px rgba(0, 21, 64, 0.04);
+
+  font-size: 1rem;              /* Increased from 0.9 */
+  font-weight: 500;
+  color: #0f2a5c;               /* Slightly softer navy */
+  line-height: 1.6;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.cap-card:nth-child(1) {
+  border-top-color: #2bb673;   /* Green */
+}
+
+.cap-card:nth-child(2) {
+  border-top-color: #d4a73f;   /* Gold */
+}
+
+.cap-card:nth-child(3) {
+  border-top-color: #2c7be5;   /* Blue */
+}
+
+.cap-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 
+    0 18px 35px rgba(0, 21, 64, 0.12),
+    0 6px 12px rgba(0, 21, 64, 0.06);
+}
+
+.cap-highlight {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #001F54;
+  margin-bottom: 8px;
+}
+
+.cap-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+/* =========== Industry Footprint – Compact Vertical Cards ========= */
+
+.industry-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.industry-mini-card {
+  background: #ffffff;
+  padding: 22px 25px;
+  border-radius: 14px;
+  border: 1.5px solid transparent;   /* ADD THIS */
+  background-clip: padding-box;      /* ADD THIS */
+  box-shadow: 
+    0 10px 28px rgba(0, 21, 64, 0.07),
+    0 3px 8px rgba(0, 21, 64, 0.04);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+.industry-mini-card::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 17px; /* 14px + 3 */
+  background: conic-gradient(
+    from 0deg,
+    #2bb673,
+    #d4a73f,
+    #2c7be5,
+    #2bb673
+  );
+  animation: rotateGlow 12s linear infinite;
+  opacity: 0.45;
+  z-index: -1;
+}
+
+.industry-mini-card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 12px; /* 14 - 2 */
+  background: #ffffff;
+  z-index: -1;
+}
+
+.impact-card:nth-child(1) {
+    box-shadow:
+    0 0 0 2px rgba(94, 185, 135, 0.08),
+    0 10px 25px rgba(94, 185, 135, 0.12);
+}
+
+
+.impact-card:nth-child(2) {
+      box-shadow:
+    0 0 0 2px rgba(207, 168, 84, 0.08),
+    0 10px 25px rgba(207, 168, 84, 0.12);
+}
+
+.impact-card:nth-child(3) {
+      box-shadow:
+    0 0 0 2px rgba(95, 146, 232, 0.08),
+    0 10px 25px rgba(95, 146, 232, 0.12);
+}
+
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.industry-mini-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 21, 64, 0.12);
+}
+
+.industry-mini-card h4 {
+  font-size: 0.95rem;
+  color: #001F54;
+  margin-bottom: 6px;
+}
+
+.industry-mini-card p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ---------- Mobile View - Lakeside difference ---------- */
+
+@media (max-width: 768px) {
+
+  /* Reduce overall section padding */
+  .lakeside-difference {
+    padding: 80px 0;
+  }
+
+  .lakeside-difference .container {
+    padding: 0 20px;
+  }
+
+  /* Stack left + right */
+  .difference-columns {
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50px;
+    position: relative;
+  }
+
+  /* Remove vertical separator */
+  .difference-columns::after {
+    display: none;
+  }
+
+  /* Full width columns */
+  .difference-left,
+  .difference-right {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  /* Reduce list spacing */
+  .difference-list li {
+    margin-bottom: 32px;
+    max-width: 100%;
+  }
+
+  .difference-subheading {
+    margin-bottom: 35px;
+    font-size: 1.15rem;
+  }
+
+  /* ===== Institutional Capability Cards ===== */
+
+  .capability-cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cap-card {
+    width: 100%;
+    padding: 22px 20px;
+  }
+
+  .cap-highlight {
+    font-size: 1.2rem;
+  }
+
+  /* ===== Industry Cards ===== */
+
+  .industry-cards {
+    gap: 16px;
+  }
+
+  .industry-mini-card {
+    padding: 20px;
+  }
+
+  .industry-mini-card::before {
+    opacity: 0.25;   /* reduce glow intensity on mobile */
+  }
+
+}
+
+
+/* ================== FOUNDERS ================== */
+
+/* Founders Section */
+.founders {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem 2rem 2rem; /* reduced top padding for tighter spacing */
+  flex-wrap: wrap;
+  margin-top: 20px; /* ✅ adds small gap after paragraph */
+}
+
+.founder {
+  max-width: 420px;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+/* Founder Name */
+.founders h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #0a2540;
+  margin-bottom: 0.25rem;
+}
+
+.founder-additionalpara {
+  display: block;               /* makes it behave like paragraph */
+  margin-top: 10px;
+  font-size: 1.rem;
+  color: #9C7C4C;               /* Lakeside gold */
+  font-weight: 600;
+}
+
+/* Founder Role (teal) */
+.founders h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #9C7C4C;  /* Lakeside Gold */
+  margin-bottom: 0.75rem;
+}
+
+/* ✅ Paragraphs inside founder cards */
+.founder p {
+  font-size: 15px;
+  line-height: 1.7; 
+  color: #5f6b7a;
+  margin-bottom: 20px; /* reduced from 60px */
+  text-align: justify;
+}
+
+/* ✅ Standardize founder images */
+.founder-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(156, 124, 76, 0.6);  /* thin subtle gold */
+  padding: 4px;  /* creates breathing space inside the ring */
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.founder:hover .founder-img {
+  transform: scale(1.05);
+}
+
+.founders-wrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+
+.lead-subtitle {
+  color: #4b5563;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .founders {
+    flex-direction: column;
+    align-items: center;
+  }
+  .founder {
+    max-width: 90%;
+  }
+}
+
+
+
+ /* ================= Industry Recognition Section ================= */
+
+/* ===== 3 Column Recognition Layout ===== */
+
+
+.industry-recognition {
+  position: relative;
+  padding: 60px 20px 75px;
+  min-height: 500px;   /* controlled height */
+  background-image: url("../Award-section-3.jpg");
+  background-repeat: no-repeat;
+  background-position: center -20px;
+  background-size: cover;
+}
+
+.industry-recognition::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+   z-index: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.10) 0%,
+    rgba(255, 255, 255, 0.55) 20%,
+    rgba(255, 255, 255, 0.80) 100%
+  );
+}
+
+.industry-recognition .section-title {
+  color: #001F54;   /* your global heading color */
+  position: relative;
+  z-index: 3;       /* ensures it sits above overlay properly */
+  margin-bottom: 35px;
+  letter-spacing: 0.5px;
+}
+
+
+.recognition-container {
+  position: relative;
+  z-index: 2;
+}
+
+.recognition-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 95px;
+}
+
+
+
+/* Make both images same height */
+.recognition-image img,
+.recognition-event img {
+  height: 340px;
+  width: auto;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+  transform: scale(0.98);
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.6s ease,
+    filter 0.6s ease;
+}
+
+
+.reveal.active .recognition-image img,
+.reveal.active .recognition-event img {
+  transform: scale(1);
+}
+
+
+/* Gold underline */
+.gold-line {
+  width: 60px;
+  height: 3px;
+  background: #c49b0b;
+  margin: 18px 0 28px 0;
+}
+
+/* Column proportions */
+.recognition-image {
+  flex: 1;
+  margin-left: -150px;   /* pushes outward properly */
+}
+
+.recognition-text {
+  flex: 2.6;   /* increased from 1.4 */
+  text-align: center;     /* center the text */
+  max-width: 600px;   /* controls reading width */
+  margin: 0 auto;     /* keeps it centered */
+  margin-top: 25px;
+  transform: translateX(-35px);
+}
+
+.recognition-text p {
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.recognition-text p + p {
+  margin-top: 30px;   /* space between paragraphs */
+}
+
+.recognition-highlight {
+  font-weight: 500;
+}
+
+
+.recognition-text p:last-child {
+  color: #4b5563;
+  font-size: 16px;
+}
+
+.recognition-text p:first-child {
+  font-size: 17px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+
+
+.recognition-image:hover img,
+.recognition-event:hover img {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.14);
+  filter: brightness(1.03);
+}
+
+.recognition-event {
+  flex: 1;
+  margin-right: -170px;  /* pushes outward properly */
+}
+
+.recognition-image,
+.recognition-event {
+  position: relative;
+  top: -30px;
+  z-index: 3;
+}
+
+.recognition-image::after,
+.recognition-event::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 25px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.18) 0%,
+    rgba(0, 0, 0, 0.08) 40%,
+    rgba(0, 0, 0, 0.0) 75%
+  );
+  filter: blur(6px);
+  z-index: -1;
+}
+
+/* ================== Award Recognition - Mobile View ================== */
+
+@media (max-width: 768px) {
+
+  .recognition-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .recognition-image,
+  .recognition-event {
+    margin: 0 !important;
+    flex: unset;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .recognition-image img,
+  .recognition-event img {
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .recognition-text {
+    transform: none;
+    margin-top: 0;
+    max-width: 90%;
+  }
+
+  .industry-recognition {
+    padding-bottom: 100px;
+    padding-top: 50px; 
+  }
+
+  .industry-recognition .section-title {
+    font-size: 1.8rem;
+  }
+
+  .recognition-text p:first-child {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .recognition-text p:last-child {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .recognition-image img,
+  .recognition-event img {
+    height: 200px;
+  }
+
+}
+
 
 /* ================== SERVICES ================== */
 /* ================== END-TO-END HR GROWTH ENGINE ================== */
@@ -914,282 +1609,6 @@ font-size: 18px;
 
 
 
-/* ================== HR LIFECYCLE - Circular Lifecycle Wheel - Lotus Petals  ================== */
-/* --- Lotus Wheel Layout --- */
-
-.lifecycle-wheel {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.lifecycle-wheel h2 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #0a2540;
-  margin-bottom: 15px;
-}
-
-.lifecycle-wheel p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 40px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Enhanced Lotus Wheel Container */
-/* Lotus Wheel Container */
-.lotus-container {
-  position: relative;
-  width: 450px;
-  height: 450px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Lotus Petal Base Styles */
-.lotus-petal {
-  position: absolute;
-  width: 180px;              
-  height: 120px;           
-  background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 100%);
-  border-radius: 50% 50% 50% 0;
-  transform-origin: center center;   /* ✅ pivot from lotus center */
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(10, 25, 47, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-/* Individual Petal Positioning with Lotus Arrangement */
-.lotus-petal:nth-child(1) { /* Recruitment */
-  --rotation: 0deg; transform: rotate(0deg) translateY(-180px);
-  background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 100%);
-}
-
-.lotus-petal:nth-child(2) { /* Onboarding */
- --rotation: 51.43deg; transform: rotate(51.43deg) translateY(-180px);
-  background: linear-gradient(135deg, #1e3a5f 0%, #2d5a7c 100%);
-}
-
-.lotus-petal:nth-child(3) { /* Development */
-  --rotation: 102.86deg; transform: rotate(102.86deg) translateY(-180px);
-  background: linear-gradient(135deg, #2d5a7c 0%, #3b7a9e 100%);
-}
-
-.lotus-petal:nth-child(4) { /* Performance */
-  --rotation: 154.29deg; transform: rotate(154.29deg) translateY(-180px);
-  background: linear-gradient(135deg, #3b7a9e 0%, #14b8a6 100%);
-}
-
-.lotus-petal:nth-child(5) { /* Retention */
-  --rotation: 205.72deg; transform: rotate(205.72deg) translateY(-180px);
-  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
-}
-
-.lotus-petal:nth-child(6) { /* Transition */
- --rotation: 257.15deg; transform: rotate(257.15deg) translateY(-180px);
-  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
-}
-
-.lotus-petal:nth-child(7) { /* Separation */
- --rotation: 308.58deg; transform: rotate(308.58deg) translateY(-180px);
-  background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
-}
-
-/* Hover Effects - Stable and Smooth */
-.lotus-petal:hover {
-  transform: rotate(var(--rotation)) translateY(-200px) scale(1.15) !important;
-  z-index: 10;
-  filter: brightness(1.2);
-  box-shadow: 0 8px 25px rgba(20, 184, 166, 0.5); /* teal glow */
-    0 0 15px rgba(255, 215, 0, 0.25);    /* faint golden glow */  
-}
-
-/* Set rotation variables for each petal */
-.lotus-petal:nth-child(1) { --rotation: 0deg; }
-.lotus-petal:nth-child(2) { --rotation: 51.43deg; }
-.lotus-petal:nth-child(3) { --rotation: 102.86deg; }
-.lotus-petal:nth-child(4) { --rotation: 154.29deg; }
-.lotus-petal:nth-child(5) { --rotation: 205.72deg; }
-.lotus-petal:nth-child(6) { --rotation: 257.15deg; }
-.lotus-petal:nth-child(7) { --rotation: 308.58deg; }
-
-/* Subtle Shine Effect */
-.lotus-petal::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: left 0.7s ease;
-  transform: skewX(-20deg);
-}
-
-.lotus-petal:hover::before {
-  left: 150%;
-}
-
-/* Petal Content */
-.petal-content {
-  color: white;
-  font-weight: 600;
-  font-size: 14px;
-  text-align: center;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  transform: rotate(calc(-1 * var(--rotation)));
-  transition: all 0.3s ease;
-  padding: 0 10px;
-  line-height: 1.3;
-}
-
-.lotus-petal:hover .petal-content {
-  transform: rotate(calc(-1 * var(--rotation))) scale(1.1);
-  color: #fff;
-}
-
-/* Center Circle - Lotus Heart */
-.lotus-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 120px;
-  height: 120px;
-  background: linear-gradient(135deg, #0a192f 0%, #14b8a6 100%);
-  border-radius: 50%;
-  border: 4px solid white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  line-height: 1.3;
-  z-index: 20;
-  overflow: visible;
-
-  /* ✅ constant subtle glow */
-  box-shadow: 
-    0 0 15px rgba(20, 184, 166, 0.6),
-    0 0 10px rgba(255, 215, 0, 0.25); /* faint golden glow */
-}
-
-/* Outer glow pulse */
-.lotus-center::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: pulseGlow 2.5s infinite ease-in-out;
-  z-index: -1;
-}
-
-/* Glow animation with dual teal + gold */
-@keyframes pulseGlow {
-  0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
-    box-shadow: 
-      0 0 25px rgba(20, 184, 166, 0.5),   /* teal */
-      0 0 15px rgba(255, 215, 0, 0.2);    /* faint gold */
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.2);
-    box-shadow: 
-      0 0 45px rgba(10, 31, 84, 0.8),     /* navy pulse */
-      0 0 25px rgba(255, 215, 0, 0.35);   /* stronger golden pulse */
-  }
-}
-
-
-/* Active State for Clicked Petals */
-.lotus-petal.active {
-  transform: rotate(var(--rotation)) translateY(-135px) scale(1.1) !important;
-  z-index: 100;
-  filter: brightness(1.25);
-  box-shadow: 0 10px 30px rgba(20, 184, 166, 0.4);
-  border: 2px solid rgba(255, 255, 255, 0.6);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .lotus-container {
-    width: 350px;
-    height: 350px;
-  }
-  
-  .lotus-petal {
-    width: 140px;
-    height: 100px;
-  }
-  
-  .lotus-petal:nth-child(n) {
-    transform: rotate(var(--rotation)) translateY(-100px);
-  }
-  
-  .lotus-petal:hover {
-    transform: rotate(var(--rotation)) translateY(-115px) scale(1.15) !important;
-  }
-  
-  .petal-content {
-    font-size: 12px;
-  }
-  
-  .lotus-center {
-    width: 80px;
-    height: 80px;
-    font-size: 11px;
-  }
-}
-
-@media (max-width: 480px) {
-  .lotus-container {
-    width: 280px;
-    height: 280px;
-  }
-  
-  .lotus-petal {
-    width: 110px;
-    height: 80px;
-  }
-  
-  .lotus-petal:nth-child(n) {
-    transform: rotate(var(--rotation)) translateY(-80px);
-  }
-  
-  .lotus-petal:hover {
-    transform: rotate(var(--rotation)) translateY(-90px) scale(1.15) !important;
-  }
-  
-  .petal-content {
-    font-size: 10px;
-  }
-  
-  .lotus-center {
-    width: 60px;
-    height: 60px;
-    font-size: 9px;
-  }
-}
-
 
 /* ================== HR LIFECYCLE ROADMAP ================== */
 .hr-lifecycle {
@@ -1437,213 +1856,6 @@ margin-bottom: 16px !important; /* ✅ reduce gap below intro paragraph */
 
 
 
-/* Trust / Expertise Section (inside Why Us) */
-.trust {
-  padding: 3rem 2rem;
-  text-align: center;
-  background: #f9f9f9;   /* ✅ subtle light gray background */
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  }
-
-.trust h2 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #0a2540;
-  margin-bottom: 1rem;
-}
-
-.trust p {
-  color: #444;
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  max-width: 700px;   /* ✅ restrict width */
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-}
-
-.trust .trust-subtitle {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  color: #555;
-  font-weight: 600;
-  margin-top: 2.7rem;  /* ✅ add extra space above */
-  margin-bottom: 1rem;
-  letter-spacing: 0.5px;
-}
-
-.trust-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;  /* ✅ more breathing space */
-  margin-top: 1.5rem;
-}
-
-.trust-logos .logo-img {
-  height: 50px;        /* ✅ consistent logo height */
-  width: auto;
-  opacity: 0.85;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.trust-logos .logo-img:hover {
-  opacity: 1;
-  transform: translateY(-3px);
-}
-
-
-/* Why Us Section */
-.why-us {
-  padding: 3rem 2rem;
-  background: #fff;
-}
-
-.why-us-container {
-  display: flex;
-  flex-wrap: nowrap;         /* ✅ force side-by-side (no wrapping) */
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  max-width: 1380px;  /* ✅ matches Growth Dilemma / Smarter Approach */
-  margin: 0 auto;
-  padding: 0 10px;           /* ✅ consistent left/right padding */
-  box-sizing: border-box;
-}
-
-/* Left Column */
-.why-us-text {
-  flex: 0 0 60%;   /* ✅ fix width instead of flexible grow/shrink */
-}
-
-.why-us-text h2 {
-  font-size: 2.5rem;
-    font-weight: 700;
-  margin-bottom: 2.4rem;
-  color: #0a2540;
-}
-
-.why-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1.25rem;
-}
-
-.why-item .icon {
-  color: #14b8a6;   /* teal checkmark */
-  font-size: 1.5rem;
-  margin-right: 0.75rem;
-  margin-top: 0.2rem;
-}
-
-.why-item h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #0a2540;
-}
-
-.why-item p {
-  margin: 0.25rem 0 0;
-  color: #444;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-/* Right Column - Navy + Gold Theme */
-.why-us-highlight {
-  flex: 0 0 35%;  /* ✅ fix width so it always stays side by side */
-  background: linear-gradient(135deg, #ffffff, #f9f9f9); /* subtle gray-white */
-  border: 2px solid #0a2540; /* navy border */
-  padding: 2.5rem;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(10,37,64,0.15); /* soft navy glow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.why-us-highlight:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(10,37,64,0.25);
-}
-
-/* accent bar on top */
-.why-us-highlight::before {
-  content: "";
-  display: block;
-  height: 6px;
-  width: 60px;
-  background: #FFD700; /* gold */
-  margin: 0 auto 1rem;
-  border-radius: 3px;
-}
-
-/* stat number */
-.why-us-highlight h2 {
-  font-size: 3.2rem;
-  font-weight: 800;
-  color: #14b8a6; /* ✅ teal */
-  margin: 0 0 0.5rem;
-  text-shadow: 0 0 8px rgba(20,184,166,0.25); /* glowing teal */
-}
-
-/* stat title */
-.why-us-highlight h3 {
-  font-size: 1.25rem;
-  color: #0a2540; /* navy */
-  margin-bottom: 0.75rem;
-  font-weight: 600;
-}
-
-/* description text */
-.why-us-highlight p {
-  font-size: 0.95rem;
-  color: #333;
-}
-
-@keyframes fadeInOut {
-  0% { opacity: 0; transform: translateY(10px); }
-  10% { opacity: 1; transform: translateY(0); }
-  90% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-10px); }
-}
-
-.why-us-highlight.fade {
-  animation: fadeInOut 5s ease-in-out;
-}
-/* progress bar */
-.progress-bar {
-  height: 4px;
-  background: linear-gradient(90deg, #FFD700, #e6c200); /* gold gradient */
-  width: 0%;
-  border-radius: 2px;
-  margin-top: 1.5rem;
-  animation: progressAnim 5s linear infinite;
-  box-shadow: 0 0 6px rgba(255,215,0,0.5); /* glowing gold */
-}
-
-@keyframes progressAnim {
-  from { width: 0%; }
-  to { width: 100%; }
-}
-
-/* Mobile layout for Why Us section */
-@media (max-width: 768px) {
-  .why-us-container {
-    flex-wrap: wrap;            /* ✅ allow stacking on small screens */
-  }
-
-  .why-us-text {
-    flex: 1 1 100%;             /* ✅ take full width */
-    order: 1;                   /* ✅ show first */
-  }
-
-  .why-us-highlight {
-    flex: 1 1 100%;             /* ✅ take full width */
-    order: 2;                   /* ✅ always comes below */
-    margin-top: 20px;           /* ✅ add spacing from text */
-  }
-}
 
 
 /* ---------- Remove underline for service links (broad first pass) ---------- */
@@ -1919,99 +2131,7 @@ a[href*="/services/"]::before,
 
 
 
-/* ================== FOUNDERS ================== */
 
-/* Founders Section */
-.founders {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  padding: 1rem 2rem 2rem; /* reduced top padding for tighter spacing */
-  flex-wrap: wrap;
-  margin-top: 20px; /* ✅ adds small gap after paragraph */
-}
-
-.founder {
-  max-width: 420px;
-  border-radius: 8px;
-  padding: 1.25rem;
-  text-align: center;
-}
-
-/* Founder Name */
-.founders h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #0a2540;
-  margin-bottom: 0.25rem;
-}
-
-/* Founder Role (teal) */
-.founders h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #14b8a6;
-  margin-bottom: 0.75rem;
-}
-
-/* ✅ Paragraphs inside founder cards */
-.founder p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 20px; /* reduced from 60px */
-}
-
-/* ✅ Standardize founder images */
-.founder-img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: top center;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-.founder:hover .founder-img {
-  transform: scale(1.05);
-}
-
-.founders-wrapper {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-.section-title {
-  font-size: 2.8rem; /* ✅ fixed typo (was 2r.8em) */
-  font-weight: 700;
-  color: #0a2540;
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: #555;
-  margin-bottom: 1.5rem; /* ✅ reduced from 2rem */
-  font-size: 1rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .founders {
-    flex-direction: column;
-    align-items: center;
-  }
-  .founder {
-    max-width: 90%;
-  }
-}
 /* ================== FOUNDERS (ABOUT PAGE) ================== */
 .founders-about {
   padding: 2rem 0;
