@@ -329,12 +329,17 @@ body {
   color: #000f2e;
 }
 
-.card-icon {
+.growth-cards .card-icon {
   font-size: 2rem;
   margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
-.bridge-text {
+.growth-cards:hover .icon {
+  transform: scale(1.1);
+}
+
+.growth-cards .bridge-text {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 2px solid #9C7C4C;  /* Lakeside Gold */
