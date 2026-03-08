@@ -1947,7 +1947,8 @@ a[href*="/services/"]::before,
   }
 
 .smarter-text {
-  flex: 0 0 52%;  /* ✅ lock text width to ~45% */
+  flex: 0 0 45%;  /* ✅ lock text width to ~45% */
+  padding-top: 40px;
 }
 
 .smarter-approach .section-title {
@@ -1958,12 +1959,12 @@ a[href*="/services/"]::before,
 .smarter-text p {
   color: #4b5563;
   font-size: 1rem;
-  line-height: 1.75;
-  margin-bottom: 28px;
+  line-height: 1.8;
+  margin-bottom: 34px;
 }
 
 .smarter-image {
-  flex: 0 0 48%;     /* ✅ lock image width to ~50% */
+  flex: 0 0 46%;     /* ✅ lock image width to ~50% */
   text-align: left;  /* ✅ image aligned to left margin */
   margin-top: 6px;
 }
@@ -1990,7 +1991,7 @@ a[href*="/services/"]::before,
 .highlight-line {
   font-weight: 700;           /* bold entire line */
   color: #333;                /* regular dark text */
-  margin-top: 22px;
+  margin-top: 40px;
   font-size: 1.1rem;          /* slightly larger than normal */
   line-height: 1.6;
   border-left: 3px solid #0a58ca;
