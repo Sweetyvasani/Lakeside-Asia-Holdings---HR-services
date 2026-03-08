@@ -1962,12 +1962,12 @@ a[href*="/services/"]::before,
   }
 
 .smarter-text {
-  flex: 0 0 45%;  /* ✅ lock text width to ~45% */
+  flex: 0 0 48%;  /* ✅ lock text width to ~45% */
 }
 
 .smarter-approach .section-title {
-  text-align: left;
-        line-height: 1.05;   /* ✅ tighten spacing between lines */
+          line-height: 1.05;   /* ✅ tighten spacing between lines */
+  margin-bottom: 40px;
 }
 
 .smarter-text p {
