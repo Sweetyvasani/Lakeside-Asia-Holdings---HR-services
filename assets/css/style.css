@@ -693,8 +693,6 @@ font-size: 18px;
 .difference-right {
   flex: 0 0 58%;
    margin-top: -2px;
-  padding-top: 30px;
-  border-top: 1px solid rgba(0, 31, 84, 0.08);
 }
 
 
@@ -745,6 +743,8 @@ font-size: 18px;
 
 .capability-row {
   margin-bottom: 50px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(0, 31, 84, 0.08);
 }
 
 .capability-cards {
@@ -806,6 +806,13 @@ font-size: 18px;
   color: #4b5563;
   line-height: 1.6;
 }
+
+.difference-subheading,
+.capability-row h3,
+.industry-row h3 {
+  margin-top: 0;
+}
+
 /* =========== Industry Footprint – Compact Vertical Cards ========= */
 
 .industry-cards {
