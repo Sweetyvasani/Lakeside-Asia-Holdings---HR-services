@@ -743,9 +743,7 @@ font-size: 18px;
 
 .capability-row {
   margin-bottom: 50px;
-  padding-top: 30px;
-  border-top: 1px solid rgba(0, 31, 84, 0.08);
-}
+  }
 
 .capability-cards {
   display: flex;
