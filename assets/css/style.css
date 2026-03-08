@@ -1314,21 +1314,6 @@ font-size: 18px;
   padding: 60px 20px;
 }
 
-.services h2, .hr-engine h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #001F54;
-}
-
-.services p {
-  max-width: 780px;
-  margin: 0 auto 35px;  /* ✅ balanced space between paragraph & service cards */
-  text-align: center;
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
-}
 
 .hr-engine p.subtitle {
   max-width: 780px;
