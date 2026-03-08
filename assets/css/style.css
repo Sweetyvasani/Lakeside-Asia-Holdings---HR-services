@@ -1936,7 +1936,7 @@ a[href*="/services/"]::before,
 .smarter-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
   max-width: 1600px; /* ✅ matches Growth Dilemma width */
   width: 97%;          /* ✅ same left-right margin as Growth Dilemma */
@@ -1947,7 +1947,7 @@ a[href*="/services/"]::before,
   }
 
 .smarter-text {
-  flex: 0 0 48%;  /* ✅ lock text width to ~45% */
+  flex: 0 0 52%;  /* ✅ lock text width to ~45% */
 }
 
 .smarter-approach .section-title {
@@ -1956,20 +1956,22 @@ a[href*="/services/"]::before,
 }
 
 .smarter-text p {
-  color: #555;
+  color: #4b5563;
   font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  line-height: 1.75;
+  margin-bottom: 28px;
 }
 
 .smarter-image {
-  flex: 0 0 55%;     /* ✅ lock image width to ~50% */
+  flex: 0 0 48%;     /* ✅ lock image width to ~50% */
   text-align: left;  /* ✅ image aligned to left margin */
+  margin-top: 6px;
 }
 
 .smarter-image img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
@@ -1991,6 +1993,8 @@ a[href*="/services/"]::before,
   margin-top: 22px;
   font-size: 1.1rem;          /* slightly larger than normal */
   line-height: 1.6;
+  border-left: 3px solid #0a58ca;
+  padding-left: 12px;
 }
 
 .highlight-line span {
