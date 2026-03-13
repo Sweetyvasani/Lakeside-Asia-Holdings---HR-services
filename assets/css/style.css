@@ -1788,7 +1788,7 @@ font-size: 18px;
     color: #333;
 }
 
-.container {
+.lakeside-ecosystem .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -1810,14 +1810,14 @@ font-size: 18px;
     color: #666;
 }
 
-.ecosystem-grid {
+.lakeside-ecosystem .ecosystem-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     margin-bottom: 50px;
 }
 
-.pillar-card {
+.lakeside-ecosystem .pillar-card {
     background: #fff;
     padding: 40px;
     border-radius: 12px;
@@ -1826,22 +1826,22 @@ font-size: 18px;
     border-top: 5px solid #001540;
 }
 
-.pillar-card:hover {
+.lakeside-ecosystem .pillar-card:hover {
     transform: translateY(-10px);
 }
 
-.pillar-card.highlight {
+.lakeside-ecosystem .pillar-card.highlight {
     border-top-color: #9C7C4C; /* Lakeside Gold */
     background-color: #fff;
 }
 
-.pillar-header {
+.lakeside-ecosystem .pillar-header {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.pillar-number {
+.lakeside-ecosystem .pillar-number {
     font-size: 1.5rem;
     font-weight: bold;
     color: #9C7C4C;
@@ -1849,25 +1849,25 @@ font-size: 18px;
     opacity: 0.5;
 }
 
-.pillar-header h3 {
+.lakeside-ecosystem .pillar-header h3 {
     font-size: 1.3rem;
     color: #001540;
     margin: 0;
 }
 
-.pillar-focus {
+.lakeside-ecosystem .pillar-focus {
     font-size: 0.95rem;
     margin-bottom: 15px;
     line-height: 1.5;
 }
 
-.pillar-list {
+.lakeside-ecosystem .pillar-list {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
 }
 
-.pillar-list li {
+.lakeside-ecosystem .pillar-list li {
     padding-left: 20px;
     position: relative;
     margin-bottom: 10px;
@@ -1875,14 +1875,14 @@ font-size: 18px;
     line-height: 1.4;
 }
 
-.pillar-list li::before {
+.lakeside-ecosystem .pillar-list li::before {
     content: "→";
     position: absolute;
     left: 0;
     color: #9C7C4C;
 }
 
-.pillar-impact {
+.lakeside-ecosystem .pillar-impact {
     background: #f1f3f5;
     padding: 15px;
     border-radius: 6px;
@@ -1890,13 +1890,13 @@ font-size: 18px;
     color: #001540;
 }
 
-.ecosystem-footer {
+.lakeside-ecosystem .ecosystem-footer {
     text-align: center;
     padding-top: 40px;
     border-top: 1px solid #ddd;
 }
 
-.cta-button {
+.lakeside-ecosystem .cta-button {
     display: inline-block;
     background-color: #001540;
     color: #fff;
@@ -1908,14 +1908,14 @@ font-size: 18px;
     transition: background 0.3s ease;
 }
 
-.cta-button:hover {
+.lakeside-ecosystem .cta-button:hover {
     background-color: #9C7C4C;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .section-title { font-size: 2rem; }
-    .ecosystem-grid { grid-template-columns: 1fr; }
+    .lakeside-ecosystem .section-title { font-size: 2rem; }
+    .lakeside-ecosystem .ecosystem-grid { grid-template-columns: 1fr; }
 }
 
 
